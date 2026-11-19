@@ -1,0 +1,88 @@
+# SPDX-License-Identifier: Apache-2.0
+# Adapted from PBAM00 A.35 init.rc / init.recovery.qcom.rc, R9s-style imports.
+import /init.recovery.a5.usb.rc
+import /init.recovery.a5.services.rc
+
+on early-init
+    # The stock 4.9 FunctionFS implementation needs the legacy AIO path.
+    setprop sys.usb.ffs.aio_compat 1
+
+on init
+    # Pie ueventd does not infer the legacy bootdevice alias from this cmdline.
+    symlink /dev/block/platform/soc/7824900.sdhci /dev/block/bootdevice
+    # Oreo stock libselinux uses nonplat_* names; Pie emits vendor_* names.
+    symlink /vendor_hwservice_contexts /nonplat_hwservice_contexts
+    symlink /vendor_service_contexts /nonplat_service_contexts
+    symlink /vendor_file_contexts /nonplat_file_contexts
+    symlink /vendor_property_contexts /nonplat_property_contexts
+    symlink /vendor_seapp_contexts /nonplat_seapp_contexts
+    chmod 0660 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+    write /sys/class/leds/lcd-backlight/brightness 1400
+    mkdir /vendor 0755 root root
+    mkdir /firmware 0755 root root
+    mkdir /persist 0755 root root
+    # Kernel direct firmware loader, before starting the noflash update below.
+    write /sys/module/firmware_class/parameters/path /vendor/firmware
+
+on boot
+    # R9s uses the same OPPO switch; A5's sdm450 charger driver exposes it too.
+    write /sys/class/power_supply/usb/otg_switch 1
+    # Exact stock recovery trigger for 18031 noflash touch, not R9s double-tap.
+    write /proc/touchpanel/tp_fw_update 0
+
+on init
+    chmod 0755 /sbin
+    chmod 0755 /sbin/a5-stock
+    chmod 0755 /sbin/a5-stock/android.hardware.keymaster@3.0-service-qti
+    chmod 0644 /sbin/a5-stock/android.hardware.keymaster@3.0.so
+    chmod 0644 /sbin/a5-stock/android.hidl.base@1.0.so
+    chmod 0644 /sbin/a5-stock/android.hidl.token@1.0.so
+    chmod 0755 /sbin/a5-stock/hwservicemanager
+    chmod 0644 /sbin/a5-stock/libGPreqcancel.so
+    chmod 0644 /sbin/a5-stock/libGPreqcancel_svc.so
+    chmod 0644 /sbin/a5-stock/libQSEEComAPI.so
+    chmod 0644 /sbin/a5-stock/libStDrvInt.so
+    chmod 0644 /sbin/a5-stock/libbacktrace.so
+    chmod 0644 /sbin/a5-stock/libbase.so
+    chmod 0644 /sbin/a5-stock/libbinder.so
+    chmod 0644 /sbin/a5-stock/libc++.so
+    chmod 0644 /sbin/a5-stock/libc.so
+    chmod 0644 /sbin/a5-stock/libcrypto.so
+    chmod 0644 /sbin/a5-stock/libcutils.so
+    chmod 0644 /sbin/a5-stock/libdiag.so
+    chmod 0644 /sbin/a5-stock/libdl.so
+    chmod 0644 /sbin/a5-stock/libdrmfs.so
+    chmod 0644 /sbin/a5-stock/libdrmtime.so
+    chmod 0644 /sbin/a5-stock/libhardware.so
+    chmod 0644 /sbin/a5-stock/libhardware_legacy.so
+    chmod 0644 /sbin/a5-stock/libhidl-gen-utils.so
+    chmod 0644 /sbin/a5-stock/libhidlbase.so
+    chmod 0644 /sbin/a5-stock/libhidltransport.so
+    chmod 0644 /sbin/a5-stock/libhwbinder.so
+    chmod 0644 /sbin/a5-stock/libkeymasterdeviceutils.so
+    chmod 0644 /sbin/a5-stock/liblog.so
+    chmod 0644 /sbin/a5-stock/liblzma.so
+    chmod 0644 /sbin/a5-stock/libm.so
+    chmod 0644 /sbin/a5-stock/libpackagelistparser.so
+    chmod 0644 /sbin/a5-stock/libpcre2.so
+    chmod 0644 /sbin/a5-stock/libqdutils.so
+    chmod 0644 /sbin/a5-stock/libqisl.so
+    chmod 0644 /sbin/a5-stock/libqservice.so
+    chmod 0644 /sbin/a5-stock/librpmb.so
+    chmod 0644 /sbin/a5-stock/libsecureui.so
+    chmod 0644 /sbin/a5-stock/libsecureui_svcsock.so
+    chmod 0644 /sbin/a5-stock/libselinux.so
+    chmod 0644 /sbin/a5-stock/libssd.so
+    chmod 0644 /sbin/a5-stock/libtime_genoff.so
+    chmod 0644 /sbin/a5-stock/libtinyxml2.so
+    chmod 0644 /sbin/a5-stock/libunwind.so
+    chmod 0644 /sbin/a5-stock/libutils.so
+    chmod 0644 /sbin/a5-stock/libvintf.so
+    chmod 0644 /sbin/a5-stock/libvndksupport.so
+    chmod 0644 /sbin/a5-stock/libz.so
+    chmod 0755 /sbin/a5-stock/linker64
+    chmod 0755 /sbin/a5-stock/qseecomd
+    chmod 0644 /sbin/a5-stock/vendor.qti.hardware.tui_comm@1.0_vendor.so

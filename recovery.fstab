@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: Apache-2.0
+# mount_point fstype block_device [flags]
+/system      ext4 /dev/block/bootdevice/by-name/system flags=display="System";backup=1
+/system_image emmc /dev/block/bootdevice/by-name/system flags=display="System image";backup=1;flashimg=1
+/vendor      ext4 /dev/block/bootdevice/by-name/vendor flags=display="Vendor";backup=1
+/data        ext4 /dev/block/bootdevice/by-name/userdata flags=display="Data";backup=1;encryptable=footer;length=-16384
+/cache       ext4 /dev/block/bootdevice/by-name/cache flags=display="Cache";backup=1
+/boot        emmc /dev/block/bootdevice/by-name/boot flags=display="Boot";backup=1;flashimg=1
+/recovery    emmc /dev/block/bootdevice/by-name/recovery flags=display="Recovery";backup=1;flashimg=1
+/misc        emmc /dev/block/bootdevice/by-name/misc
+/external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="MicroSD";storage;wipeingui;removable
+/usb_otg     vfat /dev/block/sda1 /dev/block/sda flags=display="USB OTG";storage;wipeingui;removable

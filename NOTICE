@@ -1,0 +1,12 @@
+New configuration files: SPDX-License-Identifier: Apache-2.0.
+Layout reference: mominqimiang/twrp_device_oppo_r9s_r9sk (AOSP/TWRP 2020).
+Shared TWRP/OrangeFox configuration reference: peiyuesheng666/twrp_device_xiaomi_sheng.
+The prebuilt kernel is extracted from the local OPPO PBAM00 A.35 recovery image;
+it is not covered by the license of the new configuration files.
+Stock ueventd files retain their original copyright notices. Touch firmware and
+the isolated QSEE/keymaster runtime are extracted from A.35 recovery/vendor and
+remain subject to their original licenses. See prebuilt/stock-support.json for
+per-file origins, hashes, and the three service interpreter-path modifications.
+Qualcomm cryptfs_hw sources and the QSEE ioctl header retain their upstream
+notices and license terms; see crypto/cryptfs_hw/PROVENANCE.md for source commit
+and hashes. The Android.mk in that directory is device-tree configuration.

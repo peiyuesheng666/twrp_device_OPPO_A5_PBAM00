@@ -1,0 +1,926 @@
+
+/work/a5-recovery/out-orangefox/target/product/PBAM00/symbols/init:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000414da4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)>:
+  414da4:	d105c3ff 	sub	sp, sp, #0x170
+  414da8:	a9116ffc 	stp	x28, x27, [sp, #272]
+  414dac:	a91267fa 	stp	x26, x25, [sp, #288]
+  414db0:	a9135ff8 	stp	x24, x23, [sp, #304]
+  414db4:	a91457f6 	stp	x22, x21, [sp, #320]
+  414db8:	a9154ff4 	stp	x20, x19, [sp, #336]
+  414dbc:	a9167bfd 	stp	x29, x30, [sp, #352]
+  414dc0:	910583fd 	add	x29, sp, #0x160
+  414dc4:	2a0303f5 	mov	w21, w3
+  414dc8:	aa0203f3 	mov	x19, x2
+  414dcc:	aa0103f6 	mov	x22, x1
+  414dd0:	2a0003f4 	mov	w20, w0
+  414dd4:	940251cf 	bl	4a9510 <android::base::boot_clock::now()>
+  414dd8:	f81603a0 	stur	x0, [x29, #-160]
+  414ddc:	94025755 	bl	4aab30 <android::base::GetMinimumLogSeverity()>
+  414de0:	7100081f 	cmp	w0, #0x2
+  414de4:	540064ed 	b.le	415a80 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xcdc>
+  414de8:	52858048 	mov	w8, #0x2c02                	// #11266
+  414dec:	a9047fff 	stp	xzr, xzr, [sp, #64]
+  414df0:	790083e8 	strh	w8, [sp, #64]
+  414df4:	9102a3e8 	add	x8, sp, #0xa8
+  414df8:	910103e1 	add	x1, sp, #0x40
+  414dfc:	aa1603e0 	mov	x0, x22
+  414e00:	f9002bff 	str	xzr, [sp, #80]
+  414e04:	39010bff 	strb	wzr, [sp, #66]
+  414e08:	94025ae9 	bl	4ab9ac <android::base::Split(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  414e0c:	394103e8 	ldrb	w8, [sp, #64]
+  414e10:	36000068 	tbz	w8, #0, 414e1c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x78>
+  414e14:	f9402be0 	ldr	x0, [sp, #80]
+  414e18:	94037a61 	bl	4f379c <operator delete(void*)>
+  414e1c:	a94aa3e0 	ldp	x0, x8, [sp, #168]
+  414e20:	b201f3e9 	mov	x9, #0xaaaaaaaaaaaaaaaa    	// #-6148914691236517206
+  414e24:	f2955569 	movk	x9, #0xaaab
+  414e28:	cb000108 	sub	x8, x8, x0
+  414e2c:	9343fd08 	asr	x8, x8, #3
+  414e30:	9b097d08 	mul	x8, x8, x9
+  414e34:	f100091f 	cmp	x8, #0x2
+  414e38:	54000c83 	b.cc	414fc8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x224>  // b.lo, b.ul, b.last
+  414e3c:	39400008 	ldrb	w8, [x0]
+  414e40:	f9400409 	ldr	x9, [x0, #8]
+  414e44:	d341fd0a 	lsr	x10, x8, #1
+  414e48:	7200011f 	tst	w8, #0x1
+  414e4c:	9a890148 	csel	x8, x10, x9, eq  // eq = none
+  414e50:	f100191f 	cmp	x8, #0x6
+  414e54:	54000ba1 	b.ne	414fc8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x224>  // b.any
+  414e58:	b0000c23 	adrp	x3, 599000 <dl_iterate_phdr+0x1294>
+  414e5c:	9114e863 	add	x3, x3, #0x53a
+  414e60:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  414e64:	321f07e4 	orr	w4, wzr, #0x6
+  414e68:	aa1f03e1 	mov	x1, xzr
+  414e6c:	9403f633 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  414e70:	aa1f03f7 	mov	x23, xzr
+  414e74:	35000ac0 	cbnz	w0, 414fcc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x228>
+  414e78:	f94057e0 	ldr	x0, [sp, #168]
+  414e7c:	38418c09 	ldrb	w9, [x0, #24]!
+  414e80:	f9400408 	ldr	x8, [x0, #8]
+  414e84:	d341fd2a 	lsr	x10, x9, #1
+  414e88:	7200013f 	tst	w9, #0x1
+  414e8c:	9a88014b 	csel	x11, x10, x8, eq  // eq = none
+  414e90:	f100217f 	cmp	x11, #0x8
+  414e94:	540001c1 	b.ne	414ecc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x128>  // b.any
+  414e98:	d0000c23 	adrp	x3, 59a000 <dl_iterate_phdr+0x2294>
+  414e9c:	91037463 	add	x3, x3, #0xdd
+  414ea0:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  414ea4:	321d03e4 	orr	w4, wzr, #0x8
+  414ea8:	aa1f03e1 	mov	x1, xzr
+  414eac:	9403f623 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  414eb0:	34000880 	cbz	w0, 414fc0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x21c>
+  414eb4:	f94057e0 	ldr	x0, [sp, #168]
+  414eb8:	38418c0a 	ldrb	w10, [x0, #24]!
+  414ebc:	f9400408 	ldr	x8, [x0, #8]
+  414ec0:	12000149 	and	w9, w10, #0x1
+  414ec4:	d341fd4a 	lsr	x10, x10, #1
+  414ec8:	14000002 	b	414ed0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x12c>
+  414ecc:	12000129 	and	w9, w9, #0x1
+  414ed0:	7100013f 	cmp	w9, #0x0
+  414ed4:	9a88014b 	csel	x11, x10, x8, eq  // eq = none
+  414ed8:	f100297f 	cmp	x11, #0xa
+  414edc:	540001a1 	b.ne	414f10 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x16c>  // b.any
+  414ee0:	90000c23 	adrp	x3, 598000 <dl_iterate_phdr+0x294>
+  414ee4:	91254863 	add	x3, x3, #0x952
+  414ee8:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  414eec:	52800144 	mov	w4, #0xa                   	// #10
+  414ef0:	aa1f03e1 	mov	x1, xzr
+  414ef4:	9403f611 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  414ef8:	34000640 	cbz	w0, 414fc0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x21c>
+  414efc:	f94057e0 	ldr	x0, [sp, #168]
+  414f00:	38418c0a 	ldrb	w10, [x0, #24]!
+  414f04:	f9400408 	ldr	x8, [x0, #8]
+  414f08:	12000149 	and	w9, w10, #0x1
+  414f0c:	d341fd4a 	lsr	x10, x10, #1
+  414f10:	7100013f 	cmp	w9, #0x0
+  414f14:	9a88014b 	csel	x11, x10, x8, eq  // eq = none
+  414f18:	f100117f 	cmp	x11, #0x4
+  414f1c:	540001a1 	b.ne	414f50 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x1ac>  // b.any
+  414f20:	d0000c23 	adrp	x3, 59a000 <dl_iterate_phdr+0x2294>
+  414f24:	91039863 	add	x3, x3, #0xe6
+  414f28:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  414f2c:	321e03e4 	orr	w4, wzr, #0x4
+  414f30:	aa1f03e1 	mov	x1, xzr
+  414f34:	9403f601 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  414f38:	34000440 	cbz	w0, 414fc0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x21c>
+  414f3c:	f94057e0 	ldr	x0, [sp, #168]
+  414f40:	38418c0a 	ldrb	w10, [x0, #24]!
+  414f44:	f9400408 	ldr	x8, [x0, #8]
+  414f48:	12000149 	and	w9, w10, #0x1
+  414f4c:	d341fd4a 	lsr	x10, x10, #1
+  414f50:	7100013f 	cmp	w9, #0x0
+  414f54:	9a88014b 	csel	x11, x10, x8, eq  // eq = none
+  414f58:	f100117f 	cmp	x11, #0x4
+  414f5c:	540001a1 	b.ne	414f90 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x1ec>  // b.any
+  414f60:	d0000c23 	adrp	x3, 59a000 <dl_iterate_phdr+0x2294>
+  414f64:	9103ac63 	add	x3, x3, #0xeb
+  414f68:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  414f6c:	321e03e4 	orr	w4, wzr, #0x4
+  414f70:	aa1f03e1 	mov	x1, xzr
+  414f74:	9403f5f1 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  414f78:	34000240 	cbz	w0, 414fc0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x21c>
+  414f7c:	f94057e0 	ldr	x0, [sp, #168]
+  414f80:	38418c0a 	ldrb	w10, [x0, #24]!
+  414f84:	f9400408 	ldr	x8, [x0, #8]
+  414f88:	12000149 	and	w9, w10, #0x1
+  414f8c:	d341fd4a 	lsr	x10, x10, #1
+  414f90:	7100013f 	cmp	w9, #0x0
+  414f94:	9a880148 	csel	x8, x10, x8, eq  // eq = none
+  414f98:	f100111f 	cmp	x8, #0x4
+  414f9c:	54000161 	b.ne	414fc8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x224>  // b.any
+  414fa0:	d0000c23 	adrp	x3, 59a000 <dl_iterate_phdr+0x2294>
+  414fa4:	9103c063 	add	x3, x3, #0xf0
+  414fa8:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  414fac:	321e03e4 	orr	w4, wzr, #0x4
+  414fb0:	aa1f03e1 	mov	x1, xzr
+  414fb4:	9403f5e1 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  414fb8:	aa1f03f7 	mov	x23, xzr
+  414fbc:	35000080 	cbnz	w0, 414fcc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x228>
+  414fc0:	32000bf7 	orr	w23, wzr, #0x7
+  414fc4:	14000002 	b	414fcc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x228>
+  414fc8:	aa1f03f7 	mov	x23, xzr
+  414fcc:	f0000fc8 	adrp	x8, 60f000 <super_stats_arenas_i_bins_j_node+0x10>
+  414fd0:	f941b108 	ldr	x8, [x8, #864]
+  414fd4:	321b03e0 	orr	w0, wzr, #0x20
+  414fd8:	f940011a 	ldr	x26, [x8]
+  414fdc:	940379bd 	bl	4f36d0 <operator new(unsigned long)>
+  414fe0:	f0000c08 	adrp	x8, 597000 <add_fdes+0xfc>
+  414fe4:	3dc3a500 	ldr	q0, [x8, #3728]
+  414fe8:	d0000c28 	adrp	x8, 59a000 <dl_iterate_phdr+0x2294>
+  414fec:	9103d508 	add	x8, x8, #0xf5
+  414ff0:	f840f109 	ldur	x9, [x8, #15]
+  414ff4:	3dc00101 	ldr	q1, [x8]
+  414ff8:	f9002be0 	str	x0, [sp, #80]
+  414ffc:	3d8013e0 	str	q0, [sp, #64]
+  415000:	39005c1f 	strb	wzr, [x0, #23]
+  415004:	f800f009 	stur	x9, [x0, #15]
+  415008:	3d800001 	str	q1, [x0]
+  41500c:	394002c8 	ldrb	w8, [x22]
+  415010:	f9400ac9 	ldr	x9, [x22, #16]
+  415014:	a939ffbf 	stp	xzr, xzr, [x29, #-104]
+  415018:	f81a83bf 	stur	xzr, [x29, #-88]
+  41501c:	7200011f 	tst	w8, #0x1
+  415020:	9a961528 	csinc	x8, x9, x22, ne  // ne = any
+  415024:	8b170117 	add	x23, x8, x23
+  415028:	aa1703e0 	mov	x0, x23
+  41502c:	9404aaf9 	bl	53fc10 <strlen>
+  415030:	aa0003f6 	mov	x22, x0
+  415034:	b10042df 	cmn	x22, #0x10
+  415038:	54005dc2 	b.cs	415bf0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe4c>  // b.hs, b.nlast
+  41503c:	f1005edf 	cmp	x22, #0x17
+  415040:	540000e2 	b.cs	41505c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x2b8>  // b.hs, b.nlast
+  415044:	d101a3a9 	sub	x9, x29, #0x68
+  415048:	d37ffac8 	lsl	x8, x22, #1
+  41504c:	b2400138 	orr	x24, x9, #0x1
+  415050:	381983a8 	sturb	w8, [x29, #-104]
+  415054:	b5000156 	cbnz	x22, 41507c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x2d8>
+  415058:	1400000d 	b	41508c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x2e8>
+  41505c:	910042c8 	add	x8, x22, #0x10
+  415060:	927ced19 	and	x25, x8, #0xfffffffffffffff0
+  415064:	aa1903e0 	mov	x0, x25
+  415068:	9403799a 	bl	4f36d0 <operator new(unsigned long)>
+  41506c:	aa0003f8 	mov	x24, x0
+  415070:	b2400328 	orr	x8, x25, #0x1
+  415074:	a93a63b6 	stp	x22, x24, [x29, #-96]
+  415078:	f81983a8 	stur	x8, [x29, #-104]
+  41507c:	aa1803e0 	mov	x0, x24
+  415080:	aa1703e1 	mov	x1, x23
+  415084:	aa1603e2 	mov	x2, x22
+  415088:	9404a83a 	bl	53f170 <memcpy>
+  41508c:	910103e0 	add	x0, sp, #0x40
+  415090:	d101a3a1 	sub	x1, x29, #0x68
+  415094:	38366b1f 	strb	wzr, [x24, x22]
+  415098:	d63f0340 	blr	x26
+  41509c:	385983a8 	ldurb	w8, [x29, #-104]
+  4150a0:	36000068 	tbz	w8, #0, 4150ac <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x308>
+  4150a4:	f85a83a0 	ldur	x0, [x29, #-88]
+  4150a8:	940379bd 	bl	4f379c <operator delete(void*)>
+  4150ac:	394103e8 	ldrb	w8, [sp, #64]
+  4150b0:	36000068 	tbz	w8, #0, 4150bc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x318>
+  4150b4:	f9402be0 	ldr	x0, [sp, #80]
+  4150b8:	940379b9 	bl	4f379c <operator delete(void*)>
+  4150bc:	9404dda5 	bl	54c750 <sync>
+  4150c0:	9402569c 	bl	4aab30 <android::base::GetMinimumLogSeverity()>
+  4150c4:	7100081f 	cmp	w0, #0x2
+  4150c8:	540052cd 	b.le	415b20 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xd7c>
+  4150cc:	b0000c29 	adrp	x9, 59a000 <dl_iterate_phdr+0x2294>
+  4150d0:	52800288 	mov	w8, #0x14                  	// #20
+  4150d4:	91049129 	add	x9, x9, #0x124
+  4150d8:	a9047fff 	stp	xzr, xzr, [sp, #64]
+  4150dc:	390103e8 	strb	w8, [sp, #64]
+  4150e0:	f9400128 	ldr	x8, [x9]
+  4150e4:	528c8ca9 	mov	w9, #0x6465                	// #25701
+  4150e8:	780493e9 	sturh	w9, [sp, #73]
+  4150ec:	321d03e9 	orr	w9, wzr, #0x8
+  4150f0:	f80413e8 	stur	x8, [sp, #65]
+  4150f4:	528ded88 	mov	w8, #0x6f6c                	// #28524
+  4150f8:	a9057fff 	stp	xzr, xzr, [sp, #80]
+  4150fc:	72ac8ce8 	movk	w8, #0x6467, lsl #16
+  415100:	390163e9 	strb	w9, [sp, #88]
+  415104:	a9077fff 	stp	xzr, xzr, [sp, #112]
+  415108:	3901c3e9 	strb	w9, [sp, #112]
+  41510c:	910243e9 	add	x9, sp, #0x90
+  415110:	b80593e8 	stur	w8, [sp, #89]
+  415114:	528c8c28 	mov	w8, #0x6461                	// #25697
+  415118:	91002136 	add	x22, x9, #0x8
+  41511c:	72ac8c48 	movk	w8, #0x6462, lsl #16
+  415120:	910243e0 	add	x0, sp, #0x90
+  415124:	d101a3a2 	sub	x2, x29, #0x68
+  415128:	d10203a3 	sub	x3, x29, #0x80
+  41512c:	910103e4 	add	x4, sp, #0x40
+  415130:	aa1603e1 	mov	x1, x22
+  415134:	39012fff 	strb	wzr, [sp, #75]
+  415138:	a9067fff 	stp	xzr, xzr, [sp, #96]
+  41513c:	390177ff 	strb	wzr, [sp, #93]
+  415140:	a909ffff 	stp	xzr, xzr, [sp, #152]
+  415144:	f90043ff 	str	xzr, [sp, #128]
+  415148:	b80713e8 	stur	w8, [sp, #113]
+  41514c:	3901d7ff 	strb	wzr, [sp, #117]
+  415150:	f9004bf6 	str	x22, [sp, #144]
+  415154:	910103f9 	add	x25, sp, #0x40
+  415158:	97ffc5a7 	bl	4067f4 <std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction> > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  41515c:	aa0003f7 	mov	x23, x0
+  415160:	f94002e8 	ldr	x8, [x23]
+  415164:	b50002c8 	cbnz	x8, 4151bc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x418>
+  415168:	321d0be0 	orr	w0, wzr, #0x38
+  41516c:	94037959 	bl	4f36d0 <operator new(unsigned long)>
+  415170:	aa0003f8 	mov	x24, x0
+  415174:	91008300 	add	x0, x24, #0x20
+  415178:	910103e1 	add	x1, sp, #0x40
+  41517c:	9403f0d2 	bl	5114c4 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  415180:	f85983a8 	ldur	x8, [x29, #-104]
+  415184:	a9007f1f 	stp	xzr, xzr, [x24]
+  415188:	f9000b08 	str	x8, [x24, #16]
+  41518c:	f90002f8 	str	x24, [x23]
+  415190:	f9404be8 	ldr	x8, [sp, #144]
+  415194:	f9400108 	ldr	x8, [x8]
+  415198:	b4000068 	cbz	x8, 4151a4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x400>
+  41519c:	f9004be8 	str	x8, [sp, #144]
+  4151a0:	f94002f8 	ldr	x24, [x23]
+  4151a4:	f9404fe0 	ldr	x0, [sp, #152]
+  4151a8:	aa1803e1 	mov	x1, x24
+  4151ac:	97ffc68a 	bl	406bd4 <void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)>
+  4151b0:	f94053e8 	ldr	x8, [sp, #160]
+  4151b4:	91000508 	add	x8, x8, #0x1
+  4151b8:	f90053e8 	str	x8, [sp, #160]
+  4151bc:	91006338 	add	x24, x25, #0x18
+  4151c0:	910243e0 	add	x0, sp, #0x90
+  4151c4:	d101a3a2 	sub	x2, x29, #0x68
+  4151c8:	d10203a3 	sub	x3, x29, #0x80
+  4151cc:	aa1603e1 	mov	x1, x22
+  4151d0:	aa1803e4 	mov	x4, x24
+  4151d4:	97ffc588 	bl	4067f4 <std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction> > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  4151d8:	aa0003f7 	mov	x23, x0
+  4151dc:	f94002e8 	ldr	x8, [x23]
+  4151e0:	b50002c8 	cbnz	x8, 415238 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x494>
+  4151e4:	321d0be0 	orr	w0, wzr, #0x38
+  4151e8:	9403793a 	bl	4f36d0 <operator new(unsigned long)>
+  4151ec:	aa0003f9 	mov	x25, x0
+  4151f0:	91008320 	add	x0, x25, #0x20
+  4151f4:	aa1803e1 	mov	x1, x24
+  4151f8:	9403f0b3 	bl	5114c4 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  4151fc:	f85983a8 	ldur	x8, [x29, #-104]
+  415200:	a9007f3f 	stp	xzr, xzr, [x25]
+  415204:	f9000b28 	str	x8, [x25, #16]
+  415208:	f90002f9 	str	x25, [x23]
+  41520c:	f9404be8 	ldr	x8, [sp, #144]
+  415210:	f9400108 	ldr	x8, [x8]
+  415214:	b4000068 	cbz	x8, 415220 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x47c>
+  415218:	f9004be8 	str	x8, [sp, #144]
+  41521c:	f94002f9 	ldr	x25, [x23]
+  415220:	f9404fe0 	ldr	x0, [sp, #152]
+  415224:	aa1903e1 	mov	x1, x25
+  415228:	97ffc66b 	bl	406bd4 <void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)>
+  41522c:	f94053e8 	ldr	x8, [sp, #160]
+  415230:	91000508 	add	x8, x8, #0x1
+  415234:	f90053e8 	str	x8, [sp, #160]
+  415238:	910103e8 	add	x8, sp, #0x40
+  41523c:	9100c117 	add	x23, x8, #0x30
+  415240:	910243e0 	add	x0, sp, #0x90
+  415244:	d101a3a2 	sub	x2, x29, #0x68
+  415248:	d10203a3 	sub	x3, x29, #0x80
+  41524c:	aa1603e1 	mov	x1, x22
+  415250:	aa1703e4 	mov	x4, x23
+  415254:	97ffc568 	bl	4067f4 <std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction> > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  415258:	aa0003f6 	mov	x22, x0
+  41525c:	f94002c8 	ldr	x8, [x22]
+  415260:	b4000648 	cbz	x8, 415328 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x584>
+  415264:	3941c3e8 	ldrb	w8, [sp, #112]
+  415268:	370008e8 	tbnz	w8, #0, 415384 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x5e0>
+  41526c:	394163e8 	ldrb	w8, [sp, #88]
+  415270:	37000928 	tbnz	w8, #0, 415394 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x5f0>
+  415274:	394103e8 	ldrb	w8, [sp, #64]
+  415278:	36000068 	tbz	w8, #0, 415284 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x4e0>
+  41527c:	f9402be0 	ldr	x0, [sp, #80]
+  415280:	94037947 	bl	4f379c <operator delete(void*)>
+  415284:	f0000c0a 	adrp	x10, 598000 <dl_iterate_phdr+0x294>
+  415288:	9116d14a 	add	x10, x10, #0x5b4
+  41528c:	f940014a 	ldr	x10, [x10]
+  415290:	9100a3eb 	add	x11, sp, #0x28
+  415294:	52800248 	mov	w8, #0x12                  	// #18
+  415298:	52800c89 	mov	w9, #0x64                  	// #100
+  41529c:	91002161 	add	x1, x11, #0x8
+  4152a0:	9100a3e0 	add	x0, sp, #0x28
+  4152a4:	d101a3a2 	sub	x2, x29, #0x68
+  4152a8:	d10203a3 	sub	x3, x29, #0x80
+  4152ac:	910103e4 	add	x4, sp, #0x40
+  4152b0:	a9047fff 	stp	xzr, xzr, [sp, #64]
+  4152b4:	f9002bff 	str	xzr, [sp, #80]
+  4152b8:	a9037fff 	stp	xzr, xzr, [sp, #48]
+  4152bc:	390103e8 	strb	w8, [sp, #64]
+  4152c0:	780493e9 	sturh	w9, [sp, #73]
+  4152c4:	f80413ea 	stur	x10, [sp, #65]
+  4152c8:	f90017e1 	str	x1, [sp, #40]
+  4152cc:	97ffc54a 	bl	4067f4 <std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction> > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, android::init::ControlMessageFunction>, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  4152d0:	aa0003f6 	mov	x22, x0
+  4152d4:	f94002c8 	ldr	x8, [x22]
+  4152d8:	b4000688 	cbz	x8, 4153a8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x604>
+  4152dc:	394103e8 	ldrb	w8, [sp, #64]
+  4152e0:	36000068 	tbz	w8, #0, 4152ec <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x548>
+  4152e4:	f9402be0 	ldr	x0, [sp, #80]
+  4152e8:	9403792d 	bl	4f379c <operator delete(void*)>
+  4152ec:	94002feb 	bl	421298 <android::init::ServiceList::GetInstance()>
+  4152f0:	a940701b 	ldp	x27, x28, [x0]
+  4152f4:	eb1c037f 	cmp	x27, x28
+  4152f8:	54001a40 	b.eq	415640 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x89c>  // b.none
+  4152fc:	910103e8 	add	x8, sp, #0x40
+  415300:	b0000f9a 	adrp	x26, 606000 <GCC_except_table139+0x37f24>
+  415304:	b0000c37 	adrp	x23, 59a000 <dl_iterate_phdr+0x2294>
+  415308:	f0000c18 	adrp	x24, 598000 <dl_iterate_phdr+0x294>
+  41530c:	b0000c39 	adrp	x25, 59a000 <dl_iterate_phdr+0x2294>
+  415310:	9125a35a 	add	x26, x26, #0x968
+  415314:	910576f7 	add	x23, x23, #0x15d
+  415318:	9116a318 	add	x24, x24, #0x5a8
+  41531c:	b2400116 	orr	x22, x8, #0x1
+  415320:	9104bf39 	add	x25, x25, #0x12f
+  415324:	14000093 	b	415570 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x7cc>
+  415328:	321d0be0 	orr	w0, wzr, #0x38
+  41532c:	940378e9 	bl	4f36d0 <operator new(unsigned long)>
+  415330:	aa0003f8 	mov	x24, x0
+  415334:	91008300 	add	x0, x24, #0x20
+  415338:	aa1703e1 	mov	x1, x23
+  41533c:	9403f062 	bl	5114c4 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  415340:	f85983a8 	ldur	x8, [x29, #-104]
+  415344:	a9007f1f 	stp	xzr, xzr, [x24]
+  415348:	f9000b08 	str	x8, [x24, #16]
+  41534c:	f90002d8 	str	x24, [x22]
+  415350:	f9404be8 	ldr	x8, [sp, #144]
+  415354:	f9400108 	ldr	x8, [x8]
+  415358:	b4000068 	cbz	x8, 415364 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x5c0>
+  41535c:	f9004be8 	str	x8, [sp, #144]
+  415360:	f94002d8 	ldr	x24, [x22]
+  415364:	f9404fe0 	ldr	x0, [sp, #152]
+  415368:	aa1803e1 	mov	x1, x24
+  41536c:	97ffc61a 	bl	406bd4 <void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)>
+  415370:	f94053e8 	ldr	x8, [sp, #160]
+  415374:	91000508 	add	x8, x8, #0x1
+  415378:	f90053e8 	str	x8, [sp, #160]
+  41537c:	3941c3e8 	ldrb	w8, [sp, #112]
+  415380:	3607f768 	tbz	w8, #0, 41526c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x4c8>
+  415384:	f94043e0 	ldr	x0, [sp, #128]
+  415388:	94037905 	bl	4f379c <operator delete(void*)>
+  41538c:	394163e8 	ldrb	w8, [sp, #88]
+  415390:	3607f728 	tbz	w8, #0, 415274 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x4d0>
+  415394:	f94037e0 	ldr	x0, [sp, #104]
+  415398:	94037901 	bl	4f379c <operator delete(void*)>
+  41539c:	394103e8 	ldrb	w8, [sp, #64]
+  4153a0:	3707f6e8 	tbnz	w8, #0, 41527c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x4d8>
+  4153a4:	17ffffb8 	b	415284 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x4e0>
+  4153a8:	321d0be0 	orr	w0, wzr, #0x38
+  4153ac:	940378c9 	bl	4f36d0 <operator new(unsigned long)>
+  4153b0:	aa0003f7 	mov	x23, x0
+  4153b4:	910082e0 	add	x0, x23, #0x20
+  4153b8:	910103e1 	add	x1, sp, #0x40
+  4153bc:	9403f042 	bl	5114c4 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  4153c0:	f85983a8 	ldur	x8, [x29, #-104]
+  4153c4:	a9007eff 	stp	xzr, xzr, [x23]
+  4153c8:	f9000ae8 	str	x8, [x23, #16]
+  4153cc:	f90002d7 	str	x23, [x22]
+  4153d0:	f94017e8 	ldr	x8, [sp, #40]
+  4153d4:	f9400108 	ldr	x8, [x8]
+  4153d8:	b4000068 	cbz	x8, 4153e4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x640>
+  4153dc:	f90017e8 	str	x8, [sp, #40]
+  4153e0:	f94002d7 	ldr	x23, [x22]
+  4153e4:	f9401be0 	ldr	x0, [sp, #48]
+  4153e8:	aa1703e1 	mov	x1, x23
+  4153ec:	97ffc5fa 	bl	406bd4 <void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)>
+  4153f0:	f9401fe8 	ldr	x8, [sp, #56]
+  4153f4:	91000508 	add	x8, x8, #0x1
+  4153f8:	f9001fe8 	str	x8, [sp, #56]
+  4153fc:	394103e8 	ldrb	w8, [sp, #64]
+  415400:	3707f728 	tbnz	w8, #0, 4152e4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x540>
+  415404:	17ffffba 	b	4152ec <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x548>
+  415408:	9404abc2 	bl	540310 <__errno>
+  41540c:	b9400008 	ldr	w8, [x0]
+  415410:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415414:	f90013e0 	str	x0, [sp, #32]
+  415418:	d101a3a0 	sub	x0, x29, #0x68
+  41541c:	52802ea2 	mov	w2, #0x175                 	// #373
+  415420:	321e03e4 	orr	w4, wzr, #0x4
+  415424:	12800006 	mov	w6, #0xffffffff            	// #-1
+  415428:	91000021 	add	x1, x1, #0x0
+  41542c:	2a1f03e3 	mov	w3, wzr
+  415430:	aa1f03e5 	mov	x5, xzr
+  415434:	b9001fe8 	str	w8, [sp, #28]
+  415438:	940255c3 	bl	4aab44 <android::base::LogMessage::LogMessage(char const*, unsigned int, android::base::LogId, android::base::LogSeverity, char const*, int)>
+  41543c:	d101a3a0 	sub	x0, x29, #0x68
+  415440:	940255bf 	bl	4aab3c <ENGINE_get_RSA_method>
+  415444:	528005a2 	mov	w2, #0x2d                  	// #45
+  415448:	aa1903e1 	mov	x1, x25
+  41544c:	97ffc8c3 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415450:	f9400368 	ldr	x8, [x27]
+  415454:	39400109 	ldrb	w9, [x8]
+  415458:	a940a90b 	ldp	x11, x10, [x8, #8]
+  41545c:	d341fd2c 	lsr	x12, x9, #1
+  415460:	7200013f 	tst	w9, #0x1
+  415464:	9a881541 	csinc	x1, x10, x8, ne  // ne = any
+  415468:	9a8b0182 	csel	x2, x12, x11, eq  // eq = none
+  41546c:	97ffc8bb 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415470:	320007e2 	orr	w2, wzr, #0x3
+  415474:	aa1803e1 	mov	x1, x24
+  415478:	97ffc8b8 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  41547c:	b94063e8 	ldr	w8, [sp, #96]
+  415480:	7100051f 	cmp	w8, #0x1
+  415484:	54003b41 	b.ne	415bec <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe48>  // b.any
+  415488:	394103e8 	ldrb	w8, [sp, #64]
+  41548c:	a944a7ea 	ldp	x10, x9, [sp, #72]
+  415490:	d341fd0b 	lsr	x11, x8, #1
+  415494:	7200011f 	tst	w8, #0x1
+  415498:	9a8902c1 	csel	x1, x22, x9, eq  // eq = none
+  41549c:	9a8a0162 	csel	x2, x11, x10, eq  // eq = none
+  4154a0:	97ffc8ae 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  4154a4:	d101a3a0 	sub	x0, x29, #0x68
+  4154a8:	940255e9 	bl	4aac4c <android::base::LogMessage::~LogMessage()>
+  4154ac:	f94013e8 	ldr	x8, [sp, #32]
+  4154b0:	b9401fe9 	ldr	w9, [sp, #28]
+  4154b4:	b9000109 	str	w9, [x8]
+  4154b8:	14000042 	b	4155c0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x81c>
+  4154bc:	9404ab95 	bl	540310 <__errno>
+  4154c0:	b9400008 	ldr	w8, [x0]
+  4154c4:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  4154c8:	f90013e0 	str	x0, [sp, #32]
+  4154cc:	d101a3a0 	sub	x0, x29, #0x68
+  4154d0:	52802f82 	mov	w2, #0x17c                 	// #380
+  4154d4:	321e03e4 	orr	w4, wzr, #0x4
+  4154d8:	12800006 	mov	w6, #0xffffffff            	// #-1
+  4154dc:	91000021 	add	x1, x1, #0x0
+  4154e0:	2a1f03e3 	mov	w3, wzr
+  4154e4:	aa1f03e5 	mov	x5, xzr
+  4154e8:	b9001fe8 	str	w8, [sp, #28]
+  4154ec:	94025596 	bl	4aab44 <android::base::LogMessage::LogMessage(char const*, unsigned int, android::base::LogId, android::base::LogSeverity, char const*, int)>
+  4154f0:	d101a3a0 	sub	x0, x29, #0x68
+  4154f4:	94025592 	bl	4aab3c <ENGINE_get_RSA_method>
+  4154f8:	52800562 	mov	w2, #0x2b                  	// #43
+  4154fc:	aa1703e1 	mov	x1, x23
+  415500:	97ffc896 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415504:	f9400368 	ldr	x8, [x27]
+  415508:	39400109 	ldrb	w9, [x8]
+  41550c:	a940a90b 	ldp	x11, x10, [x8, #8]
+  415510:	d341fd2c 	lsr	x12, x9, #1
+  415514:	7200013f 	tst	w9, #0x1
+  415518:	9a881541 	csinc	x1, x10, x8, ne  // ne = any
+  41551c:	9a8b0182 	csel	x2, x12, x11, eq  // eq = none
+  415520:	97ffc88e 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415524:	320007e2 	orr	w2, wzr, #0x3
+  415528:	aa1803e1 	mov	x1, x24
+  41552c:	97ffc88b 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415530:	b94063e8 	ldr	w8, [sp, #96]
+  415534:	7100051f 	cmp	w8, #0x1
+  415538:	540035a1 	b.ne	415bec <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe48>  // b.any
+  41553c:	394103e8 	ldrb	w8, [sp, #64]
+  415540:	a944a7ea 	ldp	x10, x9, [sp, #72]
+  415544:	d341fd0b 	lsr	x11, x8, #1
+  415548:	7200011f 	tst	w8, #0x1
+  41554c:	9a8902c1 	csel	x1, x22, x9, eq  // eq = none
+  415550:	9a8a0162 	csel	x2, x11, x10, eq  // eq = none
+  415554:	97ffc881 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415558:	d101a3a0 	sub	x0, x29, #0x68
+  41555c:	940255bc 	bl	4aac4c <android::base::LogMessage::~LogMessage()>
+  415560:	f94013e8 	ldr	x8, [sp, #32]
+  415564:	b9401fe9 	ldr	w9, [sp, #28]
+  415568:	b9000109 	str	w9, [x8]
+  41556c:	1400002b 	b	415618 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x874>
+  415570:	f9400361 	ldr	x1, [x27]
+  415574:	910243e0 	add	x0, sp, #0x90
+  415578:	97ffc971 	bl	407b3c <unsigned long std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > > > >::__count_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const>
+  41557c:	f9400361 	ldr	x1, [x27]
+  415580:	b40000a0 	cbz	x0, 415594 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x7f0>
+  415584:	b9404828 	ldr	w8, [x1, #72]
+  415588:	32150108 	orr	w8, w8, #0x800
+  41558c:	b9004828 	str	w8, [x1, #72]
+  415590:	14000029 	b	415634 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x890>
+  415594:	9100a3e0 	add	x0, sp, #0x28
+  415598:	97ffc969 	bl	407b3c <unsigned long std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > > > >::__count_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const>
+  41559c:	b40002a0 	cbz	x0, 4155f0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x84c>
+  4155a0:	f9400360 	ldr	x0, [x27]
+  4155a4:	910103e8 	add	x8, sp, #0x40
+  4155a8:	9400423b 	bl	425e94 <android::init::Service::Start()>
+  4155ac:	b94063e8 	ldr	w8, [sp, #96]
+  4155b0:	340000e8 	cbz	w8, 4155cc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x828>
+  4155b4:	9402555f 	bl	4aab30 <android::base::GetMinimumLogSeverity()>
+  4155b8:	7100101f 	cmp	w0, #0x4
+  4155bc:	54fff26d 	b.le	415408 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x664>
+  4155c0:	b94063e8 	ldr	w8, [sp, #96]
+  4155c4:	3100051f 	cmn	w8, #0x1
+  4155c8:	540000a0 	b.eq	4155dc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x838>  // b.none
+  4155cc:	f8685b48 	ldr	x8, [x26, w8, uxtw #3]
+  4155d0:	d101a3a0 	sub	x0, x29, #0x68
+  4155d4:	910103e1 	add	x1, sp, #0x40
+  4155d8:	d63f0100 	blr	x8
+  4155dc:	f9400368 	ldr	x8, [x27]
+  4155e0:	b9404909 	ldr	w9, [x8, #72]
+  4155e4:	32150129 	orr	w9, w9, #0x800
+  4155e8:	b9004909 	str	w9, [x8, #72]
+  4155ec:	14000012 	b	415634 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x890>
+  4155f0:	f9400360 	ldr	x0, [x27]
+  4155f4:	39412408 	ldrb	w8, [x0, #73]
+  4155f8:	361801e8 	tbz	w8, #3, 415634 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x890>
+  4155fc:	910103e8 	add	x8, sp, #0x40
+  415600:	94004225 	bl	425e94 <android::init::Service::Start()>
+  415604:	b94063e8 	ldr	w8, [sp, #96]
+  415608:	340000e8 	cbz	w8, 415624 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x880>
+  41560c:	94025549 	bl	4aab30 <android::base::GetMinimumLogSeverity()>
+  415610:	7100101f 	cmp	w0, #0x4
+  415614:	54fff54d 	b.le	4154bc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x718>
+  415618:	b94063e8 	ldr	w8, [sp, #96]
+  41561c:	3100051f 	cmn	w8, #0x1
+  415620:	540000a0 	b.eq	415634 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x890>  // b.none
+  415624:	f8685b48 	ldr	x8, [x26, w8, uxtw #3]
+  415628:	d101a3a0 	sub	x0, x29, #0x68
+  41562c:	910103e1 	add	x1, sp, #0x40
+  415630:	d63f0100 	blr	x8
+  415634:	9100237b 	add	x27, x27, #0x8
+  415638:	eb1b039f 	cmp	x28, x27
+  41563c:	54fff9a1 	b.ne	415570 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x7cc>  // b.any
+  415640:	52800048 	mov	w8, #0x2                   	// #2
+  415644:	72bbd5a8 	movk	w8, #0xdead, lsl #16
+  415648:	6b08029f 	cmp	w20, w8
+  41564c:	540000a0 	b.eq	415660 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x8bc>  // b.none
+  415650:	52800088 	mov	w8, #0x4                   	// #4
+  415654:	72bbd5a8 	movk	w8, #0xdead, lsl #16
+  415658:	6b08029f 	cmp	w20, w8
+  41565c:	54000041 	b.ne	415664 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x8c0>  // b.any
+  415660:	940001a5 	bl	415cf4 <android::init::TurnOffBacklight()>
+  415664:	94002f0d 	bl	421298 <android::init::ServiceList::GetInstance()>
+  415668:	aa0003f6 	mov	x22, x0
+  41566c:	a94062d9 	ldp	x25, x24, [x22]
+  415670:	eb19031f 	cmp	x24, x25
+  415674:	54000360 	b.eq	4156e0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x93c>  // b.none
+  415678:	b0000c37 	adrp	x23, 59a000 <dl_iterate_phdr+0x2294>
+  41567c:	910626f7 	add	x23, x23, #0x189
+  415680:	f9400320 	ldr	x0, [x25]
+  415684:	39400008 	ldrb	w8, [x0]
+  415688:	f9400409 	ldr	x9, [x0, #8]
+  41568c:	d341fd0a 	lsr	x10, x8, #1
+  415690:	7200011f 	tst	w8, #0x1
+  415694:	9a890148 	csel	x8, x10, x9, eq  // eq = none
+  415698:	f100211f 	cmp	x8, #0x8
+  41569c:	540000e1 	b.ne	4156b8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x914>  // b.any
+  4156a0:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  4156a4:	321d03e4 	orr	w4, wzr, #0x8
+  4156a8:	aa1f03e1 	mov	x1, xzr
+  4156ac:	aa1703e3 	mov	x3, x23
+  4156b0:	9403f422 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  4156b4:	340000a0 	cbz	w0, 4156c8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x924>
+  4156b8:	91002339 	add	x25, x25, #0x8
+  4156bc:	eb19031f 	cmp	x24, x25
+  4156c0:	54fffe01 	b.ne	415680 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x8dc>  // b.any
+  4156c4:	14000002 	b	4156cc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x928>
+  4156c8:	aa1903f8 	mov	x24, x25
+  4156cc:	f94006c8 	ldr	x8, [x22, #8]
+  4156d0:	eb08031f 	cmp	x24, x8
+  4156d4:	54000060 	b.eq	4156e0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x93c>  // b.none
+  4156d8:	f9400318 	ldr	x24, [x24]
+  4156dc:	14000002 	b	4156e4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x940>
+  4156e0:	aa1f03f8 	mov	x24, xzr
+  4156e4:	94002eed 	bl	421298 <android::init::ServiceList::GetInstance()>
+  4156e8:	aa0003f6 	mov	x22, x0
+  4156ec:	a94066da 	ldp	x26, x25, [x22]
+  4156f0:	eb1a033f 	cmp	x25, x26
+  4156f4:	54000800 	b.eq	4157f4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa50>  // b.none
+  4156f8:	b0000c37 	adrp	x23, 59a000 <dl_iterate_phdr+0x2294>
+  4156fc:	91064af7 	add	x23, x23, #0x192
+  415700:	f9400340 	ldr	x0, [x26]
+  415704:	39400008 	ldrb	w8, [x0]
+  415708:	f9400409 	ldr	x9, [x0, #8]
+  41570c:	d341fd0a 	lsr	x10, x8, #1
+  415710:	7200011f 	tst	w8, #0x1
+  415714:	9a890148 	csel	x8, x10, x9, eq  // eq = none
+  415718:	f100391f 	cmp	x8, #0xe
+  41571c:	540000e1 	b.ne	415738 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x994>  // b.any
+  415720:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  415724:	321f0be4 	orr	w4, wzr, #0xe
+  415728:	aa1f03e1 	mov	x1, xzr
+  41572c:	aa1703e3 	mov	x3, x23
+  415730:	9403f402 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  415734:	340000a0 	cbz	w0, 415748 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x9a4>
+  415738:	9100235a 	add	x26, x26, #0x8
+  41573c:	eb1a033f 	cmp	x25, x26
+  415740:	54fffe01 	b.ne	415700 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x95c>  // b.any
+  415744:	14000002 	b	41574c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x9a8>
+  415748:	aa1a03f9 	mov	x25, x26
+  41574c:	f94006c8 	ldr	x8, [x22, #8]
+  415750:	eb08033f 	cmp	x25, x8
+  415754:	54000500 	b.eq	4157f4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa50>  // b.none
+  415758:	b40004f8 	cbz	x24, 4157f4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa50>
+  41575c:	f9400328 	ldr	x8, [x25]
+  415760:	b40004a8 	cbz	x8, 4157f4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa50>
+  415764:	39412108 	ldrb	w8, [x8, #72]
+  415768:	36100468 	tbz	w8, #2, 4157f4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa50>
+  41576c:	94002ecb 	bl	421298 <android::init::ServiceList::GetInstance()>
+  415770:	a9406017 	ldp	x23, x24, [x0]
+  415774:	eb1802ff 	cmp	x23, x24
+  415778:	540003e0 	b.eq	4157f4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa50>  // b.none
+  41577c:	b0000c29 	adrp	x9, 59a000 <dl_iterate_phdr+0x2294>
+  415780:	91068529 	add	x9, x9, #0x1a1
+  415784:	f9400139 	ldr	x25, [x9]
+  415788:	910103e8 	add	x8, sp, #0x40
+  41578c:	b240011a 	orr	x26, x8, #0x1
+  415790:	5280025b 	mov	w27, #0x12                  	// #18
+  415794:	52800ddc 	mov	w28, #0x6e                  	// #110
+  415798:	f94002e8 	ldr	x8, [x23]
+  41579c:	910103e1 	add	x1, sp, #0x40
+  4157a0:	a9047fff 	stp	xzr, xzr, [sp, #64]
+  4157a4:	f9002bff 	str	xzr, [sp, #80]
+  4157a8:	91006100 	add	x0, x8, #0x18
+  4157ac:	390103fb 	strb	w27, [sp, #64]
+  4157b0:	f9000359 	str	x25, [x26]
+  4157b4:	3900235c 	strb	w28, [x26, #8]
+  4157b8:	39012bff 	strb	wzr, [sp, #74]
+  4157bc:	97ffc8e0 	bl	407b3c <unsigned long std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > > > >::__count_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const>
+  4157c0:	394103e8 	ldrb	w8, [sp, #64]
+  4157c4:	aa0003f6 	mov	x22, x0
+  4157c8:	36000068 	tbz	w8, #0, 4157d4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa30>
+  4157cc:	f9402be0 	ldr	x0, [sp, #80]
+  4157d0:	940377f3 	bl	4f379c <operator delete(void*)>
+  4157d4:	b40000b6 	cbz	x22, 4157e8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa44>
+  4157d8:	f94002e8 	ldr	x8, [x23]
+  4157dc:	b9404909 	ldr	w9, [x8, #72]
+  4157e0:	32150129 	orr	w9, w9, #0x800
+  4157e4:	b9004909 	str	w9, [x8, #72]
+  4157e8:	910022f7 	add	x23, x23, #0x8
+  4157ec:	eb17031f 	cmp	x24, x23
+  4157f0:	54fffd41 	b.ne	415798 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x9f4>  // b.any
+  4157f4:	94002ea9 	bl	421298 <android::init::ServiceList::GetInstance()>
+  4157f8:	910103e8 	add	x8, sp, #0x40
+  4157fc:	94004c7b 	bl	4289e8 <android::init::ServiceList::services_in_shutdown_order() const>
+  415800:	a9445ff6 	ldp	x22, x23, [sp, #64]
+  415804:	eb1702df 	cmp	x22, x23
+  415808:	54000120 	b.eq	41582c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa88>  // b.none
+  41580c:	f94002c0 	ldr	x0, [x22]
+  415810:	39412408 	ldrb	w8, [x0, #73]
+  415814:	37180048 	tbnz	w8, #3, 41581c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa78>
+  415818:	94004972 	bl	427de0 <android::init::Service::Stop()>
+  41581c:	910022d6 	add	x22, x22, #0x8
+  415820:	eb1602ff 	cmp	x23, x22
+  415824:	54ffff41 	b.ne	41580c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa68>  // b.any
+  415828:	f94023f6 	ldr	x22, [sp, #64]
+  41582c:	b4000096 	cbz	x22, 41583c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xa98>
+  415830:	aa1603e0 	mov	x0, x22
+  415834:	f90027f6 	str	x22, [sp, #72]
+  415838:	940377d9 	bl	4f379c <operator delete(void*)>
+  41583c:	940055c3 	bl	42af48 <android::init::ReapAnyOutstandingChildren()>
+  415840:	94002e96 	bl	421298 <android::init::ServiceList::GetInstance()>
+  415844:	aa0003f6 	mov	x22, x0
+  415848:	a94062d9 	ldp	x25, x24, [x22]
+  41584c:	eb19031f 	cmp	x24, x25
+  415850:	540003a0 	b.eq	4158c4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb20>  // b.none
+  415854:	b0000c37 	adrp	x23, 59a000 <dl_iterate_phdr+0x2294>
+  415858:	9106aef7 	add	x23, x23, #0x1ab
+  41585c:	f9400320 	ldr	x0, [x25]
+  415860:	39400008 	ldrb	w8, [x0]
+  415864:	f9400409 	ldr	x9, [x0, #8]
+  415868:	d341fd0a 	lsr	x10, x8, #1
+  41586c:	7200011f 	tst	w8, #0x1
+  415870:	9a890148 	csel	x8, x10, x9, eq  // eq = none
+  415874:	f100111f 	cmp	x8, #0x4
+  415878:	540000e1 	b.ne	415894 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xaf0>  // b.any
+  41587c:	92800002 	mov	x2, #0xffffffffffffffff    	// #-1
+  415880:	321e03e4 	orr	w4, wzr, #0x4
+  415884:	aa1f03e1 	mov	x1, xzr
+  415888:	aa1703e3 	mov	x3, x23
+  41588c:	9403f3ab 	bl	512738 <std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const>
+  415890:	340000a0 	cbz	w0, 4158a4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb00>
+  415894:	91002339 	add	x25, x25, #0x8
+  415898:	eb19031f 	cmp	x24, x25
+  41589c:	54fffe01 	b.ne	41585c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xab8>  // b.any
+  4158a0:	14000002 	b	4158a8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb04>
+  4158a4:	aa1903f8 	mov	x24, x25
+  4158a8:	f94006c8 	ldr	x8, [x22, #8]
+  4158ac:	eb08031f 	cmp	x24, x8
+  4158b0:	540000a0 	b.eq	4158c4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb20>  // b.none
+  4158b4:	f9400316 	ldr	x22, [x24]
+  4158b8:	b4000076 	cbz	x22, 4158c4 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb20>
+  4158bc:	394122c8 	ldrb	w8, [x22, #72]
+  4158c0:	37100ba8 	tbnz	w8, #2, 415a34 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xc90>
+  4158c4:	9402549b 	bl	4aab30 <android::base::GetMinimumLogSeverity()>
+  4158c8:	7100081f 	cmp	w0, #0x2
+  4158cc:	5400162d 	b.le	415b90 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xdec>
+  4158d0:	94002e72 	bl	421298 <android::init::ServiceList::GetInstance()>
+  4158d4:	910103e8 	add	x8, sp, #0x40
+  4158d8:	94004c44 	bl	4289e8 <android::init::ServiceList::services_in_shutdown_order() const>
+  4158dc:	a9445ff6 	ldp	x22, x23, [sp, #64]
+  4158e0:	eb1702df 	cmp	x22, x23
+  4158e4:	54000160 	b.eq	415910 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb6c>  // b.none
+  4158e8:	f94002c1 	ldr	x1, [x22]
+  4158ec:	910243e0 	add	x0, sp, #0x90
+  4158f0:	97ffc893 	bl	407b3c <unsigned long std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::unique_ptr<android::init::SectionParser, std::__1::default_delete<android::init::SectionParser> > > > >::__count_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const>
+  4158f4:	b4000060 	cbz	x0, 415900 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb5c>
+  4158f8:	f94002c0 	ldr	x0, [x22]
+  4158fc:	94004939 	bl	427de0 <android::init::Service::Stop()>
+  415900:	910022d6 	add	x22, x22, #0x8
+  415904:	eb1602ff 	cmp	x23, x22
+  415908:	54ffff01 	b.ne	4158e8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb44>  // b.any
+  41590c:	f94023f6 	ldr	x22, [sp, #64]
+  415910:	b4000096 	cbz	x22, 415920 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb7c>
+  415914:	aa1603e0 	mov	x0, x22
+  415918:	f90027f6 	str	x22, [sp, #72]
+  41591c:	940377a0 	bl	4f379c <operator delete(void*)>
+  415920:	9404db8c 	bl	54c750 <sync>
+  415924:	94024efb 	bl	4a9510 <android::base::boot_clock::now()>
+  415928:	f85603a8 	ldur	x8, [x29, #-160]
+  41592c:	eb080017 	subs	x23, x0, x8
+  415930:	540015c6 	b.vs	415be8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe44>
+  415934:	94024ef7 	bl	4a9510 <android::base::boot_clock::now()>
+  415938:	aa0003f6 	mov	x22, x0
+  41593c:	a9387fbf 	stp	xzr, xzr, [x29, #-128]
+  415940:	f81903bf 	stur	xzr, [x29, #-112]
+  415944:	a936ffbf 	stp	xzr, xzr, [x29, #-152]
+  415948:	f81783bf 	stur	xzr, [x29, #-136]
+  41594c:	360000d5 	tbz	w21, #0, 415964 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xbc0>
+  415950:	d10203a0 	sub	x0, x29, #0x80
+  415954:	d10263a1 	sub	x1, x29, #0x98
+  415958:	2a1f03e2 	mov	w2, wzr
+  41595c:	9400034f 	bl	416698 <android::init::FindPartitionsToUmount(std::__1::vector<android::init::MountEntry, std::__1::allocator<android::init::MountEntry> >*, std::__1::vector<android::init::MountEntry, std::__1::allocator<android::init::MountEntry> >*, bool)>
+  415960:	36001c60 	tbz	w0, #0, 415cec <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xf48>
+  415964:	94024eeb 	bl	4a9510 <android::base::boot_clock::now()>
+  415968:	eb160008 	subs	x8, x0, x22
+  41596c:	540013e6 	b.vs	415be8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe44>
+  415970:	d29964a9 	mov	x9, #0xcb25                	// #52005
+  415974:	d2869b6a 	mov	x10, #0x34db                	// #13531
+  415978:	f2a50929 	movk	x9, #0x2849, lsl #16
+  41597c:	f2baf6ca 	movk	x10, #0xd7b6, lsl #16
+  415980:	f2c42fa9 	movk	x9, #0x217d, lsl #32
+  415984:	f2dbd04a 	movk	x10, #0xde82, lsl #32
+  415988:	f2f79c89 	movk	x9, #0xbce4, lsl #48
+  41598c:	f2e8636a 	movk	x10, #0x431b, lsl #48
+  415990:	9b497ee9 	smulh	x9, x23, x9
+  415994:	9b4a7d08 	smulh	x8, x8, x10
+  415998:	9352fd2a 	asr	x10, x9, #18
+  41599c:	9352fd0b 	asr	x11, x8, #18
+  4159a0:	8b49fd49 	add	x9, x10, x9, lsr #63
+  4159a4:	8b48fd68 	add	x8, x11, x8, lsr #63
+  4159a8:	eb080120 	subs	x0, x9, x8
+  4159ac:	540011e6 	b.vs	415be8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe44>
+  4159b0:	94000448 	bl	416ad0 <android::init::UmountPartitions(std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> >)>
+  4159b4:	2a0003f6 	mov	w22, w0
+  4159b8:	35001216 	cbnz	w22, 415bf8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xe54>
+  4159bc:	36000135 	tbz	w21, #0, 4159e0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xc3c>
+  4159c0:	a9785bb5 	ldp	x21, x22, [x29, #-128]
+  4159c4:	eb1602bf 	cmp	x21, x22
+  4159c8:	540000c0 	b.eq	4159e0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xc3c>  // b.none
+  4159cc:	aa1503e0 	mov	x0, x21
+  4159d0:	94000505 	bl	416de4 <android::init::MountEntry::DoFsck()>
+  4159d4:	910182b5 	add	x21, x21, #0x60
+  4159d8:	eb1502df 	cmp	x22, x21
+  4159dc:	54ffff81 	b.ne	4159cc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xc28>  // b.any
+  4159e0:	2a1f03f6 	mov	w22, wzr
+  4159e4:	d10263a0 	sub	x0, x29, #0x98
+  4159e8:	9400055d 	bl	416f5c <std::__1::__vector_base<android::init::MountEntry, std::__1::allocator<android::init::MountEntry> >::~__vector_base()>
+  4159ec:	d10203a0 	sub	x0, x29, #0x80
+  4159f0:	9400055b 	bl	416f5c <std::__1::__vector_base<android::init::MountEntry, std::__1::allocator<android::init::MountEntry> >::~__vector_base()>
+  4159f4:	9404db57 	bl	54c750 <sync>
+  4159f8:	52800088 	mov	w8, #0x4                   	// #4
+  4159fc:	72bbd5a8 	movk	w8, #0xdead, lsl #16
+  415a00:	6b08029f 	cmp	w20, w8
+  415a04:	540000c0 	b.eq	415a1c <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xc78>  // b.none
+  415a08:	529c2008 	mov	w8, #0xe100                	// #57600
+  415a0c:	72a0bea8 	movk	w8, #0x5f5, lsl #16
+  415a10:	910103e0 	add	x0, sp, #0x40
+  415a14:	f90023e8 	str	x8, [sp, #64]
+  415a18:	9403fb19 	bl	51467c <std::__1::this_thread::sleep_for(std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > const&)>
+  415a1c:	d10283a1 	sub	x1, x29, #0xa0
+  415a20:	2a1603e0 	mov	w0, w22
+  415a24:	9400010e 	bl	415e5c <android::init::LogShutdownTime(android::init::UmountStat, android::base::Timer*)>
+  415a28:	2a1403e0 	mov	w0, w20
+  415a2c:	aa1303e1 	mov	x1, x19
+  415a30:	97fffc85 	bl	414c44 <android::init::RebootSystem(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)>
+  415a34:	b0000f88 	adrp	x8, 606000 <GCC_except_table139+0x37f24>
+  415a38:	9125e108 	add	x8, x8, #0x978
+  415a3c:	f9400909 	ldr	x9, [x8, #16]
+  415a40:	3dc00100 	ldr	q0, [x8]
+  415a44:	320007e0 	orr	w0, wzr, #0x3
+  415a48:	910103e1 	add	x1, sp, #0x40
+  415a4c:	d101a3a2 	sub	x2, x29, #0x68
+  415a50:	320003e3 	orr	w3, wzr, #0x1
+  415a54:	321f03e4 	orr	w4, wzr, #0x2
+  415a58:	320003e5 	orr	w5, wzr, #0x1
+  415a5c:	aa1f03e6 	mov	x6, xzr
+  415a60:	aa1f03e7 	mov	x7, xzr
+  415a64:	f9002be9 	str	x9, [sp, #80]
+  415a68:	3d8013e0 	str	q0, [sp, #64]
+  415a6c:	b90003ff 	str	wzr, [sp]
+  415a70:	940115ec 	bl	45b220 <android_fork_execvp_ext>
+  415a74:	aa1603e0 	mov	x0, x22
+  415a78:	940048da 	bl	427de0 <android::init::Service::Stop()>
+  415a7c:	17ffff95 	b	4158d0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb2c>
+  415a80:	9404aa24 	bl	540310 <__errno>
+  415a84:	aa0003f7 	mov	x23, x0
+  415a88:	b94002f8 	ldr	w24, [x23]
+  415a8c:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415a90:	91000021 	add	x1, x1, #0x0
+  415a94:	910103e0 	add	x0, sp, #0x40
+  415a98:	528029e2 	mov	w2, #0x14f                 	// #335
+  415a9c:	321f03e4 	orr	w4, wzr, #0x2
+  415aa0:	12800006 	mov	w6, #0xffffffff            	// #-1
+  415aa4:	2a1f03e3 	mov	w3, wzr
+  415aa8:	aa1f03e5 	mov	x5, xzr
+  415aac:	94025426 	bl	4aab44 <android::base::LogMessage::LogMessage(char const*, unsigned int, android::base::LogId, android::base::LogSeverity, char const*, int)>
+  415ab0:	910103e0 	add	x0, sp, #0x40
+  415ab4:	94025422 	bl	4aab3c <ENGINE_get_RSA_method>
+  415ab8:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415abc:	9102cc21 	add	x1, x1, #0xb3
+  415ac0:	528002c2 	mov	w2, #0x16                  	// #22
+  415ac4:	97ffc725 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415ac8:	394002c8 	ldrb	w8, [x22]
+  415acc:	a940a6ca 	ldp	x10, x9, [x22, #8]
+  415ad0:	d341fd0b 	lsr	x11, x8, #1
+  415ad4:	7200011f 	tst	w8, #0x1
+  415ad8:	9a961521 	csinc	x1, x9, x22, ne  // ne = any
+  415adc:	9a8a0162 	csel	x2, x11, x10, eq  // eq = none
+  415ae0:	97ffc71e 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415ae4:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415ae8:	91032821 	add	x1, x1, #0xca
+  415aec:	321c03e2 	orr	w2, wzr, #0x10
+  415af0:	97ffc71a 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415af4:	39400268 	ldrb	w8, [x19]
+  415af8:	a940a66a 	ldp	x10, x9, [x19, #8]
+  415afc:	d341fd0b 	lsr	x11, x8, #1
+  415b00:	7200011f 	tst	w8, #0x1
+  415b04:	9a931521 	csinc	x1, x9, x19, ne  // ne = any
+  415b08:	9a8a0162 	csel	x2, x11, x10, eq  // eq = none
+  415b0c:	97ffc713 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415b10:	910103e0 	add	x0, sp, #0x40
+  415b14:	9402544e 	bl	4aac4c <android::base::LogMessage::~LogMessage()>
+  415b18:	b90002f8 	str	w24, [x23]
+  415b1c:	17fffcb3 	b	414de8 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x44>
+  415b20:	9404a9fc 	bl	540310 <__errno>
+  415b24:	aa0003f6 	mov	x22, x0
+  415b28:	b94002d7 	ldr	w23, [x22]
+  415b2c:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415b30:	91000021 	add	x1, x1, #0x0
+  415b34:	910103e0 	add	x0, sp, #0x40
+  415b38:	52802d42 	mov	w2, #0x16a                 	// #362
+  415b3c:	321f03e4 	orr	w4, wzr, #0x2
+  415b40:	12800006 	mov	w6, #0xffffffff            	// #-1
+  415b44:	2a1f03e3 	mov	w3, wzr
+  415b48:	aa1f03e5 	mov	x5, xzr
+  415b4c:	940253fe 	bl	4aab44 <android::base::LogMessage::LogMessage(char const*, unsigned int, android::base::LogId, android::base::LogSeverity, char const*, int)>
+  415b50:	910103e0 	add	x0, sp, #0x40
+  415b54:	940253fa 	bl	4aab3c <ENGINE_get_RSA_method>
+  415b58:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415b5c:	91043421 	add	x1, x1, #0x10d
+  415b60:	52800242 	mov	w2, #0x12                  	// #18
+  415b64:	97ffc6fd 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415b68:	aa1f03e1 	mov	x1, xzr
+  415b6c:	94037e51 	bl	4f54b0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(long long)>
+  415b70:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415b74:	91048021 	add	x1, x1, #0x120
+  415b78:	320007e2 	orr	w2, wzr, #0x3
+  415b7c:	97ffc6f7 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415b80:	910103e0 	add	x0, sp, #0x40
+  415b84:	94025432 	bl	4aac4c <android::base::LogMessage::~LogMessage()>
+  415b88:	b90002d7 	str	w23, [x22]
+  415b8c:	17fffd50 	b	4150cc <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0x328>
+  415b90:	9404a9e0 	bl	540310 <__errno>
+  415b94:	aa0003f6 	mov	x22, x0
+  415b98:	b94002d7 	ldr	w23, [x22]
+  415b9c:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415ba0:	91000021 	add	x1, x1, #0x0
+  415ba4:	910103e0 	add	x0, sp, #0x40
+  415ba8:	528038a2 	mov	w2, #0x1c5                 	// #453
+  415bac:	321f03e4 	orr	w4, wzr, #0x2
+  415bb0:	12800006 	mov	w6, #0xffffffff            	// #-1
+  415bb4:	2a1f03e3 	mov	w3, wzr
+  415bb8:	aa1f03e5 	mov	x5, xzr
+  415bbc:	940253e2 	bl	4aab44 <android::base::LogMessage::LogMessage(char const*, unsigned int, android::base::LogId, android::base::LogSeverity, char const*, int)>
+  415bc0:	910103e0 	add	x0, sp, #0x40
+  415bc4:	940253de 	bl	4aab3c <ENGINE_get_RSA_method>
+  415bc8:	b0000c21 	adrp	x1, 59a000 <dl_iterate_phdr+0x2294>
+  415bcc:	9106c021 	add	x1, x1, #0x1b0
+  415bd0:	52800502 	mov	w2, #0x28                  	// #40
+  415bd4:	97ffc6e1 	bl	407758 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
+  415bd8:	910103e0 	add	x0, sp, #0x40
+  415bdc:	9402541c 	bl	4aac4c <android::base::LogMessage::~LogMessage()>
+  415be0:	b90002d7 	str	w23, [x22]
+  415be4:	17ffff3b 	b	4158d0 <android::init::DoReboot(unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)+0xb2c>
+  415be8:	9404a20d 	bl	53e41c <__ubsan_handle_sub_overflow_minimal_abort>
+  415bec:	9404a9d7 	bl	540348 <abort>
+  415bf0:	d101a3a0 	sub	x0, x29, #0x68
+  415bf4:	9403ee04 	bl	511404 <std::__1::__basic_string_common<true>::__throw_length_error() const>
+  415bf8:	d101a3b7 	sub	x23, x29, #0x68
+  415bfc:	940253cd 	bl	4aab30 <android::base::GetMinimumLogSeverity()>

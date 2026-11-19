@@ -1,0 +1,15 @@
+{
+  "source": "reference-sheng/assets/maintainer-original.png",
+  "original_sha256": "a642035eb41948031bf494c2b15849593ca3bad746fda6771851740715464d67",
+  "original_size": [
+    4096,
+    4096
+  ],
+  "packed_path": "twres/images/Default/About/maintainer.png",
+  "packed_size": [
+    192,
+    192
+  ],
+  "packed_sha256": "b22923c0212fbc59a136f9edf125f922635579e4925d354ae02873594ebe9fdc",
+  "operation": "LANCZOS resize to existing Fox avatar resource size; original retained unchanged"
+}

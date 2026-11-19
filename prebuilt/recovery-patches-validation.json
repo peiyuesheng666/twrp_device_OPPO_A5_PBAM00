@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-18",
+  "source_commit": "bc51c51d1a3ccfe06950e107982aabe2d17259b5",
+  "source_flavor": "OrangeFox fox_9.0",
+  "changed_files": [
+    "crypto/fde/Android.mk",
+    "crypto/fde/cryptfs.cpp"
+  ],
+  "method": "Recreate files from clean Git HEAD, apply device-tree script, compare every byte with current Recovery source",
+  "all_recovery_source_edits_reproduced": true,
+  "oem_default_password_synthetic_stock_emulation_cases_passed": 5,
+  "real_device_generated_password_logged": false
+}

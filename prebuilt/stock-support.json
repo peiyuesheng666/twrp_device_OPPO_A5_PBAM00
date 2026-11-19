@@ -1,0 +1,1106 @@
+{
+  "stock_recovery_sha256": "de2d3cc9057f39e039ef7407adf8e4348950cfe6aa920be6f2f4194ffb39cdb7",
+  "stock_vendor_source": "backup-a35/lun0_vendor.img",
+  "stock_vendor_bytes": 1476395008,
+  "imported": [
+    {
+      "path": "ueventd.qcom.rc",
+      "source": "recovery:ueventd.qcom.rc",
+      "sha256": "199275385f7af7b8a7a04cc09b8746a49b8e5452c738ddac8aabef10c4549716",
+      "bytes": 15674
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_ILI9881H_INNOLUX.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_ILI9881H_INNOLUX.bin",
+      "sha256": "38ffda0d65ee92c26e47ba9bb3309b615831ced8cb5a87bff7d93ca87f470e02",
+      "bytes": 310544
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_ILI9881H_INNOLUX_FAE.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_ILI9881H_INNOLUX_FAE.bin",
+      "sha256": "7e8ab45a601799ca9409f252958dab8cb6f0abba5ace416d0224bba99428678d",
+      "bytes": 310336
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_NT36525_AUO.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_NT36525_AUO.bin",
+      "sha256": "3fdb3f4ab62e8104ad996708622be7d1e48cdfa20593f3b1956028f0a7349d0b",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_NT36525_AUO_TEST.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_NT36525_AUO_TEST.bin",
+      "sha256": "4d41995ae89a43a8ad2ee29254d51a59418ffc29b825a084c6a11b733583f78e",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_NT36525_INNOLUX.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_NT36525_INNOLUX.bin",
+      "sha256": "2f4f2e34f85656f81634acfaa233834b43c43b5e88e2f26089addbe6b68133c4",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_NT36525_INNOLUX_TEST.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_NT36525_INNOLUX_TEST.bin",
+      "sha256": "9113457e82ec6dd515457053cbdfb4edb0c8bc89ac2bcae15889646cf18d4d51",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_NT36525_TIANMA.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_NT36525_TIANMA.bin",
+      "sha256": "23653836c1212a064d9918748dffd424eb75af187c4e98c506686a18f90af2e8",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NF_NT36525_TIANMA_TEST.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NF_NT36525_TIANMA_TEST.bin",
+      "sha256": "d93df24dd75360025f5c5e422b0a86794f53b7f48d9c749f0f53bc2ea6eb027d",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NT36525_TIANMA.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NT36525_TIANMA.bin",
+      "sha256": "c34a32aa25bafc6e61528d71b7f10f98dd24893aa5ab70bbf7ff690c2613a663",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_NT_NF36672_HUAXING.bin",
+      "source": "vendor:/firmware/tp/18031/FW_NT_NF36672_HUAXING.bin",
+      "sha256": "a000f183708aaede35c33efd7b8b702baad22b5cb5961b920c5eb926c468a896",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_S6D7AT0_BOE.bin",
+      "source": "vendor:/firmware/tp/18031/FW_S6D7AT0_BOE.bin",
+      "sha256": "c624c316bdad72ac7ad1fac00f53b71393156b0fcc4c4c73a4f997da22315943",
+      "bytes": 120352
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_S6D7AT0_BOE_FAE.bin",
+      "source": "vendor:/firmware/tp/18031/FW_S6D7AT0_BOE_FAE.bin",
+      "sha256": "eedfd536a2aee496357fdedc7b64559e922933159ed404b82de74f86c85b91ce",
+      "bytes": 120144
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_S6D7AT0_TIANMA.bin",
+      "source": "vendor:/firmware/tp/18031/FW_S6D7AT0_TIANMA.bin",
+      "sha256": "2606ade3a5e8e6001459906f952c688982ae7f9b2b6bba5f77a1219f80075b76",
+      "bytes": 120352
+    },
+    {
+      "path": "vendor/firmware/tp/18031/FW_S6D7AT0_TIANMA_FAE.bin",
+      "source": "vendor:/firmware/tp/18031/FW_S6D7AT0_TIANMA_FAE.bin",
+      "sha256": "63a53a320fc72e7a8e43c26023b7988660c2517886c615ada1629ec4a6d9d594",
+      "bytes": 120144
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_NF_ILI9881H_INNOLUX.ini",
+      "source": "vendor:/firmware/tp/18031/LIMIT_NF_ILI9881H_INNOLUX.ini",
+      "sha256": "ae87104a91a6dd2fd3b864d8b769fc382d392d98252d89aded7a93deb2f3ddce",
+      "bytes": 81709
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_NF_NT36525_AUO.img",
+      "source": "vendor:/firmware/tp/18031/LIMIT_NF_NT36525_AUO.img",
+      "sha256": "89ca41573c32ba7dff5895bddafec24582863574e8290f34e32ba6bb82f2ecc9",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_NF_NT36525_INNOLUX.img",
+      "source": "vendor:/firmware/tp/18031/LIMIT_NF_NT36525_INNOLUX.img",
+      "sha256": "5acae3693d21d600aaaee711485c9c1f7feecf1ad4f303778fb960ae7b86a3a9",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_NF_NT36525_TIANMA.img",
+      "source": "vendor:/firmware/tp/18031/LIMIT_NF_NT36525_TIANMA.img",
+      "sha256": "ed92a65642714823e7d1dbb40ad489900541daf7e85dd7bd21c035742f9a20b4",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_NT36525_TIANMA.img",
+      "source": "vendor:/firmware/tp/18031/LIMIT_NT36525_TIANMA.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_S6D7AT0_BOE.img",
+      "source": "vendor:/firmware/tp/18031/LIMIT_S6D7AT0_BOE.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "vendor/firmware/tp/18031/LIMIT_S6D7AT0_TIANMA.img",
+      "source": "vendor:/firmware/tp/18031/LIMIT_S6D7AT0_TIANMA.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_HX83112_AUO.img",
+      "source": "vendor:/firmware/tp/18171/FW_NF_HX83112_AUO.img",
+      "sha256": "7399d5b5befec2ef22b6555b55bec033dff1abebdde7c269fbe3634a27b1831e",
+      "bytes": 65744
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_HX83112_AUO_FAE.img",
+      "source": "vendor:/firmware/tp/18171/FW_NF_HX83112_AUO_FAE.img",
+      "sha256": "0383a9c451a7e3c3b8d9562568ae2b22833a4f26ae76b60d203e72a752ec83b5",
+      "bytes": 65536
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_HX83112_AUO_TEST.img",
+      "source": "vendor:/firmware/tp/18171/FW_NF_HX83112_AUO_TEST.img",
+      "sha256": "f2b896f0ef1226aa76ffa1be766b698146af0176def54fe429bd8c866e9c18a5",
+      "bytes": 65536
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_ILI9881H_INNOLUX.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_ILI9881H_INNOLUX.bin",
+      "sha256": "84b90e17143bf46c5e8040f2bdef7cabb372c50f2e8f4150672e07a26435f3cf",
+      "bytes": 320309
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_ILI9881H_INNOLUX_FAE.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_ILI9881H_INNOLUX_FAE.bin",
+      "sha256": "e41cce3f4e4109807d4e6ded8d193125944f29530f0a8ec2a1c65c802698dda8",
+      "bytes": 318391
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_AUO.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_AUO.bin",
+      "sha256": "62e0eba3315d580fcca9862079b3911bd31b3349a4676386f2e026359956fbaf",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_AUO_TEST.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_AUO_TEST.bin",
+      "sha256": "4d41995ae89a43a8ad2ee29254d51a59418ffc29b825a084c6a11b733583f78e",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_BOE.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_BOE.bin",
+      "sha256": "a58d676fdb0eb9ac7662b8647d9fcf76d1e39a39320f28f5b9f3f56ca52a5d8d",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_BOE_FAE.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_BOE_FAE.bin",
+      "sha256": "babe63f8db0351dc8b3b54beb50628ba18b6314380fc85568ffd8a6f1a3c5b3f",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_BOE_TEST.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_BOE_TEST.bin",
+      "sha256": "6c5d9b4c76996653c23d893bd5f3317464fd83e7b7e527c8a7b96c942a49e913",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_INNOLUX.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_INNOLUX.bin",
+      "sha256": "5f2f6086208b35c796bae57322ee10dace8ff005172c83e60aba7168a826490f",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_INNOLUX_TEST.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_INNOLUX_TEST.bin",
+      "sha256": "9113457e82ec6dd515457053cbdfb4edb0c8bc89ac2bcae15889646cf18d4d51",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_TIANMA.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_TIANMA.bin",
+      "sha256": "eade266834d5586ad5221a6af8b8e093b1b5a0e53b82271bc92a9c0037dfbe20",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_TIANMA_FAE.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_TIANMA_FAE.bin",
+      "sha256": "cf9d92fc79d71c6d91b9976a25650f2cd9ff545394991e5b5caf90aa731222f6",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NF_NT36525_TIANMA_TEST.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NF_NT36525_TIANMA_TEST.bin",
+      "sha256": "094fa43c2c49486ab59833bccaed577b407e664fb6b02c85c7c3df106bcb7e52",
+      "bytes": 118784
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NT36525_TIANMA.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NT36525_TIANMA.bin",
+      "sha256": "c34a32aa25bafc6e61528d71b7f10f98dd24893aa5ab70bbf7ff690c2613a663",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_NT_NF36672_HUAXING.bin",
+      "source": "vendor:/firmware/tp/18171/FW_NT_NF36672_HUAXING.bin",
+      "sha256": "a000f183708aaede35c33efd7b8b702baad22b5cb5961b920c5eb926c468a896",
+      "bytes": 118992
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_S6D7AT0_BOE.bin",
+      "source": "vendor:/firmware/tp/18171/FW_S6D7AT0_BOE.bin",
+      "sha256": "e553c1924e088e2e8577595950202ce05545d6b6efcf67ecca5a6a106feca3c4",
+      "bytes": 120352
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_S6D7AT0_BOE_FAE.bin",
+      "source": "vendor:/firmware/tp/18171/FW_S6D7AT0_BOE_FAE.bin",
+      "sha256": "b8301f18790040f80077c65efcd48696f4a7db878fa0410db81f5c2237625bd7",
+      "bytes": 120144
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_S6D7AT0_HLT.bin",
+      "source": "vendor:/firmware/tp/18171/FW_S6D7AT0_HLT.bin",
+      "sha256": "6262c2d3d6ce43df30bdeaf88f2f36759557ee8934016cdcb2d60537f486f1e8",
+      "bytes": 120352
+    },
+    {
+      "path": "vendor/firmware/tp/18171/FW_S6D7AT0_TIANMA.bin",
+      "source": "vendor:/firmware/tp/18171/FW_S6D7AT0_TIANMA.bin",
+      "sha256": "5d1d2f866567657fd9ff0b5750c2932b869108ead32548b1a031a88415dde51b",
+      "bytes": 120352
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_NF_ILI9881H_INNOLUX.ini",
+      "source": "vendor:/firmware/tp/18171/LIMIT_NF_ILI9881H_INNOLUX.ini",
+      "sha256": "94e763ec7c01f829c4a9469e5de29d51007a41ed21e5b02ecd115f9c35c3e520",
+      "bytes": 49605
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_NF_NT36525_AUO.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_NF_NT36525_AUO.img",
+      "sha256": "89ca41573c32ba7dff5895bddafec24582863574e8290f34e32ba6bb82f2ecc9",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_NF_NT36525_BOE.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_NF_NT36525_BOE.img",
+      "sha256": "711f53a37212ea6a6c10b37bf97232b36fd01869cc5f95344fd57986227e8810",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_NF_NT36525_INNOLUX.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_NF_NT36525_INNOLUX.img",
+      "sha256": "5acae3693d21d600aaaee711485c9c1f7feecf1ad4f303778fb960ae7b86a3a9",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_NF_NT36525_TIANMA.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_NF_NT36525_TIANMA.img",
+      "sha256": "9d0aa812eced3d9af2535f74c4e4052872f203251a2948784c41f9510dfa6619",
+      "bytes": 33428
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_NT36525_TIANMA.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_NT36525_TIANMA.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_S6D7AT0_BOE.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_S6D7AT0_BOE.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_S6D7AT0_HLT.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_S6D7AT0_HLT.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "vendor/firmware/tp/18171/LIMIT_S6D7AT0_TIANMA.img",
+      "source": "vendor:/firmware/tp/18171/LIMIT_S6D7AT0_TIANMA.img",
+      "sha256": "4fa4d1ed034fd5967f711beddde67229dbff17106709916e5296349694f1136d",
+      "bytes": 9372
+    },
+    {
+      "path": "sbin/a5-stock/linker64",
+      "source": "recovery:sbin/linker64",
+      "sha256": "dacb225857bb159e6444caebe55a56fbffe86c2a961780f7176f7fbc3bbc62b2",
+      "bytes": 1376216
+    },
+    {
+      "path": "vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so",
+      "source": "recovery:sbin/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so",
+      "sha256": "42724958ce7e4555a36c48ecf43489feaf6de6211c75e3b7970917c5993b617e",
+      "bytes": 85400
+    },
+    {
+      "path": "sbin/a5-stock/libdl.so",
+      "source": "recovery:sbin/libdl.so",
+      "sha256": "b912122e96c3002a3dfc1011650473fd76eb637094534323e7326888bd6c2d8c",
+      "bytes": 10688
+    },
+    {
+      "path": "sbin/a5-stock/libm.so",
+      "source": "recovery:sbin/libm.so",
+      "sha256": "b0ec7a6f6534dfdf304d6797637c6ee3983aa20910dd5ae732ee9f722ea2343d",
+      "bytes": 245000
+    },
+    {
+      "path": "sbin/a5-stock/libc.so",
+      "source": "recovery:sbin/libc.so",
+      "sha256": "3d6932288164113211eaed604d6ba5dd8de0cdf940e2ffc489f7822d6c1ff1e3",
+      "bytes": 1178112
+    },
+    {
+      "path": "sbin/a5-stock/libc++.so",
+      "source": "recovery:sbin/libc++.so",
+      "sha256": "8ae7be56dac49d104f7404f8a118a0dd35c50ab3f01ed74eca5a5cb6fc935fa2",
+      "bytes": 1036760
+    },
+    {
+      "path": "sbin/a5-stock/android.hardware.keymaster@3.0.so",
+      "source": "recovery:sbin/android.hardware.keymaster@3.0.so",
+      "sha256": "e29f7f5abed98b70c94068b50819198b4a94eb5a923edd12c3bfb9183232245d",
+      "bytes": 211080
+    },
+    {
+      "path": "sbin/a5-stock/libcutils.so",
+      "source": "recovery:sbin/libcutils.so",
+      "sha256": "041dbc5eef9c3d1288a324a8c7e9809b519bb98ff7ead37ffa66d9b1798fc092",
+      "bytes": 77104
+    },
+    {
+      "path": "sbin/a5-stock/liblog.so",
+      "source": "recovery:sbin/liblog.so",
+      "sha256": "c6a4a71d45457e1db84f661923dfd3da54eb734ae13f1b2634742442b0137ee7",
+      "bytes": 108240
+    },
+    {
+      "path": "sbin/a5-stock/libutils.so",
+      "source": "recovery:sbin/libutils.so",
+      "sha256": "0c1fe517e65f09f272c2c686bc50c02b1e155767380622d31544ce78f98f6b6c",
+      "bytes": 130416
+    },
+    {
+      "path": "sbin/a5-stock/libvndksupport.so",
+      "source": "recovery:sbin/libvndksupport.so",
+      "sha256": "5d647b88cb542e338e952c89fafed7d6fc0716ee6aab41d7fc7c3c6235769d8e",
+      "bytes": 6856
+    },
+    {
+      "path": "sbin/a5-stock/libbacktrace.so",
+      "source": "recovery:sbin/libbacktrace.so",
+      "sha256": "059feb035e788911179342a244d0c09270d0e30af5cefc06e222fbe202184c80",
+      "bytes": 126288
+    },
+    {
+      "path": "sbin/a5-stock/libunwind.so",
+      "source": "recovery:sbin/libunwind.so",
+      "sha256": "07bbb8c05de4ff08ce1f531303d36c7638de2fa458acb721d676a347763eccc1",
+      "bytes": 118520
+    },
+    {
+      "path": "sbin/a5-stock/liblzma.so",
+      "source": "recovery:sbin/liblzma.so",
+      "sha256": "fe846e918af25886cb1dc0500dcf6c3f1977f9a2dc6eb429b13c4c0dccbd38b7",
+      "bytes": 167336
+    },
+    {
+      "path": "sbin/a5-stock/libbase.so",
+      "source": "recovery:sbin/libbase.so",
+      "sha256": "c815d25d69d9a572621ef31fe260cbbf427fd75a5b435cc6425569b456013b21",
+      "bytes": 72912
+    },
+    {
+      "path": "sbin/a5-stock/libhwbinder.so",
+      "source": "recovery:sbin/libhwbinder.so",
+      "sha256": "6b17264824c8f0c73a026f085a2dbcd7fac55a30dd8dec6d2b0b512cb0cb57b1",
+      "bytes": 163784
+    },
+    {
+      "path": "sbin/a5-stock/libhidltransport.so",
+      "source": "recovery:sbin/libhidltransport.so",
+      "sha256": "e6e1598b84e71d04b70b916836bb64a9c45bdbabaec354c3b1ec9fa21b91d70f",
+      "bytes": 435192
+    },
+    {
+      "path": "sbin/a5-stock/libhidlbase.so",
+      "source": "recovery:sbin/libhidlbase.so",
+      "sha256": "ee6c2d23dbac909382acb0786bde65d1d37255f6cdb5a40782a94d109fe904a8",
+      "bytes": 60472
+    },
+    {
+      "path": "sbin/a5-stock/libkeymasterdeviceutils.so",
+      "source": "recovery:sbin/libkeymasterdeviceutils.so",
+      "sha256": "014d07ce0a1b53e08b2ae6a03d781e1fcef60544045ded7a5fad4a70116733a0",
+      "bytes": 14976
+    },
+    {
+      "path": "sbin/a5-stock/libcrypto.so",
+      "source": "recovery:sbin/libcrypto.so",
+      "sha256": "e078f5a57ab866b173d2135152953b172a31c4d011acc4220e4a750dd2f2f9b7",
+      "bytes": 1248040
+    },
+    {
+      "path": "sbin/a5-stock/libQSEEComAPI.so",
+      "source": "recovery:sbin/libQSEEComAPI.so",
+      "sha256": "1c72d01c58638cd1ed9cca35e558c0d8c9abed3312945cd3d76a3ae8da10a8ef",
+      "bytes": 31352
+    },
+    {
+      "path": "sbin/a5-stock/libGPreqcancel.so",
+      "source": "recovery:sbin/libGPreqcancel.so",
+      "sha256": "efaa97a5b8236edbe2ba6d674ff64dae4045e8685057816c9be3d2ac35dce899",
+      "bytes": 10864
+    },
+    {
+      "path": "sbin/a5-stock/libGPreqcancel_svc.so",
+      "source": "recovery:sbin/libGPreqcancel_svc.so",
+      "sha256": "d792b38205d7c247e731bb535ee88b00369d4add26002ece2f3a54001c4b9eba",
+      "bytes": 10864
+    },
+    {
+      "path": "sbin/a5-stock/libdiag.so",
+      "source": "recovery:sbin/libdiag.so",
+      "sha256": "8cb6be3d1be99a7721285b9dbc01ca26399e496117d625c1cc2f4340cf03ef23",
+      "bytes": 172712
+    },
+    {
+      "path": "sbin/a5-stock/libqisl.so",
+      "source": "recovery:sbin/libqisl.so",
+      "sha256": "094604eae3ba4281ee77287350a2b22d7bab89a8b819a11588877b906f3b8f63",
+      "bytes": 19224
+    },
+    {
+      "path": "sbin/a5-stock/libdrmtime.so",
+      "source": "recovery:sbin/libdrmtime.so",
+      "sha256": "2b3ab4976e814115fe17a40ae2435a28d5b38a535844cd63256e7586e87d4efc",
+      "bytes": 15000
+    },
+    {
+      "path": "sbin/a5-stock/libtime_genoff.so",
+      "source": "recovery:sbin/libtime_genoff.so",
+      "sha256": "76b19a67729502947835eef1f8223af68f1fad2924bfb7d806df7ad78d165c41",
+      "bytes": 10776
+    },
+    {
+      "path": "sbin/a5-stock/libsecureui.so",
+      "source": "recovery:sbin/libsecureui.so",
+      "sha256": "2984e6e4edb885a2f0fec50b3b95e23107f23af7a16361b9c425a999884661e6",
+      "bytes": 32040
+    },
+    {
+      "path": "sbin/a5-stock/libsecureui_svcsock.so",
+      "source": "recovery:sbin/libsecureui_svcsock.so",
+      "sha256": "ed41d9286aa048e14f6b5e2086bfb8752bff6bcac28d2f39fa8cd89c3cf546a5",
+      "bytes": 36464
+    },
+    {
+      "path": "sbin/a5-stock/vendor.qti.hardware.tui_comm@1.0_vendor.so",
+      "source": "recovery:sbin/vendor.qti.hardware.tui_comm@1.0_vendor.so",
+      "sha256": "271866564aea5931b854e26fdf73ee81c89e5b333d2545004392efa9fb4de6fc",
+      "bytes": 194832
+    },
+    {
+      "path": "sbin/a5-stock/android.hidl.base@1.0.so",
+      "source": "recovery:sbin/android.hidl.base@1.0.so",
+      "sha256": "643053267fe5a711da0d5c0f01c9410f898cba50765846ecb1bab3ed5e1e44dc",
+      "bytes": 6376
+    },
+    {
+      "path": "sbin/a5-stock/libbinder.so",
+      "source": "recovery:sbin/libbinder.so",
+      "sha256": "0f01016faebf2911a133907a8cc85fc4280f05bbc82704f547c33e8c877efcf0",
+      "bytes": 589416
+    },
+    {
+      "path": "sbin/a5-stock/libqdutils.so",
+      "source": "recovery:sbin/libqdutils.so",
+      "sha256": "0a4784745be805177b9de30bc8b6efb4eab6ac6df1f0b0d27059f8865e4946a6",
+      "bytes": 27488
+    },
+    {
+      "path": "sbin/a5-stock/libqservice.so",
+      "source": "recovery:sbin/libqservice.so",
+      "sha256": "6718b9c5eb48619cc576fc1d3b2aac355020b3fb117094279a61b3668962e0db",
+      "bytes": 57032
+    },
+    {
+      "path": "sbin/a5-stock/libhardware.so",
+      "source": "recovery:sbin/libhardware.so",
+      "sha256": "7f713f77812a34e5d19bae0615fc67cd055bde5fc642ee7386e730a532dc8a1e",
+      "bytes": 10840
+    },
+    {
+      "path": "sbin/a5-stock/libStDrvInt.so",
+      "source": "recovery:sbin/libStDrvInt.so",
+      "sha256": "b45da9aa196ebea3883e51758e2d8dfb9d561c136f9b9d679a0e8aa4f35cf004",
+      "bytes": 10904
+    },
+    {
+      "path": "sbin/a5-stock/libssd.so",
+      "source": "recovery:sbin/libssd.so",
+      "sha256": "ba778b13f2ced16f94fa4285eedad11302c1466e8a5396883c188214d7a358d1",
+      "bytes": 10880
+    },
+    {
+      "path": "sbin/a5-stock/librpmb.so",
+      "source": "recovery:sbin/librpmb.so",
+      "sha256": "05f3bba63ea211377bd8578d3550209a6f5fc4d48730a2784b0aec612d8f3f68",
+      "bytes": 28648
+    },
+    {
+      "path": "sbin/a5-stock/hwservicemanager",
+      "source": "recovery:sbin/hwservicemanager",
+      "sha256": "d90bce7ea612290ef57de025b2b904e0592c6cdd698014e871d25291f4d892cc",
+      "bytes": 135832,
+      "original_sha256": "c1388ceb7ce66136805c7ab08022aa7f80f40152e05e093815c8dce944da1d17",
+      "patch": "PT_INTERP=/sbin/a5-stock/linker64"
+    },
+    {
+      "path": "sbin/a5-stock/libvintf.so",
+      "source": "recovery:sbin/libvintf.so",
+      "sha256": "57c99b01b93d785a6b774efd3c01b4a1d6363d2a56e3dfea29ae2958aae6bb6a",
+      "bytes": 385088
+    },
+    {
+      "path": "sbin/a5-stock/libz.so",
+      "source": "recovery:sbin/libz.so",
+      "sha256": "3da6fe01718d065579ce212948ad09c97cef2859a4b8416dc5218e94a97c47b3",
+      "bytes": 101368
+    },
+    {
+      "path": "sbin/a5-stock/libtinyxml2.so",
+      "source": "recovery:sbin/libtinyxml2.so",
+      "sha256": "ba7e2880f9b4acf9f52929fb8ae88908f25337c9ffd2f6c67ed98209d548553d",
+      "bytes": 64744
+    },
+    {
+      "path": "sbin/a5-stock/libselinux.so",
+      "source": "recovery:sbin/libselinux.so",
+      "sha256": "4b8578280024b8aee0c71d4635da3b7606f6e61a45c8f61bb04e6cc06ac39b6a",
+      "bytes": 103008
+    },
+    {
+      "path": "sbin/a5-stock/libpackagelistparser.so",
+      "source": "recovery:sbin/libpackagelistparser.so",
+      "sha256": "37a00c8beff8a16c320738c5cfddec7c308032a11ae3f41c7081174b08412aed",
+      "bytes": 10768
+    },
+    {
+      "path": "sbin/a5-stock/libpcre2.so",
+      "source": "recovery:sbin/libpcre2.so",
+      "sha256": "3514b89a09c8311c8c1e82b7ce592b4d3ad79bad86176a9b198d5fbf89baf9ce",
+      "bytes": 158696
+    },
+    {
+      "path": "sbin/a5-stock/libhidl-gen-utils.so",
+      "source": "recovery:sbin/libhidl-gen-utils.so",
+      "sha256": "1f8e8fe756c2ec7b4187945535cf499e6ee3d12b20124238f5d751175341b065",
+      "bytes": 475960
+    },
+    {
+      "path": "sbin/a5-stock/android.hidl.token@1.0.so",
+      "source": "recovery:sbin/android.hidl.token@1.0.so",
+      "sha256": "f2d4a6a2c37dc69583d6919af20178a54db4bf60ee6bfb547fcbc19a24b042e4",
+      "bytes": 98784
+    },
+    {
+      "path": "sbin/a5-stock/android.hardware.keymaster@3.0-service-qti",
+      "source": "recovery:sbin/android.hardware.keymaster@3.0-service-qti",
+      "sha256": "320bb58e9caebcca6c8961efc855c57a4fba7e3765c83f80844d43eaac4e08ab",
+      "bytes": 66072,
+      "original_sha256": "e30d9fa5ddfc18a058837bc46329b27e9a9b0df6a981214176a0a438f2598abf",
+      "patch": "PT_INTERP=/sbin/a5-stock/linker64"
+    },
+    {
+      "path": "sbin/a5-stock/libhardware_legacy.so",
+      "source": "recovery:sbin/libhardware_legacy.so",
+      "sha256": "0d5bd2176698b15d0f9b1028b5186affa4b79b7c4943904795bb383c22c54649",
+      "bytes": 10992
+    },
+    {
+      "path": "sbin/a5-stock/qseecomd",
+      "source": "recovery:sbin/qseecomd",
+      "sha256": "6aea0e661d42018e90051d130b9f78508ed4e39715a9bf9a9f902227a2a3bff1",
+      "bytes": 66144,
+      "original_sha256": "61558ac51ae108cd49771c427e864e0f7364af608ee57078d91c84a32673df08",
+      "patch": "PT_INTERP=/sbin/a5-stock/linker64"
+    },
+    {
+      "path": "sbin/a5-stock/libdrmfs.so",
+      "source": "recovery:sbin/libdrmfs.so",
+      "sha256": "8945342f76da7f8261201c17f7a8e3b0cec714c39abcf96e8d91635d65f59331",
+      "bytes": 23312
+    },
+    {
+      "path": "ueventd.rc",
+      "source": "recovery:ueventd.rc",
+      "sha256": "aaa5a20b2b5482184ff2a7b9a20be30ebf926f15ebdd9527fde617a00b2a4b7b",
+      "bytes": 5222
+    }
+  ],
+  "elf_needed": {
+    "vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so": [
+      "liblog.so",
+      "libcrypto.so",
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhwbinder.so",
+      "libutils.so",
+      "libcutils.so",
+      "libkeymasterdeviceutils.so",
+      "android.hardware.keymaster@3.0.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libdl.so": [
+      "ld-android.so"
+    ],
+    "libm.so": [
+      "libc.so"
+    ],
+    "libc.so": [
+      "libdl.so"
+    ],
+    "libc++.so": [
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "android.hardware.keymaster@3.0.so": [
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhwbinder.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libcutils.so": [
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "liblog.so": [
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libutils.so": [
+      "liblog.so",
+      "libbacktrace.so",
+      "libcutils.so",
+      "libvndksupport.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libvndksupport.so": [
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libbacktrace.so": [
+      "libbase.so",
+      "liblog.so",
+      "libunwind.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libunwind.so": [
+      "liblzma.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "liblzma.so": [
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libbase.so": [
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libhwbinder.so": [
+      "libbase.so",
+      "liblog.so",
+      "libcutils.so",
+      "libutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libhidltransport.so": [
+      "libbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libhidlbase.so",
+      "libhwbinder.so",
+      "libcutils.so",
+      "libvndksupport.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libhidlbase.so": [
+      "libbase.so",
+      "libcutils.so",
+      "liblog.so",
+      "libutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libkeymasterdeviceutils.so": [
+      "libcutils.so",
+      "libQSEEComAPI.so",
+      "liblog.so",
+      "libcrypto.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libcrypto.so": [
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libQSEEComAPI.so": [
+      "libcutils.so",
+      "libutils.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libGPreqcancel.so": [
+      "libutils.so",
+      "libcutils.so",
+      "libdiag.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libGPreqcancel_svc.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libGPreqcancel_svc.so": [
+      "libutils.so",
+      "libcutils.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libdiag.so": [
+      "liblog.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libqisl.so": [
+      "libcutils.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libdrmtime.so": [
+      "libutils.so",
+      "libcutils.so",
+      "libdiag.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libtime_genoff.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libtime_genoff.so": [
+      "libcutils.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libsecureui.so": [
+      "libutils.so",
+      "libcutils.so",
+      "libdiag.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libStDrvInt.so",
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhwbinder.so",
+      "libqdutils.so",
+      "libbinder.so",
+      "libsecureui_svcsock.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libsecureui_svcsock.so": [
+      "libutils.so",
+      "libcutils.so",
+      "liblog.so",
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhwbinder.so",
+      "vendor.qti.hardware.tui_comm@1.0_vendor.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "vendor.qti.hardware.tui_comm@1.0_vendor.so": [
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhwbinder.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "android.hidl.base@1.0.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "android.hidl.base@1.0.so": [
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libbinder.so": [
+      "libbase.so",
+      "liblog.so",
+      "libcutils.so",
+      "libutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libqdutils.so": [
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libhardware.so",
+      "libbinder.so",
+      "libqservice.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libqservice.so": [
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libhardware.so",
+      "libbinder.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libhardware.so": [
+      "libcutils.so",
+      "liblog.so",
+      "libvndksupport.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libStDrvInt.so": [
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libssd.so": [
+      "libutils.so",
+      "libcutils.so",
+      "libdiag.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "librpmb.so": [
+      "libutils.so",
+      "libQSEEComAPI.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "hwservicemanager": [
+      "android.hidl.token@1.0.so",
+      "libbase.so",
+      "libcrypto.so",
+      "libcutils.so",
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhidl-gen-utils.so",
+      "libhwbinder.so",
+      "liblog.so",
+      "libselinux.so",
+      "libutils.so",
+      "libvintf.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libvintf.so": [
+      "libbase.so",
+      "liblog.so",
+      "libselinux.so",
+      "libtinyxml2.so",
+      "libcutils.so",
+      "libutils.so",
+      "libz.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libz.so": [
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libtinyxml2.so": [
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libselinux.so": [
+      "libcrypto.so",
+      "liblog.so",
+      "libpcre2.so",
+      "libpackagelistparser.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libpackagelistparser.so": [
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libpcre2.so": [
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libhidl-gen-utils.so": [
+      "libbase.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "android.hidl.token@1.0.so": [
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "libhwbinder.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "android.hardware.keymaster@3.0-service-qti": [
+      "liblog.so",
+      "libcutils.so",
+      "libbase.so",
+      "libutils.so",
+      "libhardware_legacy.so",
+      "libhardware.so",
+      "libhwbinder.so",
+      "libhidlbase.so",
+      "libhidltransport.so",
+      "android.hardware.keymaster@3.0.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libhardware_legacy.so": [
+      "libbase.so",
+      "libcutils.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "qseecomd": [
+      "libcutils.so",
+      "libutils.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libdrmfs.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ],
+    "libdrmfs.so": [
+      "libutils.so",
+      "libcutils.so",
+      "libdiag.so",
+      "liblog.so",
+      "libQSEEComAPI.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "compiled": false,
+  "flashed": false
+}

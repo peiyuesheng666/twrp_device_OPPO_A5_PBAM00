@@ -1,0 +1,496 @@
+{
+  "file": "init",
+  "bytes": 2177568,
+  "sha256": "2438cfe20e817b4b9c5a113eec820ab5cd5a7dfed74fa360e062f3e993c66e20",
+  "strings": {
+    "0x59d8ff": "ERROR_NATIVE_REBOOT_INTO_RECOVERY",
+    "0x59d944": "sys.powerctl",
+    "0x59d951": "reboot,recovery",
+    "0x59fe29": "persist.sys.oppo.reboot",
+    "0x5a01a3": "data/property/persist.sys.oppo.reboot",
+    "0x5a01c9": "system/core/init/reboot.cpp",
+    "0x5a01e5": "Unable to reboot property",
+    "0x5a0206": "android_reboot, write tag success size ",
+    "0x5a022e": "/cache/normal_reboot",
+    "0x5a0243": "setRebootCacheProperty:Unable to reboot property",
+    "0x5a0274": "Reboot start, reason: ",
+    "0x5a028b": ", rebootTarget: ",
+    "0x5a02b2": "create /cache/normal_reboot success!",
+    "0x5a02d7": "create /cache/normal_reboot error!",
+    "0x5a02fa": "/data/misc/reboot/last_reboot_reason",
+    "0x5a03f1": "recovery.reboot.directly",
+    "0x5a04b5": "reboot",
+    "0x5a04c7": "reboot-bootloader: Error writing bootloader_message: ",
+    "0x5a050e": "powerctl: unrecognized command '",
+    "0x5a06b5": "powerctl_shutdown_time_ms:",
+    "0x5a06d0": "Reboot ending, jumping to kernel",
+    "0x5a06f1": "reboot call returned",
+    "0x5a158c": "zygote reboot by service",
+    "0x5a23e1": "panic: rebooting to bootloader",
+    "0x5a39b1": "unlink /cache/normal_reboot failed",
+    "0x5a39d4": "unlink /cache/normal_reboot success",
+    "0x5b00c7": "unexpected_handler unexpectedly returned",
+    "0x5b00f0": "terminate_handler unexpectedly returned",
+    "0x5b0118": "terminate_handler unexpectedly threw an exception",
+    "0x5badb1": "internal error: unknown opcode in find_fixedlength()"
+  },
+  "references": [
+    {
+      "address": "0x40ae78",
+      "instruction": "add x0, x0, #0x8ff",
+      "string_address": "0x59d8ff",
+      "string": "ERROR_NATIVE_REBOOT_INTO_RECOVERY",
+      "function_address": "0x40ae58",
+      "function": "_ZN7android4initL20reboot_into_recoveryERKNSt3__16vectorINS1_12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS6_IS8_EEEE"
+    },
+    {
+      "address": "0x40aeb4",
+      "instruction": "add x9, x9, #0x944",
+      "string_address": "0x59d944",
+      "string": "sys.powerctl",
+      "function_address": "0x40ae58",
+      "function": "_ZN7android4initL20reboot_into_recoveryERKNSt3__16vectorINS1_12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS6_IS8_EEEE"
+    },
+    {
+      "address": "0x40aec4",
+      "instruction": "add x10, x10, #0x951",
+      "string_address": "0x59d951",
+      "string": "reboot,recovery",
+      "function_address": "0x40ae58",
+      "function": "_ZN7android4initL20reboot_into_recoveryERKNSt3__16vectorINS1_12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEENS6_IS8_EEEE"
+    },
+    {
+      "address": "0x40d2b4",
+      "instruction": "add x1, x1, #0x944",
+      "string_address": "0x59d944",
+      "string": "sys.powerctl",
+      "function_address": "0x40d260",
+      "function": "_ZN7android4init16property_changedERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_"
+    },
+    {
+      "address": "0x41dc2c",
+      "instruction": "add x1, x1, #0xe29",
+      "string_address": "0x59fe29",
+      "string": "persist.sys.oppo.reboot",
+      "function_address": "0x41d728",
+      "function": "_ZN7android4init18load_persist_propsEv"
+    },
+    {
+      "address": "0x42115c",
+      "instruction": "add x0, x0, #0x1a3",
+      "string_address": "0x5a01a3",
+      "string": "data/property/persist.sys.oppo.reboot",
+      "function_address": "0x42112c",
+      "function": "_ZN7android4init17setRebootPropertyEv"
+    },
+    {
+      "address": "0x4211fc",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x42112c",
+      "function": "_ZN7android4init17setRebootPropertyEv"
+    },
+    {
+      "address": "0x421228",
+      "instruction": "add x1, x1, #0x206",
+      "string_address": "0x5a0206",
+      "string": "android_reboot, write tag success size ",
+      "function_address": "0x42112c",
+      "function": "_ZN7android4init17setRebootPropertyEv"
+    },
+    {
+      "address": "0x421258",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x42112c",
+      "function": "_ZN7android4init17setRebootPropertyEv"
+    },
+    {
+      "address": "0x421284",
+      "instruction": "add x1, x1, #0x1e5",
+      "string_address": "0x5a01e5",
+      "string": "Unable to reboot property",
+      "function_address": "0x42112c",
+      "function": "_ZN7android4init17setRebootPropertyEv"
+    },
+    {
+      "address": "0x4212c0",
+      "instruction": "add x0, x0, #0x22e",
+      "string_address": "0x5a022e",
+      "string": "/cache/normal_reboot",
+      "function_address": "0x4212a4",
+      "function": "_ZN7android4init22setRebootCachePropertyEv"
+    },
+    {
+      "address": "0x421330",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x4212a4",
+      "function": "_ZN7android4init22setRebootCachePropertyEv"
+    },
+    {
+      "address": "0x42135c",
+      "instruction": "add x1, x1, #0x243",
+      "string_address": "0x5a0243",
+      "string": "setRebootCacheProperty:Unable to reboot property",
+      "function_address": "0x4212a4",
+      "function": "_ZN7android4init22setRebootCachePropertyEv"
+    },
+    {
+      "address": "0x421458",
+      "instruction": "add x0, x0, #0x22e",
+      "string_address": "0x5a022e",
+      "string": "/cache/normal_reboot",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x421484",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4214b0",
+      "instruction": "add x1, x1, #0x2d7",
+      "string_address": "0x5a02d7",
+      "string": "create /cache/normal_reboot error!",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x421500",
+      "instruction": "add x11, x11, #0x2fa",
+      "string_address": "0x5a02fa",
+      "string": "/data/misc/reboot/last_reboot_reason",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x421c50",
+      "instruction": "add x15, x15, #0x3f1",
+      "string_address": "0x5a03f1",
+      "string": "recovery.reboot.directly",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x421dbc",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x42206c",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422174",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4221a0",
+      "instruction": "add x1, x1, #0x6b5",
+      "string_address": "0x5a06b5",
+      "string": "powerctl_shutdown_time_ms:",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4222d0",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4222fc",
+      "instruction": "add x1, x1, #0x6d0",
+      "string_address": "0x5a06d0",
+      "string": "Reboot ending, jumping to kernel",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422344",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4223a4",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422440",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422510",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x42253c",
+      "instruction": "add x1, x1, #0x6f1",
+      "string_address": "0x5a06f1",
+      "string": "reboot call returned",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422564",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422590",
+      "instruction": "add x1, x1, #0x274",
+      "string_address": "0x5a0274",
+      "string": "Reboot start, reason: ",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4225bc",
+      "instruction": "add x1, x1, #0x28b",
+      "string_address": "0x5a028b",
+      "string": ", rebootTarget: ",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422604",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422670",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4226c4",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422738",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4227ac",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x4227d8",
+      "instruction": "add x1, x1, #0x2b2",
+      "string_address": "0x5a02b2",
+      "string": "create /cache/normal_reboot success!",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x42280c",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x421378",
+      "function": "_ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b"
+    },
+    {
+      "address": "0x422bc8",
+      "instruction": "add x1, x1, #0x4b5",
+      "string_address": "0x5a04b5",
+      "string": "reboot",
+      "function_address": "0x422a90",
+      "function": "_ZN7android4init21HandlePowerctlMessageERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE"
+    },
+    {
+      "address": "0x4232d4",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x422a90",
+      "function": "_ZN7android4init21HandlePowerctlMessageERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE"
+    },
+    {
+      "address": "0x423300",
+      "instruction": "add x1, x1, #0x50e",
+      "string_address": "0x5a050e",
+      "string": "powerctl: unrecognized command '",
+      "function_address": "0x422a90",
+      "function": "_ZN7android4init21HandlePowerctlMessageERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE"
+    },
+    {
+      "address": "0x423360",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x422a90",
+      "function": "_ZN7android4init21HandlePowerctlMessageERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE"
+    },
+    {
+      "address": "0x4233b4",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x422a90",
+      "function": "_ZN7android4init21HandlePowerctlMessageERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE"
+    },
+    {
+      "address": "0x4233e0",
+      "instruction": "add x1, x1, #0x4c7",
+      "string_address": "0x5a04c7",
+      "string": "reboot-bootloader: Error writing bootloader_message: ",
+      "function_address": "0x422a90",
+      "function": "_ZN7android4init21HandlePowerctlMessageERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE"
+    },
+    {
+      "address": "0x423694",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x423440",
+      "function": "_ZN7android4initL22FindPartitionsToUmountEPNSt3__16vectorINS0_10MountEntryENS1_9allocatorIS3_EEEES7_b"
+    },
+    {
+      "address": "0x423a28",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x423898",
+      "function": "_ZN7android4init10MountEntry6DoFsckEv"
+    },
+    {
+      "address": "0x424954",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x4248a8",
+      "function": "_ZN7android4init10MountEntry6UmountEb"
+    },
+    {
+      "address": "0x424a20",
+      "instruction": "add x1, x1, #0x1c9",
+      "string_address": "0x5a01c9",
+      "string": "system/core/init/reboot.cpp",
+      "function_address": "0x4248a8",
+      "function": "_ZN7android4init10MountEntry6UmountEb"
+    },
+    {
+      "address": "0x437788",
+      "instruction": "add x5, x5, #0x58c",
+      "string_address": "0x5a158c",
+      "string": "zygote reboot by service",
+      "function_address": "0x4374e0",
+      "function": "_ZN7android4init7Service4ReapEv"
+    },
+    {
+      "address": "0x443e0c",
+      "instruction": "add x1, x1, #0x3e1",
+      "string_address": "0x5a23e1",
+      "string": "panic: rebooting to bootloader",
+      "function_address": "0x443db8",
+      "function": "_ZN7android4init5panicEv"
+    },
+    {
+      "address": "0x44ebec",
+      "instruction": "add x0, x0, #0x22e",
+      "string_address": "0x5a022e",
+      "string": "/cache/normal_reboot",
+      "function_address": "0x44e580",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0x44ed3c",
+      "instruction": "add x0, x0, #0x22e",
+      "string_address": "0x5a022e",
+      "string": "/cache/normal_reboot",
+      "function_address": "0x44e580",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0x44ed64",
+      "instruction": "add x0, x0, #0x22e",
+      "string_address": "0x5a022e",
+      "string": "/cache/normal_reboot",
+      "function_address": "0x44e580",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0x44edc8",
+      "instruction": "add x1, x1, #0x9d4",
+      "string_address": "0x5a39d4",
+      "string": "unlink /cache/normal_reboot success",
+      "function_address": "0x44e580",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0x44f2c4",
+      "instruction": "add x1, x1, #0x9b1",
+      "string_address": "0x5a39b1",
+      "string": "unlink /cache/normal_reboot failed",
+      "function_address": "0x44e580",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0x462770",
+      "instruction": "add x0, x0, #0x944",
+      "string_address": "0x59d944",
+      "string": "sys.powerctl",
+      "function_address": "0x462710",
+      "function": "android_reboot"
+    }
+  ],
+  "debug_function_count": 2706
+}

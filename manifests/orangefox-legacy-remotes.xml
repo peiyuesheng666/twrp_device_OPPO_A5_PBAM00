@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Original Omni Pie repositories were renamed to *_old upstream. -->
+  <remove-project name="android_frameworks_base" />
+  <remove-project name="android_system_core" />
+  <project path="frameworks/base" name="android_frameworks_base_old" remote="omnirom" revision="android-9.0" />
+  <project path="system/core" name="android_system_core_old" remote="omnirom" revision="android-9.0" />
+  <!-- The legacy OrangeFox vendor tree's master branch is now legacy. -->
+  <extend-project name="vendor/recovery" revision="legacy" />
+</manifest>

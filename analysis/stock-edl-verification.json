@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "stock_menu_edl_string": true,
+    "stock_intent_calls_finish": true,
+    "stock_intent_sets_property": true,
+    "stock_init_timeout_default_six": true,
+    "stock_init_timeout_property_present": true,
+    "fox_init_timeout_property_absent": true,
+    "fox_libinit_eng_override_one": true,
+    "stock_has_graceful_termination_loop": true,
+    "fox_doreboot_has_no_terminate_call": true,
+    "stock_restart2_syscall": true,
+    "same_kernel_payload": true
+  },
+  "all_passed": true,
+  "stock_init_sha256": "2438cfe20e817b4b9c5a113eec820ab5cd5a7dfed74fa360e062f3e993c66e20",
+  "fox_init_sha256": "5ad3b792837845c6686bdfb3689d3698de88876b5c070a0aa820c639865ead08",
+  "phone_partition_reads": false,
+  "phone_partition_writes": false,
+  "root_cause_of_sahara_failure_proven": false
+}

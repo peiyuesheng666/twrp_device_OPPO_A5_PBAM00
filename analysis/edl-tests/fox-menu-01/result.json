@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-18T22:55:42.181936+08:00",
+  "entry": "fox-menu",
+  "target_serial": "b658f72c",
+  "programmer": "E:\\OPPOA5UnlockBootLoader\\tools\\firehose_450.mbn",
+  "programmer_sha256": "571351495ede00053cbb3669b31f65037e3440479190a621008999675c847ff9",
+  "programmer_bytes": 1048576,
+  "partition_reads": false,
+  "partition_writes": false,
+  "sahara_success": true,
+  "firehose_nop_ack": true,
+  "before": {
+    "device": "PBAM00",
+    "twrp_version": "",
+    "adb_state": "recovery",
+    "bootmode": "recovery"
+  },
+  "port": "COM5",
+  "usb_hwid": "USB VID:PID=05C6:9008 SER= LOCATION=1-13",
+  "seconds_to_enumeration": 1.932,
+  "sahara_command": [
+    "E:\\6\\\u9ad8\u901a\u5de5\u5177\u7bb1\\bin\\tool\\Windows\\QSaharaServer.exe",
+    "-p",
+    "\\\\.\\COM5",
+    "-s",
+    "13:E:\\OPPOA5UnlockBootLoader\\tools\\firehose_450.mbn",
+    "-t",
+    "5",
+    "-v",
+    "3"
+  ],
+  "sahara_returncode": 0,
+  "reset_requested": true,
+  "reset_transport_disconnected": "GetOverlappedResult failed (PermissionError(13, '\u8fde\u5230\u7cfb\u7edf\u4e0a\u7684\u8bbe\u5907\u6ca1\u6709\u53d1\u6325\u4f5c\u7528\u3002', None, 31))"
+}

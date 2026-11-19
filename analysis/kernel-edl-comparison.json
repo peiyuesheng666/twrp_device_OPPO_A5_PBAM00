@@ -1,0 +1,17 @@
+{
+  "stock": {
+    "image": "backup-a35/lun0_recovery.img",
+    "image_sha256": "de2d3cc9057f39e039ef7407adf8e4348950cfe6aa920be6f2f4194ffb39cdb7",
+    "kernel_bytes": 11619350,
+    "kernel_sha256": "73b91a174b9498badc3b0398c8bafd80ff7a13cd69176d8f2144d2dc7d5153fe",
+    "cmdline": "console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78af000 ramoops.mem_address=0x91400000 ramoops.mem_size=0x100000 ramoops.record_size=0x20000 ramoops.dump_oops=0 buildvariant=user"
+  },
+  "fox_test4": {
+    "image": "recovery-build/releases/OrangeFox-R11.1-PBAM00-20261118-EDL/OrangeFox-R11.1-peiyuesheng_PBAM00-Unofficial-PBAM00.img",
+    "image_sha256": "ad0292e6ed5a58e53b53b7214baa6e84720cabf5e997eb41d63d58ce0392fb5a",
+    "kernel_bytes": 11619350,
+    "kernel_sha256": "73b91a174b9498badc3b0398c8bafd80ff7a13cd69176d8f2144d2dc7d5153fe",
+    "cmdline": "console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78af000 ramoops.mem_address=0x91400000 ramoops.mem_size=0x100000 ramoops.record_size=0x20000 ramoops.dump_oops=0 buildvariant=eng androidboot.selinux=permissive firmware_class.path=/vendor/firmware buildvariant=eng"
+  },
+  "kernels_identical": true
+}

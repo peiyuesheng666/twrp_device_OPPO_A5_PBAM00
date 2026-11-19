@@ -1,0 +1,44 @@
+{
+  "preserved_files": [
+    {
+      "source": "E:\\6\\高通工具箱\\bin\\conf\\user.bat",
+      "saved": "user.bat",
+      "sha256": "53dfc35562d158c3908c6af85a7084fc873f138b243ccce55fb3a927d9d970f8",
+      "failed_com3": false
+    },
+    {
+      "source": "E:\\6\\高通工具箱\\bin\\log\\2026.11.18_22.25.57.848.log",
+      "saved": "2026.11.18_22.25.57.848.log",
+      "sha256": "a8b3abef192d751503e78d19482cb1e9ea480bf71646322815d2af282a1669d2",
+      "failed_com3": true
+    },
+    {
+      "source": "E:\\6\\高通工具箱\\bin\\log\\2026.11.18_22.28.04.900.log",
+      "saved": "2026.11.18_22.28.04.900.log",
+      "sha256": "14106ef9e201e8c766cb1d4f7fc07b35abd5387badda9cf6237b690aa452a897",
+      "failed_com3": true
+    },
+    {
+      "source": "E:\\6\\高通工具箱\\bin\\log\\2026.11.18_22.28.10.135.log",
+      "saved": "2026.11.18_22.28.10.135.log",
+      "sha256": "4133191aab3eeaac23aac0a87fb75fb589154f996e75524aff57c1b8a14de226",
+      "failed_com3": true
+    },
+    {
+      "source": "E:\\6\\高通工具箱\\bin\\log\\2026.11.18_22.30.58.415.log",
+      "saved": "2026.11.18_22.30.58.415.log",
+      "sha256": "93a9ed9a80e30db552ba1f5e0b84425a7d541d9349a33e4e7d42b2e6967b33f6",
+      "failed_com3": true
+    }
+  ],
+  "configuration": {
+    "qctool_port": "specific",
+    "qctool_port_specific_portnum": 3
+  },
+  "observed_edl_port": "COM5",
+  "same_builtin_programmer": true,
+  "programmer_sha256": "571351495ede00053cbb3669b31f65037e3440479190a621008999675c847ff9",
+  "external_configuration_modified": false,
+  "recovery_runtime_modified": false,
+  "conclusion": "These four failed attempts selected forced COM3 and failed to open the port before a Sahara HELLO; successful comparison tests selected COM5."
+}

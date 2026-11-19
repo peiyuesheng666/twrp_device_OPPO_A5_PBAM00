@@ -1,0 +1,10 @@
+set qctool_port=specific
+set filefolder=E:\OPPOA5UnlockBootLoader\backup-a35
+set qctool_memory_ufs_lunnum=6
+set qctool_port_specific_portnum=3
+set framework_multitmpdir=n
+set framework_log=y
+set framework_lognum=10
+set qctool_rwmode=common
+
+set qctool_memory=emmc

@@ -1,0 +1,337 @@
+{
+  "file": "recovery",
+  "bytes": 1676496,
+  "sha256": "39c91bd457cc9029b9529a0cdc9507d783d0a584df5e5d5c94056e7604307d29",
+  "strings": {
+    "0x87ab": "EVP_DecodedLength",
+    "0x87ed": "EVP_EncodedLength",
+    "0x13e21a": "enable_reboot",
+    "0x13f9ba": "reboot,silence",
+    "0x13f9c9": "reboot",
+    "0x13fb48": "sys.powerctl",
+    "0x13fb55": "reboot,",
+    "0x13fc6e": "intent_reboot",
+    "0x140523": "<~power.reboot.downmode>",
+    "0x14053c": "<~power.reboot.downmode.information>",
+    "0x140561": "reboot,edl",
+    "0x14069e": "reboot,recovery",
+    "0x140937": "error_reboot_failed",
+    "0x146283": "reboot_ui_init",
+    "0x146292": "<~reboot.null>",
+    "0x1462a1": "@reboot",
+    "0x1462ba": "<~reboot.poweroff>",
+    "0x14631a": "<~reboot.null.title>",
+    "0x14632f": "<~reboot.bootloader>",
+    "0x146344": "@reboot.bootloader",
+    "0x146357": "<~reboot.recovery>",
+    "0x14636a": "@reboot.recovery",
+    "0x14639a": "reboot,bootloader",
+    "0x14cb37": "/cache/normal_reboot",
+    "0x14cba3": "unlink /cache/normal_reboot failed",
+    "0x14cbc6": "unlink /cache/normal_reboot success",
+    "0x151d10": "Rebooting...",
+    "0x152d80": "Could not change password on reboot encryption",
+    "0x152db0": "Default password did not match on reboot encryption",
+    "0x153060": "encryption failed - rebooting into recovery to wipe data",
+    "0x153700": "cryptfs_enable: crypto block dev failure. Must reboot..."
+  },
+  "references": [
+    {
+      "address": "0x17258",
+      "instruction": "add x1, x1, #0x21a",
+      "string_address": "0x13e21a",
+      "string": "enable_reboot",
+      "function_address": "0x168d0",
+      "function": "_ZL17try_update_binaryPKcP10ZipArchivePiS3_RNSt3__16vectorINS4_12basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEENS9_ISB_EEEEi"
+    },
+    {
+      "address": "0x1e0fc",
+      "instruction": "add x2, x2, #0x9ba",
+      "string_address": "0x13f9ba",
+      "string": "reboot,silence",
+      "function_address": "0x1d294",
+      "function": "_Z22formatCacheIfSizeWrongv"
+    },
+    {
+      "address": "0x1e31c",
+      "instruction": "add x0, x0, #0xd10",
+      "string_address": "0x151d10",
+      "string": "Rebooting...",
+      "function_address": "0x1d294",
+      "function": "_Z22formatCacheIfSizeWrongv"
+    },
+    {
+      "address": "0x1e340",
+      "instruction": "add x0, x0, #0xb48",
+      "string_address": "0x13fb48",
+      "string": "sys.powerctl",
+      "function_address": "0x1d294",
+      "function": "_Z22formatCacheIfSizeWrongv"
+    },
+    {
+      "address": "0x1e350",
+      "instruction": "add x1, x1, #0x9ba",
+      "string_address": "0x13f9ba",
+      "string": "reboot,silence",
+      "function_address": "0x1d294",
+      "function": "_Z22formatCacheIfSizeWrongv"
+    },
+    {
+      "address": "0x1e35c",
+      "instruction": "add x1, x1, #0xb55",
+      "string_address": "0x13fb55",
+      "string": "reboot,",
+      "function_address": "0x1d294",
+      "function": "_Z22formatCacheIfSizeWrongv"
+    },
+    {
+      "address": "0x1e3a4",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x1d294",
+      "function": "_Z22formatCacheIfSizeWrongv"
+    },
+    {
+      "address": "0x1e5dc",
+      "instruction": "add x1, x1, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x1e59c",
+      "function": "_ZL13intent_rebootiPPc"
+    },
+    {
+      "address": "0x1e604",
+      "instruction": "add x0, x0, #0xb48",
+      "string_address": "0x13fb48",
+      "string": "sys.powerctl",
+      "function_address": "0x1e59c",
+      "function": "_ZL13intent_rebootiPPc"
+    },
+    {
+      "address": "0x1e630",
+      "instruction": "add x1, x1, #0xc6e",
+      "string_address": "0x13fc6e",
+      "string": "intent_reboot",
+      "function_address": "0x1e59c",
+      "function": "_ZL13intent_rebootiPPc"
+    },
+    {
+      "address": "0x1fd18",
+      "instruction": "add x1, x1, #0x523",
+      "string_address": "0x140523",
+      "string": "<~power.reboot.downmode>",
+      "function_address": "0x1fc64",
+      "function": "_ZL19root_detection_showP9_menuUnit"
+    },
+    {
+      "address": "0x1fd1c",
+      "instruction": "add x2, x2, #0x53c",
+      "string_address": "0x14053c",
+      "string": "<~power.reboot.downmode.information>",
+      "function_address": "0x1fc64",
+      "function": "_ZL19root_detection_showP9_menuUnit"
+    },
+    {
+      "address": "0x1fd34",
+      "instruction": "add x2, x2, #0x561",
+      "string_address": "0x140561",
+      "string": "reboot,edl",
+      "function_address": "0x1fc64",
+      "function": "_ZL19root_detection_showP9_menuUnit"
+    },
+    {
+      "address": "0x20578",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x20484",
+      "function": "_ZL15root_phone_showP9_menuUnit"
+    },
+    {
+      "address": "0x207dc",
+      "instruction": "add x0, x0, #0xb48",
+      "string_address": "0x13fb48",
+      "string": "sys.powerctl",
+      "function_address": "0x206cc",
+      "function": "_ZL19serial_operate_showP9_menuUnit"
+    },
+    {
+      "address": "0x207e0",
+      "instruction": "add x1, x1, #0x69e",
+      "string_address": "0x14069e",
+      "string": "reboot,recovery",
+      "function_address": "0x206cc",
+      "function": "_ZL19serial_operate_showP9_menuUnit"
+    },
+    {
+      "address": "0x21fd4",
+      "instruction": "add x0, x0, #0xdb0",
+      "string_address": "0x152db0",
+      "string": "Default password did not match on reboot encryption",
+      "function_address": "0x21e80",
+      "function": "_Z23cryptfs_check_passwd_hwPKc"
+    },
+    {
+      "address": "0x22010",
+      "instruction": "add x0, x0, #0xd80",
+      "string_address": "0x152d80",
+      "string": "Could not change password on reboot encryption",
+      "function_address": "0x21e80",
+      "function": "_Z23cryptfs_check_passwd_hwPKc"
+    },
+    {
+      "address": "0x23004",
+      "instruction": "add x0, x0, #0xdb0",
+      "string_address": "0x152db0",
+      "string": "Default password did not match on reboot encryption",
+      "function_address": "0x22ee0",
+      "function": "cryptfs_check_passwd"
+    },
+    {
+      "address": "0x230a8",
+      "instruction": "add x0, x0, #0xd80",
+      "string_address": "0x152d80",
+      "string": "Could not change password on reboot encryption",
+      "function_address": "0x22ee0",
+      "function": "cryptfs_check_passwd"
+    },
+    {
+      "address": "0x98330",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x981e0",
+      "function": "external_sd_menu_show"
+    },
+    {
+      "address": "0x98910",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x9885c",
+      "function": "sd_menu_show"
+    },
+    {
+      "address": "0x98b40",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x989e0",
+      "function": "inter_sd_menu_show"
+    },
+    {
+      "address": "0x99274",
+      "instruction": "add x1, x1, #0x292",
+      "string_address": "0x146292",
+      "string": "<~reboot.null>",
+      "function_address": "0x99258",
+      "function": "reboot_ui_init"
+    },
+    {
+      "address": "0x99290",
+      "instruction": "add x1, x1, #0x2a1",
+      "string_address": "0x1462a1",
+      "string": "@reboot",
+      "function_address": "0x99258",
+      "function": "reboot_ui_init"
+    },
+    {
+      "address": "0x992cc",
+      "instruction": "add x3, x3, #0x283",
+      "string_address": "0x146283",
+      "string": "reboot_ui_init",
+      "function_address": "0x99258",
+      "function": "reboot_ui_init"
+    },
+    {
+      "address": "0x993c4",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x992e8",
+      "function": "power_child_show"
+    },
+    {
+      "address": "0x993fc",
+      "instruction": "add x2, x2, #0x69e",
+      "string_address": "0x14069e",
+      "string": "reboot,recovery",
+      "function_address": "0x992e8",
+      "function": "power_child_show"
+    },
+    {
+      "address": "0x99408",
+      "instruction": "add x2, x2, #0x39a",
+      "string_address": "0x14639a",
+      "string": "reboot,bootloader",
+      "function_address": "0x992e8",
+      "function": "power_child_show"
+    },
+    {
+      "address": "0x994ac",
+      "instruction": "add x1, x1, #0x2ba",
+      "string_address": "0x1462ba",
+      "string": "<~reboot.poweroff>",
+      "function_address": "0x99490",
+      "function": "poweroff_ui_init"
+    },
+    {
+      "address": "0x9a594",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x9a478",
+      "function": "format_result_confirm"
+    },
+    {
+      "address": "0x9f644",
+      "instruction": "add x2, x2, #0x9c9",
+      "string_address": "0x13f9c9",
+      "string": "reboot",
+      "function_address": "0x9f378",
+      "function": "download_process_show"
+    },
+    {
+      "address": "0xc9a84",
+      "instruction": "add x0, x0, #0xb37",
+      "string_address": "0x14cb37",
+      "string": "/cache/normal_reboot",
+      "function_address": "0xc9418",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0xc9bd4",
+      "instruction": "add x0, x0, #0xb37",
+      "string_address": "0x14cb37",
+      "string": "/cache/normal_reboot",
+      "function_address": "0xc9418",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0xc9bfc",
+      "instruction": "add x0, x0, #0xb37",
+      "string_address": "0x14cb37",
+      "string": "/cache/normal_reboot",
+      "function_address": "0xc9418",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0xc9c60",
+      "instruction": "add x1, x1, #0xbc6",
+      "string_address": "0x14cbc6",
+      "string": "unlink /cache/normal_reboot success",
+      "function_address": "0xc9418",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    },
+    {
+      "address": "0xca15c",
+      "instruction": "add x1, x1, #0xba3",
+      "string_address": "0x14cba3",
+      "string": "unlink /cache/normal_reboot failed",
+      "function_address": "0xc9418",
+      "function": "_ZL8check_fsPKcPcS1_Pi"
+    }
+  ],
+  "debug_function_count": 1703
+}

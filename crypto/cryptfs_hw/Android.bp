@@ -1,0 +1,25 @@
+// Source layout adapted from the pinned Qualcomm implementation documented in PROVENANCE.md.
+cc_library_shared {
+    name: "libcryptfs_hw",
+    header_libs: [
+        "qseecom-kernel-headers",
+        "libhardware_headers",
+    ],
+    cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
+    srcs: ["cryptfs_hw.c"],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libdl",
+        "libhardware",
+        "liblog",
+    ],
+    product_variables: {
+        omnirom: {
+            uses_metadata_as_fde_key: {
+                cflags: ["-DUSE_METADATA_FOR_KEY"],
+            },
+        },
+    },
+    owner: "qti",
+}

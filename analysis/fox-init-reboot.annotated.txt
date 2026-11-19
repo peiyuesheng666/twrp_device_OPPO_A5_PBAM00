@@ -1,0 +1,1076 @@
+Input: twrp_device_oppo_PBAM00\analysis\fox-init-test4.elf
+SHA256: 5ad3b792837845c6686bdfb3689d3698de88876b5c070a0aa820c639865ead08
+Addresses are ELF virtual addresses. String tracking is local and heuristic.
+
+
+FUNCTION 0x414c44 size=352 _ZN7android4init12RebootSystemEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+  00414c44: ff0301d1  sub      sp, sp, #0x40
+  00414c48: f65701a9  stp      x22, x21, [sp, #0x10]
+  00414c4c: f44f02a9  stp      x20, x19, [sp, #0x20]
+  00414c50: fd7b03a9  stp      x29, x30, [sp, #0x30]
+  00414c54: fdc30091  add      x29, sp, #0x30
+  00414c58: f30301aa  mov      x19, x1
+  00414c5c: f403002a  mov      w20, w0
+  00414c60: b4570294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  00414c64: 1f080071  cmp      w0, #2
+  00414c68: cc020054  b.gt     #0x414cc0
+  00414c6c: a9ad0494  bl       #0x540310  ; __errno
+  00414c70: f50300aa  mov      x21, x0
+  00414c74: b60240b9  ldr      w22, [x21]
+  00414c78: 210c00d0  adrp     x1, #0x59a000
+  00414c7c: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  00414c80: e0230091  add      x0, sp, #8
+  00414c84: e2168052  mov      w2, #0xb7
+  00414c88: e4031f32  mov      w4, #2
+  00414c8c: 06008012  mov      w6, #-1
+  00414c90: e3031f2a  mov      w3, wzr
+  00414c94: e5031faa  mov      x5, xzr
+  00414c98: ab570294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  00414c9c: e0230091  add      x0, sp, #8
+  00414ca0: a7570294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00414ca4: 210c00d0  adrp     x1, #0x59a000
+  00414ca8: 21f40191  add      x1, x1, #0x7d  ; 0x59a07d "Reboot ending, jumping to kernel"
+  00414cac: e2031b32  mov      w2, #0x20
+  00414cb0: aacaff97  bl       #0x407758
+  00414cb4: e0230091  add      x0, sp, #8
+  00414cb8: e5570294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00414cbc: b60200b9  str      w22, [x21]
+  00414cc0: 6cffff97  bl       #0x414a70  ; _ZN7android4init15IsRebootCapableEv
+  00414cc4: 20020036  tbz      w0, #0, #0x414d08
+  00414cc8: 88008052  mov      w8, #4
+  00414ccc: a8d5bb72  movk     w8, #0xdead, lsl #16
+  00414cd0: 9f02086b  cmp      w20, w8
+  00414cd4: 20010054  b.eq     #0x414cf8
+  00414cd8: 68008052  mov      w8, #3
+  00414cdc: a8d5bb72  movk     w8, #0xdead, lsl #16
+  00414ce0: 9f02086b  cmp      w20, w8
+  00414ce4: 60010054  b.eq     #0x414d10
+  00414ce8: 48008052  mov      w8, #2
+  00414cec: a8d5bb72  movk     w8, #0xdead, lsl #16
+  00414cf0: 9f02086b  cmp      w20, w8
+  00414cf4: 61020054  b.ne     #0x414d40
+  00414cf8: 80db9f52  mov      w0, #0xfedc
+  00414cfc: 2064a872  movk     w0, #0x4321, lsl #16
+  00414d00: 1bbc0494  bl       #0x543d6c  ; reboot
+  00414d04: 0f000014  b        #0x414d40
+  00414d08: e0031f2a  mov      w0, wzr
+  00414d0c: 3dadff97  bl       #0x400200
+  00414d10: 68024039  ldrb     w8, [x19]
+  00414d14: 690a40f9  ldr      x9, [x19, #0x10]
+  00414d18: a1d59b52  mov      w1, #0xdead
+  00414d1c: 222d8352  mov      w2, #0x1969
+  00414d20: 1f010072  tst      w8, #1
+  00414d24: 837a9852  mov      w3, #0xc3d4
+  00414d28: 2415939a  csinc    x4, x9, x19, ne
+  00414d2c: c0118052  mov      w0, #0x8e
+  00414d30: 21dcbf72  movk     w1, #0xfee1, lsl #16
+  00414d34: 4202a572  movk     w2, #0x2812, lsl #16
+  00414d38: 4336b472  movk     w3, #0xa1b2, lsl #16
+  00414d3c: 69ad0494  bl       #0x5402e0  ; syscall
+  00414d40: 7c570294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  00414d44: 1f100071  cmp      w0, #4
+  00414d48: cc020054  b.gt     #0x414da0
+  00414d4c: 71ad0494  bl       #0x540310  ; __errno
+  00414d50: f30300aa  mov      x19, x0
+  00414d54: 740240b9  ldr      w20, [x19]
+  00414d58: 210c00d0  adrp     x1, #0x59a000
+  00414d5c: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  00414d60: e0230091  add      x0, sp, #8
+  00414d64: c2198052  mov      w2, #0xce
+  00414d68: e4031e32  mov      w4, #4
+  00414d6c: e3031f2a  mov      w3, wzr
+  00414d70: e5031faa  mov      x5, xzr
+  00414d74: e603142a  mov      w6, w20
+  00414d78: 73570294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  00414d7c: e0230091  add      x0, sp, #8
+  00414d80: 6f570294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00414d84: 210c00d0  adrp     x1, #0x59a000
+  00414d88: 21780291  add      x1, x1, #0x9e  ; 0x59a09e "reboot call returned"
+  00414d8c: 82028052  mov      w2, #0x14
+  00414d90: 72caff97  bl       #0x407758
+  00414d94: e0230091  add      x0, sp, #8
+  00414d98: ad570294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00414d9c: 740200b9  str      w20, [x19]
+  00414da0: 6aad0494  bl       #0x540348  ; abort
+
+FUNCTION 0x414da4 size=3920 _ZN7android4init8DoRebootEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b
+  00414da4: ffc305d1  sub      sp, sp, #0x170
+  00414da8: fc6f11a9  stp      x28, x27, [sp, #0x110]
+  00414dac: fa6712a9  stp      x26, x25, [sp, #0x120]
+  00414db0: f85f13a9  stp      x24, x23, [sp, #0x130]
+  00414db4: f65714a9  stp      x22, x21, [sp, #0x140]
+  00414db8: f44f15a9  stp      x20, x19, [sp, #0x150]
+  00414dbc: fd7b16a9  stp      x29, x30, [sp, #0x160]
+  00414dc0: fd830591  add      x29, sp, #0x160
+  00414dc4: f503032a  mov      w21, w3
+  00414dc8: f30302aa  mov      x19, x2
+  00414dcc: f60301aa  mov      x22, x1
+  00414dd0: f403002a  mov      w20, w0
+  00414dd4: cf510294  bl       #0x4a9510  ; _ZN7android4base10boot_clock3nowEv
+  00414dd8: a00316f8  stur     x0, [x29, #-0xa0]
+  00414ddc: 55570294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  00414de0: 1f080071  cmp      w0, #2
+  00414de4: ed640054  b.le     #0x415a80
+  00414de8: 48808552  mov      w8, #0x2c02
+  00414dec: ff7f04a9  stp      xzr, xzr, [sp, #0x40]
+  00414df0: e8830079  strh     w8, [sp, #0x40]
+  00414df4: e8a30291  add      x8, sp, #0xa8
+  00414df8: e1030191  add      x1, sp, #0x40
+  00414dfc: e00316aa  mov      x0, x22
+  00414e00: ff2b00f9  str      xzr, [sp, #0x50]
+  00414e04: ff0b0139  strb     wzr, [sp, #0x42]
+  00414e08: e95a0294  bl       #0x4ab9ac  ; _ZN7android4base5SplitERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_
+  00414e0c: e8034139  ldrb     w8, [sp, #0x40]
+  00414e10: 68000036  tbz      w8, #0, #0x414e1c
+  00414e14: e02b40f9  ldr      x0, [sp, #0x50]
+  00414e18: 617a0394  bl       #0x4f379c
+  00414e1c: e0a34aa9  ldp      x0, x8, [sp, #0xa8]
+  00414e20: e9f301b2  mov      x9, #-0x5555555555555556
+  00414e24: 695595f2  movk     x9, #0xaaab
+  00414e28: 080100cb  sub      x8, x8, x0
+  00414e2c: 08fd4393  asr      x8, x8, #3
+  00414e30: 087d099b  mul      x8, x8, x9
+  00414e34: 1f0900f1  cmp      x8, #2
+  00414e38: 830c0054  b.lo     #0x414fc8
+  00414e3c: 08004039  ldrb     w8, [x0]
+  00414e40: 090440f9  ldr      x9, [x0, #8]
+  00414e44: 0afd41d3  lsr      x10, x8, #1
+  00414e48: 1f010072  tst      w8, #1
+  00414e4c: 4801899a  csel     x8, x10, x9, eq
+  00414e50: 1f1900f1  cmp      x8, #6
+  00414e54: a10b0054  b.ne     #0x414fc8
+  00414e58: 230c00b0  adrp     x3, #0x599000
+  00414e5c: 63e81491  add      x3, x3, #0x53a  ; 0x59953a "reboot"
+  00414e60: 02008092  mov      x2, #-1
+  00414e64: e4071f32  mov      w4, #6
+  00414e68: e1031faa  mov      x1, xzr
+  00414e6c: 33f60394  bl       #0x512738
+  00414e70: f7031faa  mov      x23, xzr
+  00414e74: c00a0035  cbnz     w0, #0x414fcc
+  00414e78: e05740f9  ldr      x0, [sp, #0xa8]
+  00414e7c: 098c4138  ldrb     w9, [x0, #0x18]!
+  00414e80: 080440f9  ldr      x8, [x0, #8]
+  00414e84: 2afd41d3  lsr      x10, x9, #1
+  00414e88: 3f010072  tst      w9, #1
+  00414e8c: 4b01889a  csel     x11, x10, x8, eq
+  00414e90: 7f2100f1  cmp      x11, #8
+  00414e94: c1010054  b.ne     #0x414ecc
+  00414e98: 230c00d0  adrp     x3, #0x59a000
+  00414e9c: 63740391  add      x3, x3, #0xdd  ; 0x59a0dd "recovery"
+  00414ea0: 02008092  mov      x2, #-1
+  00414ea4: e4031d32  mov      w4, #8
+  00414ea8: e1031faa  mov      x1, xzr
+  00414eac: 23f60394  bl       #0x512738
+  00414eb0: 80080034  cbz      w0, #0x414fc0
+  00414eb4: e05740f9  ldr      x0, [sp, #0xa8]
+  00414eb8: 0a8c4138  ldrb     w10, [x0, #0x18]!
+  00414ebc: 080440f9  ldr      x8, [x0, #8]
+  00414ec0: 49010012  and      w9, w10, #1
+  00414ec4: 4afd41d3  lsr      x10, x10, #1
+  00414ec8: 02000014  b        #0x414ed0
+  00414ecc: 29010012  and      w9, w9, #1
+  00414ed0: 3f010071  cmp      w9, #0
+  00414ed4: 4b01889a  csel     x11, x10, x8, eq
+  00414ed8: 7f2900f1  cmp      x11, #0xa
+  00414edc: a1010054  b.ne     #0x414f10
+  00414ee0: 230c0090  adrp     x3, #0x598000
+  00414ee4: 63482591  add      x3, x3, #0x952  ; 0x598952 "bootloader"
+  00414ee8: 02008092  mov      x2, #-1
+  00414eec: 44018052  mov      w4, #0xa
+  00414ef0: e1031faa  mov      x1, xzr
+  00414ef4: 11f60394  bl       #0x512738
+  00414ef8: 40060034  cbz      w0, #0x414fc0
+  00414efc: e05740f9  ldr      x0, [sp, #0xa8]
+  00414f00: 0a8c4138  ldrb     w10, [x0, #0x18]!
+  00414f04: 080440f9  ldr      x8, [x0, #8]
+  00414f08: 49010012  and      w9, w10, #1
+  00414f0c: 4afd41d3  lsr      x10, x10, #1
+  00414f10: 3f010071  cmp      w9, #0
+  00414f14: 4b01889a  csel     x11, x10, x8, eq
+  00414f18: 7f1100f1  cmp      x11, #4
+  00414f1c: a1010054  b.ne     #0x414f50
+  00414f20: 230c00d0  adrp     x3, #0x59a000
+  00414f24: 63980391  add      x3, x3, #0xe6  ; 0x59a0e6 "cold"
+  00414f28: 02008092  mov      x2, #-1
+  00414f2c: e4031e32  mov      w4, #4
+  00414f30: e1031faa  mov      x1, xzr
+  00414f34: 01f60394  bl       #0x512738
+  00414f38: 40040034  cbz      w0, #0x414fc0
+  00414f3c: e05740f9  ldr      x0, [sp, #0xa8]
+  00414f40: 0a8c4138  ldrb     w10, [x0, #0x18]!
+  00414f44: 080440f9  ldr      x8, [x0, #8]
+  00414f48: 49010012  and      w9, w10, #1
+  00414f4c: 4afd41d3  lsr      x10, x10, #1
+  00414f50: 3f010071  cmp      w9, #0
+  00414f54: 4b01889a  csel     x11, x10, x8, eq
+  00414f58: 7f1100f1  cmp      x11, #4
+  00414f5c: a1010054  b.ne     #0x414f90
+  00414f60: 230c00d0  adrp     x3, #0x59a000
+  00414f64: 63ac0391  add      x3, x3, #0xeb  ; 0x59a0eb "hard"
+  00414f68: 02008092  mov      x2, #-1
+  00414f6c: e4031e32  mov      w4, #4
+  00414f70: e1031faa  mov      x1, xzr
+  00414f74: f1f50394  bl       #0x512738
+  00414f78: 40020034  cbz      w0, #0x414fc0
+  00414f7c: e05740f9  ldr      x0, [sp, #0xa8]
+  00414f80: 0a8c4138  ldrb     w10, [x0, #0x18]!
+  00414f84: 080440f9  ldr      x8, [x0, #8]
+  00414f88: 49010012  and      w9, w10, #1
+  00414f8c: 4afd41d3  lsr      x10, x10, #1
+  00414f90: 3f010071  cmp      w9, #0
+  00414f94: 4801889a  csel     x8, x10, x8, eq
+  00414f98: 1f1100f1  cmp      x8, #4
+  00414f9c: 61010054  b.ne     #0x414fc8
+  00414fa0: 230c00d0  adrp     x3, #0x59a000
+  00414fa4: 63c00391  add      x3, x3, #0xf0  ; 0x59a0f0 "warm"
+  00414fa8: 02008092  mov      x2, #-1
+  00414fac: e4031e32  mov      w4, #4
+  00414fb0: e1031faa  mov      x1, xzr
+  00414fb4: e1f50394  bl       #0x512738
+  00414fb8: f7031faa  mov      x23, xzr
+  00414fbc: 80000035  cbnz     w0, #0x414fcc
+  00414fc0: f70b0032  mov      w23, #7
+  00414fc4: 02000014  b        #0x414fcc
+  00414fc8: f7031faa  mov      x23, xzr
+  00414fcc: c80f00f0  adrp     x8, #0x60f000
+  00414fd0: 08b141f9  ldr      x8, [x8, #0x360]
+  00414fd4: e0031b32  mov      w0, #0x20
+  00414fd8: 1a0140f9  ldr      x26, [x8]
+  00414fdc: bd790394  bl       #0x4f36d0
+  00414fe0: 080c00f0  adrp     x8, #0x597000
+  00414fe4: 00a5c33d  ldr      q0, [x8, #0xe90]
+  00414fe8: 280c00d0  adrp     x8, #0x59a000
+  00414fec: 08d50391  add      x8, x8, #0xf5  ; 0x59a0f5 "persist.sys.boot.reason"
+  00414ff0: 09f140f8  ldur     x9, [x8, #0xf]
+  00414ff4: 0101c03d  ldr      q1, [x8]
+  00414ff8: e02b00f9  str      x0, [sp, #0x50]
+  00414ffc: e013803d  str      q0, [sp, #0x40]
+  00415000: 1f5c0039  strb     wzr, [x0, #0x17]
+  00415004: 09f000f8  stur     x9, [x0, #0xf]
+  00415008: 0100803d  str      q1, [x0]
+  0041500c: c8024039  ldrb     w8, [x22]
+  00415010: c90a40f9  ldr      x9, [x22, #0x10]
+  00415014: bfff39a9  stp      xzr, xzr, [x29, #-0x68]
+  00415018: bf831af8  stur     xzr, [x29, #-0x58]
+  0041501c: 1f010072  tst      w8, #1
+  00415020: 2815969a  csinc    x8, x9, x22, ne
+  00415024: 1701178b  add      x23, x8, x23
+  00415028: e00317aa  mov      x0, x23
+  0041502c: f9aa0494  bl       #0x53fc10  ; strlen
+  00415030: f60300aa  mov      x22, x0
+  00415034: df4200b1  cmn      x22, #0x10
+  00415038: c25d0054  b.hs     #0x415bf0
+  0041503c: df5e00f1  cmp      x22, #0x17
+  00415040: e2000054  b.hs     #0x41505c
+  00415044: a9a301d1  sub      x9, x29, #0x68
+  00415048: c8fa7fd3  lsl      x8, x22, #1
+  0041504c: 380140b2  orr      x24, x9, #1
+  00415050: a8831938  sturb    w8, [x29, #-0x68]
+  00415054: 560100b5  cbnz     x22, #0x41507c
+  00415058: 0d000014  b        #0x41508c
+  0041505c: c8420091  add      x8, x22, #0x10
+  00415060: 19ed7c92  and      x25, x8, #0xfffffffffffffff0
+  00415064: e00319aa  mov      x0, x25
+  00415068: 9a790394  bl       #0x4f36d0
+  0041506c: f80300aa  mov      x24, x0
+  00415070: 280340b2  orr      x8, x25, #1
+  00415074: b6633aa9  stp      x22, x24, [x29, #-0x60]
+  00415078: a88319f8  stur     x8, [x29, #-0x68]
+  0041507c: e00318aa  mov      x0, x24
+  00415080: e10317aa  mov      x1, x23
+  00415084: e20316aa  mov      x2, x22
+  00415088: 3aa80494  bl       #0x53f170  ; memcpy
+  0041508c: e0030191  add      x0, sp, #0x40
+  00415090: a1a301d1  sub      x1, x29, #0x68
+  00415094: 1f6b3638  strb     wzr, [x24, x22]
+  00415098: 40033fd6  blr      x26
+  0041509c: a8835938  ldurb    w8, [x29, #-0x68]
+  004150a0: 68000036  tbz      w8, #0, #0x4150ac
+  004150a4: a0835af8  ldur     x0, [x29, #-0x58]
+  004150a8: bd790394  bl       #0x4f379c
+  004150ac: e8034139  ldrb     w8, [sp, #0x40]
+  004150b0: 68000036  tbz      w8, #0, #0x4150bc
+  004150b4: e02b40f9  ldr      x0, [sp, #0x50]
+  004150b8: b9790394  bl       #0x4f379c
+  004150bc: a5dd0494  bl       #0x54c750  ; sync
+  004150c0: 9c560294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  004150c4: 1f080071  cmp      w0, #2
+  004150c8: cd520054  b.le     #0x415b20
+  004150cc: 290c00b0  adrp     x9, #0x59a000
+  004150d0: 88028052  mov      w8, #0x14
+  004150d4: 29910491  add      x9, x9, #0x124  ; 0x59a124 "tombstoned"
+  004150d8: ff7f04a9  stp      xzr, xzr, [sp, #0x40]
+  004150dc: e8030139  strb     w8, [sp, #0x40]
+  004150e0: 280140f9  ldr      x8, [x9]
+  004150e4: a98c8c52  mov      w9, #0x6465
+  004150e8: e9930478  sturh    w9, [sp, #0x49]
+  004150ec: e9031d32  mov      w9, #8
+  004150f0: e81304f8  stur     x8, [sp, #0x41]
+  004150f4: 88ed8d52  mov      w8, #0x6f6c
+  004150f8: ff7f05a9  stp      xzr, xzr, [sp, #0x50]
+  004150fc: e88cac72  movk     w8, #0x6467, lsl #16
+  00415100: e9630139  strb     w9, [sp, #0x58]
+  00415104: ff7f07a9  stp      xzr, xzr, [sp, #0x70]
+  00415108: e9c30139  strb     w9, [sp, #0x70]
+  0041510c: e9430291  add      x9, sp, #0x90
+  00415110: e89305b8  stur     w8, [sp, #0x59]
+  00415114: 288c8c52  mov      w8, #0x6461
+  00415118: 36210091  add      x22, x9, #8
+  0041511c: 488cac72  movk     w8, #0x6462, lsl #16
+  00415120: e0430291  add      x0, sp, #0x90
+  00415124: a2a301d1  sub      x2, x29, #0x68
+  00415128: a30302d1  sub      x3, x29, #0x80
+  0041512c: e4030191  add      x4, sp, #0x40
+  00415130: e10316aa  mov      x1, x22
+  00415134: ff2f0139  strb     wzr, [sp, #0x4b]
+  00415138: ff7f06a9  stp      xzr, xzr, [sp, #0x60]
+  0041513c: ff770139  strb     wzr, [sp, #0x5d]
+  00415140: ffff09a9  stp      xzr, xzr, [sp, #0x98]
+  00415144: ff4300f9  str      xzr, [sp, #0x80]
+  00415148: e81307b8  stur     w8, [sp, #0x71]
+  0041514c: ffd70139  strb     wzr, [sp, #0x75]
+  00415150: f64b00f9  str      x22, [sp, #0x90]
+  00415154: f9030191  add      x25, sp, #0x40
+  00415158: a7c5ff97  bl       #0x4067f4
+  0041515c: f70300aa  mov      x23, x0
+  00415160: e80240f9  ldr      x8, [x23]
+  00415164: c80200b5  cbnz     x8, #0x4151bc
+  00415168: e00b1d32  mov      w0, #0x38
+  0041516c: 59790394  bl       #0x4f36d0
+  00415170: f80300aa  mov      x24, x0
+  00415174: 00830091  add      x0, x24, #0x20
+  00415178: e1030191  add      x1, sp, #0x40
+  0041517c: d2f00394  bl       #0x5114c4
+  00415180: a88359f8  ldur     x8, [x29, #-0x68]
+  00415184: 1f7f00a9  stp      xzr, xzr, [x24]
+  00415188: 080b00f9  str      x8, [x24, #0x10]
+  0041518c: f80200f9  str      x24, [x23]
+  00415190: e84b40f9  ldr      x8, [sp, #0x90]
+  00415194: 080140f9  ldr      x8, [x8]
+  00415198: 680000b4  cbz      x8, #0x4151a4
+  0041519c: e84b00f9  str      x8, [sp, #0x90]
+  004151a0: f80240f9  ldr      x24, [x23]
+  004151a4: e04f40f9  ldr      x0, [sp, #0x98]
+  004151a8: e10318aa  mov      x1, x24
+  004151ac: 8ac6ff97  bl       #0x406bd4
+  004151b0: e85340f9  ldr      x8, [sp, #0xa0]
+  004151b4: 08050091  add      x8, x8, #1
+  004151b8: e85300f9  str      x8, [sp, #0xa0]
+  004151bc: 38630091  add      x24, x25, #0x18
+  004151c0: e0430291  add      x0, sp, #0x90
+  004151c4: a2a301d1  sub      x2, x29, #0x68
+  004151c8: a30302d1  sub      x3, x29, #0x80
+  004151cc: e10316aa  mov      x1, x22
+  004151d0: e40318aa  mov      x4, x24
+  004151d4: 88c5ff97  bl       #0x4067f4
+  004151d8: f70300aa  mov      x23, x0
+  004151dc: e80240f9  ldr      x8, [x23]
+  004151e0: c80200b5  cbnz     x8, #0x415238
+  004151e4: e00b1d32  mov      w0, #0x38
+  004151e8: 3a790394  bl       #0x4f36d0
+  004151ec: f90300aa  mov      x25, x0
+  004151f0: 20830091  add      x0, x25, #0x20
+  004151f4: e10318aa  mov      x1, x24
+  004151f8: b3f00394  bl       #0x5114c4
+  004151fc: a88359f8  ldur     x8, [x29, #-0x68]
+  00415200: 3f7f00a9  stp      xzr, xzr, [x25]
+  00415204: 280b00f9  str      x8, [x25, #0x10]
+  00415208: f90200f9  str      x25, [x23]
+  0041520c: e84b40f9  ldr      x8, [sp, #0x90]
+  00415210: 080140f9  ldr      x8, [x8]
+  00415214: 680000b4  cbz      x8, #0x415220
+  00415218: e84b00f9  str      x8, [sp, #0x90]
+  0041521c: f90240f9  ldr      x25, [x23]
+  00415220: e04f40f9  ldr      x0, [sp, #0x98]
+  00415224: e10319aa  mov      x1, x25
+  00415228: 6bc6ff97  bl       #0x406bd4
+  0041522c: e85340f9  ldr      x8, [sp, #0xa0]
+  00415230: 08050091  add      x8, x8, #1
+  00415234: e85300f9  str      x8, [sp, #0xa0]
+  00415238: e8030191  add      x8, sp, #0x40
+  0041523c: 17c10091  add      x23, x8, #0x30
+  00415240: e0430291  add      x0, sp, #0x90
+  00415244: a2a301d1  sub      x2, x29, #0x68
+  00415248: a30302d1  sub      x3, x29, #0x80
+  0041524c: e10316aa  mov      x1, x22
+  00415250: e40317aa  mov      x4, x23
+  00415254: 68c5ff97  bl       #0x4067f4
+  00415258: f60300aa  mov      x22, x0
+  0041525c: c80240f9  ldr      x8, [x22]
+  00415260: 480600b4  cbz      x8, #0x415328
+  00415264: e8c34139  ldrb     w8, [sp, #0x70]
+  00415268: e8080037  tbnz     w8, #0, #0x415384
+  0041526c: e8634139  ldrb     w8, [sp, #0x58]
+  00415270: 28090037  tbnz     w8, #0, #0x415394
+  00415274: e8034139  ldrb     w8, [sp, #0x40]
+  00415278: 68000036  tbz      w8, #0, #0x415284
+  0041527c: e02b40f9  ldr      x0, [sp, #0x50]
+  00415280: 47790394  bl       #0x4f379c
+  00415284: 0a0c00f0  adrp     x10, #0x598000
+  00415288: 4ad11691  add      x10, x10, #0x5b4  ; 0x5985b4 "watchdogd"
+  0041528c: 4a0140f9  ldr      x10, [x10]
+  00415290: eba30091  add      x11, sp, #0x28
+  00415294: 48028052  mov      w8, #0x12
+  00415298: 890c8052  mov      w9, #0x64
+  0041529c: 61210091  add      x1, x11, #8
+  004152a0: e0a30091  add      x0, sp, #0x28
+  004152a4: a2a301d1  sub      x2, x29, #0x68
+  004152a8: a30302d1  sub      x3, x29, #0x80
+  004152ac: e4030191  add      x4, sp, #0x40
+  004152b0: ff7f04a9  stp      xzr, xzr, [sp, #0x40]
+  004152b4: ff2b00f9  str      xzr, [sp, #0x50]
+  004152b8: ff7f03a9  stp      xzr, xzr, [sp, #0x30]
+  004152bc: e8030139  strb     w8, [sp, #0x40]
+  004152c0: e9930478  sturh    w9, [sp, #0x49]
+  004152c4: ea1304f8  stur     x10, [sp, #0x41]
+  004152c8: e11700f9  str      x1, [sp, #0x28]
+  004152cc: 4ac5ff97  bl       #0x4067f4
+  004152d0: f60300aa  mov      x22, x0
+  004152d4: c80240f9  ldr      x8, [x22]
+  004152d8: 880600b4  cbz      x8, #0x4153a8
+  004152dc: e8034139  ldrb     w8, [sp, #0x40]
+  004152e0: 68000036  tbz      w8, #0, #0x4152ec
+  004152e4: e02b40f9  ldr      x0, [sp, #0x50]
+  004152e8: 2d790394  bl       #0x4f379c
+  004152ec: eb2f0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  004152f0: 1b7040a9  ldp      x27, x28, [x0]
+  004152f4: 7f031ceb  cmp      x27, x28
+  004152f8: 401a0054  b.eq     #0x415640
+  004152fc: e8030191  add      x8, sp, #0x40
+  00415300: 9a0f00b0  adrp     x26, #0x606000
+  00415304: 370c00b0  adrp     x23, #0x59a000
+  00415308: 180c00f0  adrp     x24, #0x598000
+  0041530c: 390c00b0  adrp     x25, #0x59a000
+  00415310: 5aa32591  add      x26, x26, #0x968
+  00415314: f7760591  add      x23, x23, #0x15d  ; 0x59a15d "Could not start shutdown critical service '"
+  00415318: 18a31691  add      x24, x24, #0x5a8  ; 0x5985a8 "': "
+  0041531c: 160140b2  orr      x22, x8, #1
+  00415320: 39bf0491  add      x25, x25, #0x12f  ; 0x59a12f "Could not start shutdown 'to_start' service '"
+  00415324: 93000014  b        #0x415570
+  00415328: e00b1d32  mov      w0, #0x38
+  0041532c: e9780394  bl       #0x4f36d0
+  00415330: f80300aa  mov      x24, x0
+  00415334: 00830091  add      x0, x24, #0x20
+  00415338: e10317aa  mov      x1, x23
+  0041533c: 62f00394  bl       #0x5114c4
+  00415340: a88359f8  ldur     x8, [x29, #-0x68]
+  00415344: 1f7f00a9  stp      xzr, xzr, [x24]
+  00415348: 080b00f9  str      x8, [x24, #0x10]
+  0041534c: d80200f9  str      x24, [x22]
+  00415350: e84b40f9  ldr      x8, [sp, #0x90]
+  00415354: 080140f9  ldr      x8, [x8]
+  00415358: 680000b4  cbz      x8, #0x415364
+  0041535c: e84b00f9  str      x8, [sp, #0x90]
+  00415360: d80240f9  ldr      x24, [x22]
+  00415364: e04f40f9  ldr      x0, [sp, #0x98]
+  00415368: e10318aa  mov      x1, x24
+  0041536c: 1ac6ff97  bl       #0x406bd4
+  00415370: e85340f9  ldr      x8, [sp, #0xa0]
+  00415374: 08050091  add      x8, x8, #1
+  00415378: e85300f9  str      x8, [sp, #0xa0]
+  0041537c: e8c34139  ldrb     w8, [sp, #0x70]
+  00415380: 68f70736  tbz      w8, #0, #0x41526c
+  00415384: e04340f9  ldr      x0, [sp, #0x80]
+  00415388: 05790394  bl       #0x4f379c
+  0041538c: e8634139  ldrb     w8, [sp, #0x58]
+  00415390: 28f70736  tbz      w8, #0, #0x415274
+  00415394: e03740f9  ldr      x0, [sp, #0x68]
+  00415398: 01790394  bl       #0x4f379c
+  0041539c: e8034139  ldrb     w8, [sp, #0x40]
+  004153a0: e8f60737  tbnz     w8, #0, #0x41527c
+  004153a4: b8ffff17  b        #0x415284
+  004153a8: e00b1d32  mov      w0, #0x38
+  004153ac: c9780394  bl       #0x4f36d0
+  004153b0: f70300aa  mov      x23, x0
+  004153b4: e0820091  add      x0, x23, #0x20
+  004153b8: e1030191  add      x1, sp, #0x40
+  004153bc: 42f00394  bl       #0x5114c4
+  004153c0: a88359f8  ldur     x8, [x29, #-0x68]
+  004153c4: ff7e00a9  stp      xzr, xzr, [x23]
+  004153c8: e80a00f9  str      x8, [x23, #0x10]
+  004153cc: d70200f9  str      x23, [x22]
+  004153d0: e81740f9  ldr      x8, [sp, #0x28]
+  004153d4: 080140f9  ldr      x8, [x8]
+  004153d8: 680000b4  cbz      x8, #0x4153e4
+  004153dc: e81700f9  str      x8, [sp, #0x28]
+  004153e0: d70240f9  ldr      x23, [x22]
+  004153e4: e01b40f9  ldr      x0, [sp, #0x30]
+  004153e8: e10317aa  mov      x1, x23
+  004153ec: fac5ff97  bl       #0x406bd4
+  004153f0: e81f40f9  ldr      x8, [sp, #0x38]
+  004153f4: 08050091  add      x8, x8, #1
+  004153f8: e81f00f9  str      x8, [sp, #0x38]
+  004153fc: e8034139  ldrb     w8, [sp, #0x40]
+  00415400: 28f70737  tbnz     w8, #0, #0x4152e4
+  00415404: baffff17  b        #0x4152ec
+  00415408: c2ab0494  bl       #0x540310  ; __errno
+  0041540c: 080040b9  ldr      w8, [x0]
+  00415410: 210c00b0  adrp     x1, #0x59a000
+  00415414: e01300f9  str      x0, [sp, #0x20]
+  00415418: a0a301d1  sub      x0, x29, #0x68
+  0041541c: a22e8052  mov      w2, #0x175
+  00415420: e4031e32  mov      w4, #4
+  00415424: 06008012  mov      w6, #-1
+  00415428: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  0041542c: e3031f2a  mov      w3, wzr
+  00415430: e5031faa  mov      x5, xzr
+  00415434: e81f00b9  str      w8, [sp, #0x1c]
+  00415438: c3550294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  0041543c: a0a301d1  sub      x0, x29, #0x68
+  00415440: bf550294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00415444: a2058052  mov      w2, #0x2d
+  00415448: e10319aa  mov      x1, x25
+  0041544c: c3c8ff97  bl       #0x407758
+  00415450: 680340f9  ldr      x8, [x27]
+  00415454: 09014039  ldrb     w9, [x8]
+  00415458: 0ba940a9  ldp      x11, x10, [x8, #8]
+  0041545c: 2cfd41d3  lsr      x12, x9, #1
+  00415460: 3f010072  tst      w9, #1
+  00415464: 4115889a  csinc    x1, x10, x8, ne
+  00415468: 82018b9a  csel     x2, x12, x11, eq
+  0041546c: bbc8ff97  bl       #0x407758
+  00415470: e2070032  mov      w2, #3
+  00415474: e10318aa  mov      x1, x24
+  00415478: b8c8ff97  bl       #0x407758
+  0041547c: e86340b9  ldr      w8, [sp, #0x60]
+  00415480: 1f050071  cmp      w8, #1
+  00415484: 413b0054  b.ne     #0x415bec
+  00415488: e8034139  ldrb     w8, [sp, #0x40]
+  0041548c: eaa744a9  ldp      x10, x9, [sp, #0x48]
+  00415490: 0bfd41d3  lsr      x11, x8, #1
+  00415494: 1f010072  tst      w8, #1
+  00415498: c102899a  csel     x1, x22, x9, eq
+  0041549c: 62018a9a  csel     x2, x11, x10, eq
+  004154a0: aec8ff97  bl       #0x407758
+  004154a4: a0a301d1  sub      x0, x29, #0x68
+  004154a8: e9550294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  004154ac: e81340f9  ldr      x8, [sp, #0x20]
+  004154b0: e91f40b9  ldr      w9, [sp, #0x1c]
+  004154b4: 090100b9  str      w9, [x8]
+  004154b8: 42000014  b        #0x4155c0
+  004154bc: 95ab0494  bl       #0x540310  ; __errno
+  004154c0: 080040b9  ldr      w8, [x0]
+  004154c4: 210c00b0  adrp     x1, #0x59a000
+  004154c8: e01300f9  str      x0, [sp, #0x20]
+  004154cc: a0a301d1  sub      x0, x29, #0x68
+  004154d0: 822f8052  mov      w2, #0x17c
+  004154d4: e4031e32  mov      w4, #4
+  004154d8: 06008012  mov      w6, #-1
+  004154dc: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  004154e0: e3031f2a  mov      w3, wzr
+  004154e4: e5031faa  mov      x5, xzr
+  004154e8: e81f00b9  str      w8, [sp, #0x1c]
+  004154ec: 96550294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  004154f0: a0a301d1  sub      x0, x29, #0x68
+  004154f4: 92550294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  004154f8: 62058052  mov      w2, #0x2b
+  004154fc: e10317aa  mov      x1, x23
+  00415500: 96c8ff97  bl       #0x407758
+  00415504: 680340f9  ldr      x8, [x27]
+  00415508: 09014039  ldrb     w9, [x8]
+  0041550c: 0ba940a9  ldp      x11, x10, [x8, #8]
+  00415510: 2cfd41d3  lsr      x12, x9, #1
+  00415514: 3f010072  tst      w9, #1
+  00415518: 4115889a  csinc    x1, x10, x8, ne
+  0041551c: 82018b9a  csel     x2, x12, x11, eq
+  00415520: 8ec8ff97  bl       #0x407758
+  00415524: e2070032  mov      w2, #3
+  00415528: e10318aa  mov      x1, x24
+  0041552c: 8bc8ff97  bl       #0x407758
+  00415530: e86340b9  ldr      w8, [sp, #0x60]
+  00415534: 1f050071  cmp      w8, #1
+  00415538: a1350054  b.ne     #0x415bec
+  0041553c: e8034139  ldrb     w8, [sp, #0x40]
+  00415540: eaa744a9  ldp      x10, x9, [sp, #0x48]
+  00415544: 0bfd41d3  lsr      x11, x8, #1
+  00415548: 1f010072  tst      w8, #1
+  0041554c: c102899a  csel     x1, x22, x9, eq
+  00415550: 62018a9a  csel     x2, x11, x10, eq
+  00415554: 81c8ff97  bl       #0x407758
+  00415558: a0a301d1  sub      x0, x29, #0x68
+  0041555c: bc550294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00415560: e81340f9  ldr      x8, [sp, #0x20]
+  00415564: e91f40b9  ldr      w9, [sp, #0x1c]
+  00415568: 090100b9  str      w9, [x8]
+  0041556c: 2b000014  b        #0x415618
+  00415570: 610340f9  ldr      x1, [x27]
+  00415574: e0430291  add      x0, sp, #0x90
+  00415578: 71c9ff97  bl       #0x407b3c
+  0041557c: 610340f9  ldr      x1, [x27]
+  00415580: a00000b4  cbz      x0, #0x415594
+  00415584: 284840b9  ldr      w8, [x1, #0x48]
+  00415588: 08011532  orr      w8, w8, #0x800
+  0041558c: 284800b9  str      w8, [x1, #0x48]
+  00415590: 29000014  b        #0x415634
+  00415594: e0a30091  add      x0, sp, #0x28
+  00415598: 69c9ff97  bl       #0x407b3c
+  0041559c: a00200b4  cbz      x0, #0x4155f0
+  004155a0: 600340f9  ldr      x0, [x27]
+  004155a4: e8030191  add      x8, sp, #0x40
+  004155a8: 3b420094  bl       #0x425e94  ; _ZN7android4init7Service5StartEv
+  004155ac: e86340b9  ldr      w8, [sp, #0x60]
+  004155b0: e8000034  cbz      w8, #0x4155cc
+  004155b4: 5f550294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  004155b8: 1f100071  cmp      w0, #4
+  004155bc: 6df2ff54  b.le     #0x415408
+  004155c0: e86340b9  ldr      w8, [sp, #0x60]
+  004155c4: 1f050031  cmn      w8, #1
+  004155c8: a0000054  b.eq     #0x4155dc
+  004155cc: 485b68f8  ldr      x8, [x26, w8, uxtw #3]
+  004155d0: a0a301d1  sub      x0, x29, #0x68
+  004155d4: e1030191  add      x1, sp, #0x40
+  004155d8: 00013fd6  blr      x8
+  004155dc: 680340f9  ldr      x8, [x27]
+  004155e0: 094940b9  ldr      w9, [x8, #0x48]
+  004155e4: 29011532  orr      w9, w9, #0x800
+  004155e8: 094900b9  str      w9, [x8, #0x48]
+  004155ec: 12000014  b        #0x415634
+  004155f0: 600340f9  ldr      x0, [x27]
+  004155f4: 08244139  ldrb     w8, [x0, #0x49]
+  004155f8: e8011836  tbz      w8, #3, #0x415634
+  004155fc: e8030191  add      x8, sp, #0x40
+  00415600: 25420094  bl       #0x425e94  ; _ZN7android4init7Service5StartEv
+  00415604: e86340b9  ldr      w8, [sp, #0x60]
+  00415608: e8000034  cbz      w8, #0x415624
+  0041560c: 49550294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  00415610: 1f100071  cmp      w0, #4
+  00415614: 4df5ff54  b.le     #0x4154bc
+  00415618: e86340b9  ldr      w8, [sp, #0x60]
+  0041561c: 1f050031  cmn      w8, #1
+  00415620: a0000054  b.eq     #0x415634
+  00415624: 485b68f8  ldr      x8, [x26, w8, uxtw #3]
+  00415628: a0a301d1  sub      x0, x29, #0x68
+  0041562c: e1030191  add      x1, sp, #0x40
+  00415630: 00013fd6  blr      x8
+  00415634: 7b230091  add      x27, x27, #8
+  00415638: 9f031beb  cmp      x28, x27
+  0041563c: a1f9ff54  b.ne     #0x415570
+  00415640: 48008052  mov      w8, #2
+  00415644: a8d5bb72  movk     w8, #0xdead, lsl #16
+  00415648: 9f02086b  cmp      w20, w8
+  0041564c: a0000054  b.eq     #0x415660
+  00415650: 88008052  mov      w8, #4
+  00415654: a8d5bb72  movk     w8, #0xdead, lsl #16
+  00415658: 9f02086b  cmp      w20, w8
+  0041565c: 41000054  b.ne     #0x415664
+  00415660: a5010094  bl       #0x415cf4  ; _ZN7android4initL16TurnOffBacklightEv
+  00415664: 0d2f0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  00415668: f60300aa  mov      x22, x0
+  0041566c: d96240a9  ldp      x25, x24, [x22]
+  00415670: 1f0319eb  cmp      x24, x25
+  00415674: 60030054  b.eq     #0x4156e0
+  00415678: 370c00b0  adrp     x23, #0x59a000
+  0041567c: f7260691  add      x23, x23, #0x189  ; 0x59a189 "bootanim"
+  00415680: 200340f9  ldr      x0, [x25]
+  00415684: 08004039  ldrb     w8, [x0]
+  00415688: 090440f9  ldr      x9, [x0, #8]
+  0041568c: 0afd41d3  lsr      x10, x8, #1
+  00415690: 1f010072  tst      w8, #1
+  00415694: 4801899a  csel     x8, x10, x9, eq
+  00415698: 1f2100f1  cmp      x8, #8
+  0041569c: e1000054  b.ne     #0x4156b8
+  004156a0: 02008092  mov      x2, #-1
+  004156a4: e4031d32  mov      w4, #8
+  004156a8: e1031faa  mov      x1, xzr
+  004156ac: e30317aa  mov      x3, x23
+  004156b0: 22f40394  bl       #0x512738
+  004156b4: a0000034  cbz      w0, #0x4156c8
+  004156b8: 39230091  add      x25, x25, #8
+  004156bc: 1f0319eb  cmp      x24, x25
+  004156c0: 01feff54  b.ne     #0x415680
+  004156c4: 02000014  b        #0x4156cc
+  004156c8: f80319aa  mov      x24, x25
+  004156cc: c80640f9  ldr      x8, [x22, #8]
+  004156d0: 1f0308eb  cmp      x24, x8
+  004156d4: 60000054  b.eq     #0x4156e0
+  004156d8: 180340f9  ldr      x24, [x24]
+  004156dc: 02000014  b        #0x4156e4
+  004156e0: f8031faa  mov      x24, xzr
+  004156e4: ed2e0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  004156e8: f60300aa  mov      x22, x0
+  004156ec: da6640a9  ldp      x26, x25, [x22]
+  004156f0: 3f031aeb  cmp      x25, x26
+  004156f4: 00080054  b.eq     #0x4157f4
+  004156f8: 370c00b0  adrp     x23, #0x59a000
+  004156fc: f74a0691  add      x23, x23, #0x192  ; 0x59a192 "surfaceflinger"
+  00415700: 400340f9  ldr      x0, [x26]
+  00415704: 08004039  ldrb     w8, [x0]
+  00415708: 090440f9  ldr      x9, [x0, #8]
+  0041570c: 0afd41d3  lsr      x10, x8, #1
+  00415710: 1f010072  tst      w8, #1
+  00415714: 4801899a  csel     x8, x10, x9, eq
+  00415718: 1f3900f1  cmp      x8, #0xe
+  0041571c: e1000054  b.ne     #0x415738
+  00415720: 02008092  mov      x2, #-1
+  00415724: e40b1f32  mov      w4, #0xe
+  00415728: e1031faa  mov      x1, xzr
+  0041572c: e30317aa  mov      x3, x23
+  00415730: 02f40394  bl       #0x512738
+  00415734: a0000034  cbz      w0, #0x415748
+  00415738: 5a230091  add      x26, x26, #8
+  0041573c: 3f031aeb  cmp      x25, x26
+  00415740: 01feff54  b.ne     #0x415700
+  00415744: 02000014  b        #0x41574c
+  00415748: f9031aaa  mov      x25, x26
+  0041574c: c80640f9  ldr      x8, [x22, #8]
+  00415750: 3f0308eb  cmp      x25, x8
+  00415754: 00050054  b.eq     #0x4157f4
+  00415758: f80400b4  cbz      x24, #0x4157f4
+  0041575c: 280340f9  ldr      x8, [x25]
+  00415760: a80400b4  cbz      x8, #0x4157f4
+  00415764: 08214139  ldrb     w8, [x8, #0x48]
+  00415768: 68041036  tbz      w8, #2, #0x4157f4
+  0041576c: cb2e0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  00415770: 176040a9  ldp      x23, x24, [x0]
+  00415774: ff0218eb  cmp      x23, x24
+  00415778: e0030054  b.eq     #0x4157f4
+  0041577c: 290c00b0  adrp     x9, #0x59a000
+  00415780: 29850691  add      x9, x9, #0x1a1  ; 0x59a1a1 "animation"
+  00415784: 390140f9  ldr      x25, [x9]
+  00415788: e8030191  add      x8, sp, #0x40
+  0041578c: 1a0140b2  orr      x26, x8, #1
+  00415790: 5b028052  mov      w27, #0x12
+  00415794: dc0d8052  mov      w28, #0x6e
+  00415798: e80240f9  ldr      x8, [x23]
+  0041579c: e1030191  add      x1, sp, #0x40
+  004157a0: ff7f04a9  stp      xzr, xzr, [sp, #0x40]
+  004157a4: ff2b00f9  str      xzr, [sp, #0x50]
+  004157a8: 00610091  add      x0, x8, #0x18
+  004157ac: fb030139  strb     w27, [sp, #0x40]
+  004157b0: 590300f9  str      x25, [x26]
+  004157b4: 5c230039  strb     w28, [x26, #8]
+  004157b8: ff2b0139  strb     wzr, [sp, #0x4a]
+  004157bc: e0c8ff97  bl       #0x407b3c
+  004157c0: e8034139  ldrb     w8, [sp, #0x40]
+  004157c4: f60300aa  mov      x22, x0
+  004157c8: 68000036  tbz      w8, #0, #0x4157d4
+  004157cc: e02b40f9  ldr      x0, [sp, #0x50]
+  004157d0: f3770394  bl       #0x4f379c
+  004157d4: b60000b4  cbz      x22, #0x4157e8
+  004157d8: e80240f9  ldr      x8, [x23]
+  004157dc: 094940b9  ldr      w9, [x8, #0x48]
+  004157e0: 29011532  orr      w9, w9, #0x800
+  004157e4: 094900b9  str      w9, [x8, #0x48]
+  004157e8: f7220091  add      x23, x23, #8
+  004157ec: 1f0317eb  cmp      x24, x23
+  004157f0: 41fdff54  b.ne     #0x415798
+  004157f4: a92e0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  004157f8: e8030191  add      x8, sp, #0x40
+  004157fc: 7b4c0094  bl       #0x4289e8  ; _ZNK7android4init11ServiceList26services_in_shutdown_orderEv
+  00415800: f65f44a9  ldp      x22, x23, [sp, #0x40]
+  00415804: df0217eb  cmp      x22, x23
+  00415808: 20010054  b.eq     #0x41582c
+  0041580c: c00240f9  ldr      x0, [x22]
+  00415810: 08244139  ldrb     w8, [x0, #0x49]
+  00415814: 48001837  tbnz     w8, #3, #0x41581c
+  00415818: 72490094  bl       #0x427de0  ; _ZN7android4init7Service4StopEv
+  0041581c: d6220091  add      x22, x22, #8
+  00415820: ff0216eb  cmp      x23, x22
+  00415824: 41ffff54  b.ne     #0x41580c
+  00415828: f62340f9  ldr      x22, [sp, #0x40]
+  0041582c: 960000b4  cbz      x22, #0x41583c
+  00415830: e00316aa  mov      x0, x22
+  00415834: f62700f9  str      x22, [sp, #0x48]
+  00415838: d9770394  bl       #0x4f379c
+  0041583c: c3550094  bl       #0x42af48  ; _ZN7android4init26ReapAnyOutstandingChildrenEv
+  00415840: 962e0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  00415844: f60300aa  mov      x22, x0
+  00415848: d96240a9  ldp      x25, x24, [x22]
+  0041584c: 1f0319eb  cmp      x24, x25
+  00415850: a0030054  b.eq     #0x4158c4
+  00415854: 370c00b0  adrp     x23, #0x59a000
+  00415858: f7ae0691  add      x23, x23, #0x1ab  ; 0x59a1ab "vold"
+  0041585c: 200340f9  ldr      x0, [x25]
+  00415860: 08004039  ldrb     w8, [x0]
+  00415864: 090440f9  ldr      x9, [x0, #8]
+  00415868: 0afd41d3  lsr      x10, x8, #1
+  0041586c: 1f010072  tst      w8, #1
+  00415870: 4801899a  csel     x8, x10, x9, eq
+  00415874: 1f1100f1  cmp      x8, #4
+  00415878: e1000054  b.ne     #0x415894
+  0041587c: 02008092  mov      x2, #-1
+  00415880: e4031e32  mov      w4, #4
+  00415884: e1031faa  mov      x1, xzr
+  00415888: e30317aa  mov      x3, x23
+  0041588c: abf30394  bl       #0x512738
+  00415890: a0000034  cbz      w0, #0x4158a4
+  00415894: 39230091  add      x25, x25, #8
+  00415898: 1f0319eb  cmp      x24, x25
+  0041589c: 01feff54  b.ne     #0x41585c
+  004158a0: 02000014  b        #0x4158a8
+  004158a4: f80319aa  mov      x24, x25
+  004158a8: c80640f9  ldr      x8, [x22, #8]
+  004158ac: 1f0308eb  cmp      x24, x8
+  004158b0: a0000054  b.eq     #0x4158c4
+  004158b4: 160340f9  ldr      x22, [x24]
+  004158b8: 760000b4  cbz      x22, #0x4158c4
+  004158bc: c8224139  ldrb     w8, [x22, #0x48]
+  004158c0: a80b1037  tbnz     w8, #2, #0x415a34
+  004158c4: 9b540294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  004158c8: 1f080071  cmp      w0, #2
+  004158cc: 2d160054  b.le     #0x415b90
+  004158d0: 722e0094  bl       #0x421298  ; _ZN7android4init11ServiceList11GetInstanceEv
+  004158d4: e8030191  add      x8, sp, #0x40
+  004158d8: 444c0094  bl       #0x4289e8  ; _ZNK7android4init11ServiceList26services_in_shutdown_orderEv
+  004158dc: f65f44a9  ldp      x22, x23, [sp, #0x40]
+  004158e0: df0217eb  cmp      x22, x23
+  004158e4: 60010054  b.eq     #0x415910
+  004158e8: c10240f9  ldr      x1, [x22]
+  004158ec: e0430291  add      x0, sp, #0x90
+  004158f0: 93c8ff97  bl       #0x407b3c
+  004158f4: 600000b4  cbz      x0, #0x415900
+  004158f8: c00240f9  ldr      x0, [x22]
+  004158fc: 39490094  bl       #0x427de0  ; _ZN7android4init7Service4StopEv
+  00415900: d6220091  add      x22, x22, #8
+  00415904: ff0216eb  cmp      x23, x22
+  00415908: 01ffff54  b.ne     #0x4158e8
+  0041590c: f62340f9  ldr      x22, [sp, #0x40]
+  00415910: 960000b4  cbz      x22, #0x415920
+  00415914: e00316aa  mov      x0, x22
+  00415918: f62700f9  str      x22, [sp, #0x48]
+  0041591c: a0770394  bl       #0x4f379c
+  00415920: 8cdb0494  bl       #0x54c750  ; sync
+  00415924: fb4e0294  bl       #0x4a9510  ; _ZN7android4base10boot_clock3nowEv
+  00415928: a80356f8  ldur     x8, [x29, #-0xa0]
+  0041592c: 170008eb  subs     x23, x0, x8
+  00415930: c6150054  b.vs     #0x415be8
+  00415934: f74e0294  bl       #0x4a9510  ; _ZN7android4base10boot_clock3nowEv
+  00415938: f60300aa  mov      x22, x0
+  0041593c: bf7f38a9  stp      xzr, xzr, [x29, #-0x80]
+  00415940: bf0319f8  stur     xzr, [x29, #-0x70]
+  00415944: bfff36a9  stp      xzr, xzr, [x29, #-0x98]
+  00415948: bf8317f8  stur     xzr, [x29, #-0x88]
+  0041594c: d5000036  tbz      w21, #0, #0x415964
+  00415950: a00302d1  sub      x0, x29, #0x80
+  00415954: a16302d1  sub      x1, x29, #0x98
+  00415958: e2031f2a  mov      w2, wzr
+  0041595c: 4f030094  bl       #0x416698  ; _ZN7android4initL22FindPartitionsToUmountEPNSt3__16vectorINS0_10MountEntryENS1_9allocatorIS3_EEEES7_b
+  00415960: 601c0036  tbz      w0, #0, #0x415cec
+  00415964: eb4e0294  bl       #0x4a9510  ; _ZN7android4base10boot_clock3nowEv
+  00415968: 080016eb  subs     x8, x0, x22
+  0041596c: e6130054  b.vs     #0x415be8
+  00415970: a96499d2  mov      x9, #0xcb25
+  00415974: 6a9b86d2  mov      x10, #0x34db
+  00415978: 2909a5f2  movk     x9, #0x2849, lsl #16
+  0041597c: caf6baf2  movk     x10, #0xd7b6, lsl #16
+  00415980: a92fc4f2  movk     x9, #0x217d, lsl #32
+  00415984: 4ad0dbf2  movk     x10, #0xde82, lsl #32
+  00415988: 899cf7f2  movk     x9, #0xbce4, lsl #48
+  0041598c: 6a63e8f2  movk     x10, #0x431b, lsl #48
+  00415990: e97e499b  smulh    x9, x23, x9
+  00415994: 087d4a9b  smulh    x8, x8, x10
+  00415998: 2afd5293  asr      x10, x9, #0x12
+  0041599c: 0bfd5293  asr      x11, x8, #0x12
+  004159a0: 49fd498b  add      x9, x10, x9, lsr #63
+  004159a4: 68fd488b  add      x8, x11, x8, lsr #63
+  004159a8: 200108eb  subs     x0, x9, x8
+  004159ac: e6110054  b.vs     #0x415be8
+  004159b0: 48040094  bl       #0x416ad0  ; _ZN7android4initL16UmountPartitionsENSt3__16chrono8durationIxNS1_5ratioILl1ELl1000EEEEE
+  004159b4: f603002a  mov      w22, w0
+  004159b8: 16120035  cbnz     w22, #0x415bf8
+  004159bc: 35010036  tbz      w21, #0, #0x4159e0
+  004159c0: b55b78a9  ldp      x21, x22, [x29, #-0x80]
+  004159c4: bf0216eb  cmp      x21, x22
+  004159c8: c0000054  b.eq     #0x4159e0
+  004159cc: e00315aa  mov      x0, x21
+  004159d0: 05050094  bl       #0x416de4  ; _ZN7android4init10MountEntry6DoFsckEv
+  004159d4: b5820191  add      x21, x21, #0x60
+  004159d8: df0215eb  cmp      x22, x21
+  004159dc: 81ffff54  b.ne     #0x4159cc
+  004159e0: f6031f2a  mov      w22, wzr
+  004159e4: a06302d1  sub      x0, x29, #0x98
+  004159e8: 5d050094  bl       #0x416f5c
+  004159ec: a00302d1  sub      x0, x29, #0x80
+  004159f0: 5b050094  bl       #0x416f5c
+  004159f4: 57db0494  bl       #0x54c750  ; sync
+  004159f8: 88008052  mov      w8, #4
+  004159fc: a8d5bb72  movk     w8, #0xdead, lsl #16
+  00415a00: 9f02086b  cmp      w20, w8
+  00415a04: c0000054  b.eq     #0x415a1c
+  00415a08: 08209c52  mov      w8, #0xe100
+  00415a0c: a8bea072  movk     w8, #0x5f5, lsl #16
+  00415a10: e0030191  add      x0, sp, #0x40
+  00415a14: e82300f9  str      x8, [sp, #0x40]
+  00415a18: 19fb0394  bl       #0x51467c  ; _ZNSt3__111this_thread9sleep_forERKNS_6chrono8durationIxNS_5ratioILl1ELl1000000000EEEEE
+  00415a1c: a18302d1  sub      x1, x29, #0xa0
+  00415a20: e003162a  mov      w0, w22
+  00415a24: 0e010094  bl       #0x415e5c  ; _ZN7android4initL15LogShutdownTimeENS0_10UmountStatEPNS_4base5TimerE
+  00415a28: e003142a  mov      w0, w20
+  00415a2c: e10313aa  mov      x1, x19
+  00415a30: 85fcff97  bl       #0x414c44  ; _ZN7android4init12RebootSystemEjRKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+  00415a34: 880f00b0  adrp     x8, #0x606000
+  00415a38: 08e12591  add      x8, x8, #0x978
+  00415a3c: 090940f9  ldr      x9, [x8, #0x10]
+  00415a40: 0001c03d  ldr      q0, [x8]
+  00415a44: e0070032  mov      w0, #3
+  00415a48: e1030191  add      x1, sp, #0x40
+  00415a4c: a2a301d1  sub      x2, x29, #0x68
+  00415a50: e3030032  mov      w3, #1
+  00415a54: e4031f32  mov      w4, #2
+  00415a58: e5030032  mov      w5, #1
+  00415a5c: e6031faa  mov      x6, xzr
+  00415a60: e7031faa  mov      x7, xzr
+  00415a64: e92b00f9  str      x9, [sp, #0x50]
+  00415a68: e013803d  str      q0, [sp, #0x40]
+  00415a6c: ff0300b9  str      wzr, [sp]
+  00415a70: ec150194  bl       #0x45b220  ; android_fork_execvp_ext
+  00415a74: e00316aa  mov      x0, x22
+  00415a78: da480094  bl       #0x427de0  ; _ZN7android4init7Service4StopEv
+  00415a7c: 95ffff17  b        #0x4158d0
+  00415a80: 24aa0494  bl       #0x540310  ; __errno
+  00415a84: f70300aa  mov      x23, x0
+  00415a88: f80240b9  ldr      w24, [x23]
+  00415a8c: 210c00b0  adrp     x1, #0x59a000
+  00415a90: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  00415a94: e0030191  add      x0, sp, #0x40
+  00415a98: e2298052  mov      w2, #0x14f
+  00415a9c: e4031f32  mov      w4, #2
+  00415aa0: 06008012  mov      w6, #-1
+  00415aa4: e3031f2a  mov      w3, wzr
+  00415aa8: e5031faa  mov      x5, xzr
+  00415aac: 26540294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  00415ab0: e0030191  add      x0, sp, #0x40
+  00415ab4: 22540294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00415ab8: 210c00b0  adrp     x1, #0x59a000
+  00415abc: 21cc0291  add      x1, x1, #0xb3  ; 0x59a0b3 "Reboot start, reason: "
+  00415ac0: c2028052  mov      w2, #0x16
+  00415ac4: 25c7ff97  bl       #0x407758
+  00415ac8: c8024039  ldrb     w8, [x22]
+  00415acc: caa640a9  ldp      x10, x9, [x22, #8]
+  00415ad0: 0bfd41d3  lsr      x11, x8, #1
+  00415ad4: 1f010072  tst      w8, #1
+  00415ad8: 2115969a  csinc    x1, x9, x22, ne
+  00415adc: 62018a9a  csel     x2, x11, x10, eq
+  00415ae0: 1ec7ff97  bl       #0x407758
+  00415ae4: 210c00b0  adrp     x1, #0x59a000
+  00415ae8: 21280391  add      x1, x1, #0xca  ; 0x59a0ca ", rebootTarget: "
+  00415aec: e2031c32  mov      w2, #0x10
+  00415af0: 1ac7ff97  bl       #0x407758
+  00415af4: 68024039  ldrb     w8, [x19]
+  00415af8: 6aa640a9  ldp      x10, x9, [x19, #8]
+  00415afc: 0bfd41d3  lsr      x11, x8, #1
+  00415b00: 1f010072  tst      w8, #1
+  00415b04: 2115939a  csinc    x1, x9, x19, ne
+  00415b08: 62018a9a  csel     x2, x11, x10, eq
+  00415b0c: 13c7ff97  bl       #0x407758
+  00415b10: e0030191  add      x0, sp, #0x40
+  00415b14: 4e540294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00415b18: f80200b9  str      w24, [x23]
+  00415b1c: b3fcff17  b        #0x414de8
+  00415b20: fca90494  bl       #0x540310  ; __errno
+  00415b24: f60300aa  mov      x22, x0
+  00415b28: d70240b9  ldr      w23, [x22]
+  00415b2c: 210c00b0  adrp     x1, #0x59a000
+  00415b30: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  00415b34: e0030191  add      x0, sp, #0x40
+  00415b38: 422d8052  mov      w2, #0x16a
+  00415b3c: e4031f32  mov      w4, #2
+  00415b40: 06008012  mov      w6, #-1
+  00415b44: e3031f2a  mov      w3, wzr
+  00415b48: e5031faa  mov      x5, xzr
+  00415b4c: fe530294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  00415b50: e0030191  add      x0, sp, #0x40
+  00415b54: fa530294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00415b58: 210c00b0  adrp     x1, #0x59a000
+  00415b5c: 21340491  add      x1, x1, #0x10d  ; 0x59a10d "Shutdown timeout: "
+  00415b60: 42028052  mov      w2, #0x12
+  00415b64: fdc6ff97  bl       #0x407758
+  00415b68: e1031faa  mov      x1, xzr
+  00415b6c: 517e0394  bl       #0x4f54b0
+  00415b70: 210c00b0  adrp     x1, #0x59a000
+  00415b74: 21800491  add      x1, x1, #0x120  ; 0x59a120 " ms"
+  00415b78: e2070032  mov      w2, #3
+  00415b7c: f7c6ff97  bl       #0x407758
+  00415b80: e0030191  add      x0, sp, #0x40
+  00415b84: 32540294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00415b88: d70200b9  str      w23, [x22]
+  00415b8c: 50fdff17  b        #0x4150cc
+  00415b90: e0a90494  bl       #0x540310  ; __errno
+  00415b94: f60300aa  mov      x22, x0
+  00415b98: d70240b9  ldr      w23, [x22]
+  00415b9c: 210c00b0  adrp     x1, #0x59a000
+  00415ba0: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  00415ba4: e0030191  add      x0, sp, #0x40
+  00415ba8: a2388052  mov      w2, #0x1c5
+  00415bac: e4031f32  mov      w4, #2
+  00415bb0: 06008012  mov      w6, #-1
+  00415bb4: e3031f2a  mov      w3, wzr
+  00415bb8: e5031faa  mov      x5, xzr
+  00415bbc: e2530294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  00415bc0: e0030191  add      x0, sp, #0x40
+  00415bc4: de530294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00415bc8: 210c00b0  adrp     x1, #0x59a000
+  00415bcc: 21c00691  add      x1, x1, #0x1b0  ; 0x59a1b0 "vold not running, skipping vold shutdown"
+  00415bd0: 02058052  mov      w2, #0x28
+  00415bd4: e1c6ff97  bl       #0x407758
+  00415bd8: e0030191  add      x0, sp, #0x40
+  00415bdc: 1c540294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00415be0: d70200b9  str      w23, [x22]
+  00415be4: 3bffff17  b        #0x4158d0
+  00415be8: 0da20494  bl       #0x53e41c  ; __ubsan_handle_sub_overflow_minimal_abort
+  00415bec: d7a90494  bl       #0x540348  ; abort
+  00415bf0: a0a301d1  sub      x0, x29, #0x68
+  00415bf4: 04ee0394  bl       #0x511404
+  00415bf8: b7a301d1  sub      x23, x29, #0x68
+  00415bfc: cd530294  bl       #0x4aab30  ; _ZN7android4base21GetMinimumLogSeverityEv
+  00415c00: 1f080071  cmp      w0, #2
+  00415c04: cc020054  b.gt     #0x415c5c
+  00415c08: c2a90494  bl       #0x540310  ; __errno
+  00415c0c: f50300aa  mov      x21, x0
+  00415c10: b80240b9  ldr      w24, [x21]
+  00415c14: 210c00b0  adrp     x1, #0x59a000
+  00415c18: 21000091  add      x1, x1, #0  ; 0x59a000 "system/core/init/reboot.cpp"
+  00415c1c: e0030191  add      x0, sp, #0x40
+  00415c20: 42278052  mov      w2, #0x13a
+  00415c24: e4031f32  mov      w4, #2
+  00415c28: 06008012  mov      w6, #-1
+  00415c2c: e3031f2a  mov      w3, wzr
+  00415c30: e5031faa  mov      x5, xzr
+  00415c34: c4530294  bl       #0x4aab44  ; _ZN7android4base10LogMessageC2EPKcjNS0_5LogIdENS0_11LogSeverityES3_i
+  00415c38: e0030191  add      x0, sp, #0x40
+  00415c3c: c0530294  bl       #0x4aab3c  ; ENGINE_get_RSA_method
+  00415c40: 210c00b0  adrp     x1, #0x59a000
+  00415c44: 21700b91  add      x1, x1, #0x2dc  ; 0x59a2dc "umount timeout, last resort, kill all and try"
+  00415c48: a2058052  mov      w2, #0x2d
+  00415c4c: c3c6ff97  bl       #0x407758
+  00415c50: e0030191  add      x0, sp, #0x40
+  00415c54: fe530294  bl       #0x4aac4c  ; _ZN7android4base10LogMessageD2Ev
+  00415c58: b80200b9  str      w24, [x21]
+  00415c5c: e0030032  mov      w0, #1
+  00415c60: 05040094  bl       #0x416c74  ; _ZN7android4initL23DumpUmountDebuggingInfoEb
+  00415c64: 48208d52  mov      w8, #0x6902
+  00415c68: ff7f04a9  stp      xzr, xzr, [sp, #0x40]
+  00415c6c: e8830079  strh     w8, [sp, #0x40]
+  00415c70: 280c00b0  adrp     x8, #0x59a000
+  00415c74: 08f50e91  add      x8, x8, #0x3bd  ; 0x59a3bd "/proc/sysrq-trigger"
+  00415c78: 0001c03d  ldr      q0, [x8]
+  00415c7c: c8048052  mov      w8, #0x26
+  00415c80: bfff39a9  stp      xzr, xzr, [x29, #-0x68]
+  00415c84: a8831938  sturb    w8, [x29, #-0x68]
+  00415c88: e8ac8c52  mov      w8, #0x6567
+  00415c8c: 480ea072  movk     w8, #0x72, lsl #16
+  00415c90: e0030191  add      x0, sp, #0x40
+  00415c94: a1a301d1  sub      x1, x29, #0x68
+  00415c98: e2031f2a  mov      w2, wzr
+  00415c9c: ff2b00f9  str      xzr, [sp, #0x50]
+  00415ca0: bf831af8  stur     xzr, [x29, #-0x58]
+  00415ca4: ff0b0139  strb     wzr, [sp, #0x42]
+  00415ca8: e012803c  stur     q0, [x23, #1]
+  00415cac: e81201b8  stur     w8, [x23, #0x11]
+  00415cb0: ab4f0294  bl       #0x4a9b5c  ; _ZN7android4base17WriteStringToFileERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_b
+  00415cb4: a8835938  ldurb    w8, [x29, #-0x68]
+  00415cb8: 68000036  tbz      w8, #0, #0x415cc4
+  00415cbc: a0835af8  ldur     x0, [x29, #-0x58]
+  00415cc0: b7760394  bl       #0x4f379c
+  00415cc4: e8034139  ldrb     w8, [sp, #0x40]
+  00415cc8: 68000036  tbz      w8, #0, #0x415cd4
+  00415ccc: e02b40f9  ldr      x0, [sp, #0x50]
+  00415cd0: b3760394  bl       #0x4f379c
+  00415cd4: e0031faa  mov      x0, xzr
+  00415cd8: 7e030094  bl       #0x416ad0  ; _ZN7android4initL16UmountPartitionsENSt3__16chrono8durationIxNS1_5ratioILl1ELl1000EEEEE
+  00415cdc: 40e8ff34  cbz      w0, #0x4159e4
+  00415ce0: e0031f2a  mov      w0, wzr
+  00415ce4: e4030094  bl       #0x416c74  ; _ZN7android4initL23DumpUmountDebuggingInfoEb
+  00415ce8: 3fffff17  b        #0x4159e4
+  00415cec: f6070032  mov      w22, #3
+  00415cf0: 3dffff17  b        #0x4159e4

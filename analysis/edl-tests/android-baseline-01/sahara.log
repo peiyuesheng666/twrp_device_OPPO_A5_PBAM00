@@ -1,0 +1,4033 @@
+Binary build date: Jun 25 2019 @ 03:16:15
+QSAHARASERVER CALLED LIKE THIS: 'E:\6\高通工具箱\bin\tool\Windows\QSaharaServer.ex'Current working dir: E:\OPPOA5UnlockBootLoader\twrp_device_oppo_PBAM00\analysis\edl-tests\android-baseline-01
+Sahara mappings:
+2: amss.mbn
+6: apps.mbn
+8: dsp1.mbn
+10: dbl.mbn
+11: osbl.mbn
+12: dsp2.mbn
+16: efs1.mbn
+17: efs2.mbn
+20: efs3.mbn
+21: sbl1.mbn
+22: sbl2.mbn
+23: rpm.mbn
+25: tz.mbn
+28: dsp3.mbn
+29: acdb.mbn
+30: wdt.mbn
+31: mba.mbn
+13: E:\OPPOA5UnlockBootLoader\tools\firehose_450.mbn
+
+22:50:35: INFO: function: main:300 Port name '\\.\COM5'
+
+22:50:35: EVENT: STATE <-- SAHARA_WAIT_HELLO
+
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 00 00 00 30 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 1 and packet length 48 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 48
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 40 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 00 00 00 01 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_HELLO
+
+22:50:35: EVENT: SENDING --> SAHARA_HELLO_RESPONSE
+
+22:50:35: INFO: function: sahara_start:448 
+
+sahara_mode                         = 4
+
+22:50:35: INFO: function: sahara_start:449 
+sahara_hello->mode = 0
+
+22:50:35: INFO: function: sahara_start:450 
+helloRx.mode                        = 0
+
+
+22:50:35: INFO: function: tx_data:203 Transmitting 48 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 00 00 00 30 00 00 00 02 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 00 00 00 02 00 00 00 03 00 00 00 04 00 00 00 05 00 00 00 06 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 48
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 00 00 34 00 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:226 num_sahara_mappings = 18
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (0) Looking for image 13, sahara_mappings[0].id = 2
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (1) Looking for image 13, sahara_mappings[1].id = 6
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (2) Looking for image 13, sahara_mappings[2].id = 8
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (3) Looking for image 13, sahara_mappings[3].id = 10
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (4) Looking for image 13, sahara_mappings[4].id = 11
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (5) Looking for image 13, sahara_mappings[5].id = 12
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (6) Looking for image 13, sahara_mappings[6].id = 16
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (7) Looking for image 13, sahara_mappings[7].id = 17
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (8) Looking for image 13, sahara_mappings[8].id = 20
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (9) Looking for image 13, sahara_mappings[9].id = 21
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (10) Looking for image 13, sahara_mappings[10].id = 22
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (11) Looking for image 13, sahara_mappings[11].id = 23
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (12) Looking for image 13, sahara_mappings[12].id = 25
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (13) Looking for image 13, sahara_mappings[13].id = 28
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (14) Looking for image 13, sahara_mappings[14].id = 29
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (15) Looking for image 13, sahara_mappings[15].id = 30
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (16) Looking for image 13, sahara_mappings[16].id = 31
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:230 (17) Looking for image 13, sahara_mappings[17].id = 13
+
+22:50:35: INFO: function: get_file_from_sahara_mapping_list:234 Matched!!! - 'E:\OPPOA5UnlockBootLoader\tools\firehose_450.mbn'
+
+22:50:35: INFO: function: find_file:89 search path 0: C:\builds\Perforce_main\core\storage\tools\kickstart\common\kickstart\kickstart\
+
+22:50:35: INFO: function: find_file:89 search path 1: /firmware/images/
+
+22:50:35: INFO: function: find_file:89 search path 2: E:\OPPOA5UnlockBootLoader\twrp_device_oppo_PBAM00\analysis\edl-tests\android-baseline-01\
+
+22:50:35: INFO: function: find_file:104 Found 'E:\OPPOA5UnlockBootLoader\tools\firehose_450.mbn' in local directory
+
+22:50:35: Requested ID 13, file: "E:\OPPOA5UnlockBootLoader\tools\firehose_450.mbn"
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 0
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x0
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 52
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x34
+
+22:50:35: INFO: function: tx_data:203 Transmitting 52 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 7F 45 4C 46 01 01 01 00 00 00 00 00 00 00 00 00 02 00 28 00 01 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 34 00 00 00 00 00 00 00 02 00 00 05 34 00 20 00 0A 00 28 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 100
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 34 00 00 00 40 01 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 52
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x34
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 320
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x140
+
+22:50:35: INFO: function: tx_data:203 Transmitting 320 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 74 01 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 70 86 00 00 70 86 00 00 00 00 B0 CC 03 00 06 00 00 00 00 40 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 420
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 10 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 4096
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 15 00 00 00 03 00 00 00 00 00 00 00 28 D0 73 86 40 1A 00 00 40 01 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 4516
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 20 00 00 68 0A 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 8192
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 2664
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0xA68
+
+22:50:35: INFO: function: tx_data:203 Transmitting 2664 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 7180
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 24 85 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 427300
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x68524
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: D6 F0 21 E3 60 01 9F E5 01 10 A0 E3 00 10 80 E5 58 01 9F E5 00 10 A0 E1 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 81 01 CD 6C 00 2D 4E D0 01 6A 01 F0 11 01 41 F0 10 01 01 62 D0 F8 A0 10 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 11276
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 24 95 06 00 B4 0F 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 431396
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x69524
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4020
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0xFB4
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4020 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 11 F0 01 0F FA D1 01 6A 01 F0 11 01 41 F0 01 01 01 62 C4 F8 04 A0 15 F0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 74 20 6F 66 20 6C 69 6D 69 74 73 3A 20 25 75 4D 48 7A 0A 0A 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 15296
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 D8 A4 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 435416
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x6A4D8
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 19392
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 D8 B4 06 00 30 08 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 439512
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x6B4D8
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 2096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x830
+
+22:50:35: INFO: function: tx_data:203 Transmitting 2096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 21488
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 30 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 12288
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 75 0D 00 EA 4C 0D 00 EA DE 7C 00 EA 4C 0D 00 EA 4D 0D 00 EA F2 74 00 EA 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 03 00 52 21 04 00 00 1A 01 20 D0 E4 01 30 D1 E4 01 00 52 E3 03 00 52 21 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 25584
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 40 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 16384
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: F5 FF FF 0A 03 00 42 E0 1E FF 2F E1 01 01 01 01 42 78 01 78 83 78 C0 78 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 32 46 06 A9 03 A8 01 F0 4C F8 03 AB 07 C3 6D 10 64 1C 00 2D E5 D1 32 46 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 29680
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 50 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 20480
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 69 46 B8 F1 00 0F 03 A8 02 D0 01 F0 2A F8 01 E0 01 F0 3B F8 C9 E9 00 01 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: F9 D3 57 08 DA E7 46 EA 06 46 13 F1 40 0F 4F EA 16 46 1F DD 13 F1 20 0F 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 33776
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 60 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 24576
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x6000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: DF BF 16 43 0A 46 00 21 20 33 5B 42 C8 D0 C3 F1 20 07 46 EA 06 46 02 FA 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 04 90 05 90 06 90 07 90 08 90 80 46 82 46 81 46 83 46 00 EB 40 01 C1 EB 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 37872
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 70 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 28672
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x7000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 80 11 03 AB 04 EB 81 01 8A 6A 1A 54 04 AB CA 6A 1A 54 05 AB 0A 6B 1A 54 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 08 44 9D F8 00 10 08 43 8D F8 00 00 10 23 6A 46 19 46 06 F1 80 00 01 F0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 41968
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 80 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 32768
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x8000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 85 FB DD B1 B5 F5 7F 4F 03 D2 28 0A 20 70 65 70 0A E0 FF 20 20 70 FE 20 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 1F FA 88 F0 01 21 4F F4 50 62 01 92 00 23 02 91 00 90 DB F8 04 20 D9 F8 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 46064
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 90 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 36864
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x9000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 18 00 12 F0 FA FD 08 B1 01 25 1D E0 B0 B2 02 21 4F F4 40 62 01 92 00 23 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 04 98 FA F7 11 F8 81 46 DF F8 5C A1 38 46 DA F8 00 10 FB F7 34 EB 06 46 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 50160
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 A0 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 40960
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0xA000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 B1 76 1C 0C 98 FA F7 03 F8 80 F8 79 50 76 1E 7D D3 4F F0 00 0A 4E 48 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 F0 58 FF 02 9A 05 EA 07 00 20 FA 08 F0 00 B9 01 20 05 EA 06 01 D1 40 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 54256
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 B0 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 45056
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0xB000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 41 EA 00 40 C9 F8 00 00 03 B0 BD E8 F0 83 00 00 4D 41 4A 4F 52 5F 56 45 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: EB FC 88 B1 68 46 FF F7 D3 F9 80 B1 FF F7 AE FD 07 20 FF F7 D9 FA 0E B0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 58352
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 C0 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 49152
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0xC000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 20 70 BD 0E B0 00 20 70 BD 0E B0 00 20 70 BD 0E B0 00 20 70 BD 0E B0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 0D F0 04 F9 05 46 7D B1 04 99 2B 46 03 98 3A 46 01 91 41 46 00 90 30 46 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 62448
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 D0 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 53248
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0xD000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D F0 AC F8 48 B1 20 60 06 B0 00 20 BD E8 F0 81 06 B0 4F F0 FF 30 BD E8 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: D3 E7 0B B0 BD E8 F0 8F 4C 9A 05 08 07 00 F0 00 0A 20 20 20 20 52 44 20 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 66544
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 E0 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 57344
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0xE000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 44 51 53 20 44 43 43 20 43 6F 72 72 65 63 74 69 6F 6E 20 0A 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 F5 80 51 01 44 CD F8 94 19 02 D1 4F F0 00 01 01 E0 4F F4 60 51 01 F5 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 70640
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 F0 00 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 61440
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0xF000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 51 01 44 CD F8 80 19 02 D1 4F F0 00 01 01 E0 4F F4 60 51 01 F5 40 51 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 15 F0 B0 FC DD F8 D0 39 04 F2 DA 22 05 99 DD F8 7C 09 FE F7 3D FE A8 F1 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 74736
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 65536
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x10000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 00 00 F0 FF 08 B8 F1 00 0F 7F F4 7C AF DD F8 D8 09 40 1C C0 B2 CD F8 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: CD F8 08 90 FC F7 5A FE 00 21 0E 9A 04 EB C4 00 06 EB 80 10 00 EB 42 10 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 78832
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 10 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 69632
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x11000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0C 90 08 A8 00 EB 44 05 04 EB 84 00 06 EB 80 02 0D 98 02 EB 40 00 0B 90 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 EB C0 00 01 EB C0 00 09 EB C9 01 00 EB 81 00 01 90 00 24 01 99 06 EB 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 82928
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 20 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 73728
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x12000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: C6 00 08 44 02 90 08 EB 06 30 03 90 01 22 02 98 4B 46 21 46 20 44 90 F8 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: C0 F8 C8 65 D0 F8 08 82 08 EA 03 03 C0 F8 08 32 D0 F8 08 32 03 EA 0C 03 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 87024
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 30 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 77824
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x13000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: C0 F8 08 32 D0 F8 40 C2 21 4B 0C EA 03 03 C0 F8 40 32 D0 F8 40 C2 1F 4B 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 08 60 08 68 20 F0 1C 00 20 F4 E0 50 38 43 08 60 C6 E7 D0 F8 0C 05 20 F4 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 91120
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 40 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 81920
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x14000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 40 00 20 F0 40 40 4C EA 00 00 08 60 08 68 20 F4 00 10 20 F0 00 50 20 43 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 20 00 81 60 70 47 00 00 80 FB 06 08 0A 4A 52 F8 20 00 0A 78 4B 78 12 02 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 95216
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 50 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 86016
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x15000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 42 EA 83 12 8B 78 42 EA 43 12 CB 78 42 EA 03 12 0B 79 49 79 42 EA C3 02 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: F5 E7 00 00 4C 9A 05 08 49 73 5F 56 6F 6C 5F 55 70 44 6F 77 6E 5F 69 73 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 99312
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 60 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 90112
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x16000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 44 6F 77 6E 20 69 73 20 63 61 6C 6C 00 00 00 00 20 00 00 02 60 85 03 20 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 92 00 41 F8 24 00 60 1C C4 B2 04 2C ED D3 D6 F8 78 04 40 1E 00 F0 FF 09 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 103408
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 70 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 94208
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x17000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 2D 64 D3 4F F0 01 0B B9 F1 00 0F 11 DB 33 48 50 F8 25 00 09 EB 89 01 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 20 C1 F3 09 13 DF F8 24 C0 DC F8 10 C0 63 45 03 D2 08 46 FD F7 A0 F8 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 107504
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 80 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 98304
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x18000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 22 18 B1 01 20 20 60 10 46 10 BD 00 20 20 60 FA E7 00 00 A0 08 07 08 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 08 B1 04 46 17 E0 01 99 06 29 01 D0 01 24 12 E0 9D F8 08 10 61 70 9D F8 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 111600
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 90 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 102400
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x19000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 09 10 21 70 9D F8 0A 10 E1 70 9D F8 0B 10 A1 70 9D F8 0C 10 21 71 9D F8 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 41 78 8D F8 05 10 81 78 8D F8 06 10 C0 78 8D F8 07 00 01 A9 04 F1 68 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 115696
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 A0 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 106496
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1A000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF F7 C8 F9 18 B1 05 B0 4F F0 FF 30 30 BD 01 21 04 F1 68 00 FF F7 9E F9 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 22 90 23 90 24 90 25 90 26 90 27 90 28 90 29 90 2A 90 2B 90 2C 90 2D 90 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 119792
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 B0 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 110592
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1B000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0E 90 0F 90 10 90 11 90 12 90 13 90 14 90 15 90 16 90 17 90 18 90 19 90 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 2D E9 F8 43 07 46 0D 46 14 46 DD F8 20 90 98 46 3C 48 01 22 00 EB 05 36 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 123888
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 C0 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 114688
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1C000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 38 46 31 46 00 F0 ED F9 FF F7 98 FB 00 22 31 46 38 46 00 F0 E6 F9 38 46 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 54 9A 05 08 66 73 5F 62 6C 6F 63 6B 64 65 76 5F 73 64 2E 63 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 127984
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 D0 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 118784
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1D000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 70 B5 15 46 1A 46 04 46 04 9B 08 46 0B 49 D1 F8 00 C0 3C B1 58 B1 29 46 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FE E7 71 48 40 F2 96 41 75 4A 03 68 6F A0 98 47 FE E7 74 48 03 F0 1E FD 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 132080
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 E0 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 122880
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1E000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: E9 E7 30 78 02 28 49 D0 70 48 C4 69 B0 88 F1 6A 00 FB 01 F0 87 B2 F0 68 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 60 1C 06 D0 00 F0 2E F8 41 1C 02 D0 A0 42 00 D3 05 1B 28 46 70 BD 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 136176
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 F0 01 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 126976
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x1F000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 48 00 78 70 47 00 00 4C 9D 05 08 05 48 00 78 02 28 03 D0 00 21 04 48 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: B8 D0 70 86 A0 BA 70 86 70 47 EB F7 09 BF EB F7 AD BD 00 00 03 22 40 F2 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 140272
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 131072
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x20000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FD 11 01 A0 FE F7 76 FC 62 6F 6F 74 5F 65 72 72 6F 72 5F 68 61 6E 64 6C 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: CC F8 48 00 30 BC 70 47 80 9A 05 08 E8 32 77 86 30 B4 00 24 DF F8 40 C0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 144368
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 10 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 135168
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x21000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: DC F8 44 20 64 2A 01 D3 CC F8 44 40 DC F8 44 30 0C 4D 03 EB 83 02 45 F8 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 0B D0 01 68 06 4D A9 42 07 D0 C8 22 A9 17 E3 F7 46 ED 20 68 05 60 01 21 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 148464
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 20 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 139264
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x22000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 41 60 70 BD 88 9D 05 08 40 DB F8 C1 25 F0 B6 BA 25 F0 A6 BB 25 F0 B4 BB 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 0B 60 4B 60 8B 60 CB 60 40 1C 05 28 F0 D3 06 98 40 1C 06 90 0E 98 01 69 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 152560
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 30 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 143360
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x23000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 06 98 81 42 3F F6 CF AE 11 B0 BD E8 F0 8F 00 00 2D E9 FF 4F 89 B0 88 46 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 0C EB 40 13 01 EB 40 12 0B 44 52 69 5B 69 D2 68 DB 68 9A 42 07 D9 8F 21 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 156656
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 40 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 147456
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x24000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 06 48 43 F2 60 02 03 68 05 A0 98 47 FE E7 40 1C 84 42 E9 DC 70 BD 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 81 78 4F EA D1 1C 00 95 42 79 03 79 C0 78 43 EA 02 23 00 F0 03 02 01 F0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 160752
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 50 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 151552
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x25000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0F 00 61 46 16 F0 68 FE 24 68 00 2C EA D1 00 20 F8 BD F7 22 00 21 21 20 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF F7 98 F9 00 26 8F 4F 80 A0 38 60 C7 F8 10 80 02 98 00 B1 01 26 01 20 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 164848
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 60 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 155648
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x26000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0F A9 FA F7 0B F9 0F 98 2C 21 00 FB 01 F0 0E A9 E6 F7 7E FF 0E 99 03 20 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: A8 46 13 46 C7 FB 02 83 4F EA A3 08 A8 EB E3 73 A3 EB C3 03 13 44 F3 5C 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 168944
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 70 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 159744
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x27000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 83 EA 0C 03 83 54 52 1C 8A 42 E8 DB 02 98 A0 42 04 D0 03 B0 BD E8 F0 01 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 24 70 38 46 00 F0 80 FD 81 46 B9 F1 00 0F 27 D0 02 AA 01 A9 48 46 05 F0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 173040
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 80 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 163840
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x28000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: AE FB F0 B9 BD F8 08 00 85 42 07 D2 72 22 12 48 40 F2 CD 21 03 68 11 A0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 12 D2 42 46 4B 46 20 46 29 46 FF F7 A9 FF B8 EB 00 08 69 EB 01 09 24 18 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 177136
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 90 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 167936
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x29000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 4D 41 01 98 40 1C 01 90 A0 1B 75 EB 07 00 EC D3 02 99 01 98 88 42 01 D2 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 61 62 6C 65 20 73 69 7A 65 00 00 00 5A 6C 70 41 77 61 72 65 48 6F 73 74 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 181232
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 A0 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 172032
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2A000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 53 6B 69 70 57 72 69 74 65 00 00 00 73 6B 69 70 70 69 6E 67 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 1C F0 5E F9 01 24 00 F0 37 BA 01 24 00 F0 34 BA BD 48 0C 90 02 68 43 68 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 185328
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 B0 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 176128
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2B000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 82 EA 05 01 83 EA E5 70 08 43 09 D0 29 46 B9 A0 04 F0 24 FA 00 20 1C F0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 73 00 00 00 45 6E 63 6F 75 6E 74 65 72 65 64 20 52 41 57 20 64 61 74 61 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 189424
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 C0 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 180224
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2C000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 20 74 72 61 6E 73 70 6F 72 74 20 65 72 72 6F 72 20 69 6E 20 76 61 6C 69 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 2A D0 20 6C 4F F4 00 71 D6 F7 74 FF 20 6C 32 7D 02 70 00 21 38 20 0E F0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 193520
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 D0 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 184320
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2D000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 1D FC 94 F8 A4 10 20 46 22 6C 01 23 BD E8 70 40 0E F0 38 BC A4 6B 9C B1 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 75 67 5F 69 74 65 72 2E 63 00 00 00 F0 B4 83 68 00 24 00 22 1A 49 0D 68 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 197616
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 E0 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 188416
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2E000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 2D 2C DD 19 4E C2 EB C2 01 06 EB C1 01 D1 F8 04 C0 BC F1 00 0F 1F D1 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 28 46 70 BD 70 B5 04 46 00 25 20 46 D5 F7 0C F8 11 49 88 42 1E D1 60 79 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 201712
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 F0 02 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 192512
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x2F000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 21 79 41 EA 00 20 C0 28 18 D1 A0 79 01 28 15 D1 E0 79 01 28 12 D1 20 7A 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: B8 F1 01 0F 1D D9 02 9B 57 F8 21 50 B3 46 53 F8 21 A0 00 23 15 EB 0B 05 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 205808
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 196608
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x30000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 43 EB 03 06 E2 FB 0A 56 03 9B A2 46 00 24 1A EB 05 05 53 F8 21 30 64 41 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 65 60 13 44 93 42 01 D3 AB 42 F5 D9 03 20 04 B0 30 BD 2D E9 F0 41 05 46 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 209904
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 10 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 200704
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x31000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0E 46 00 27 2D B3 26 B3 D5 F8 78 03 00 28 20 D0 3C 46 3E D9 31 68 09 B3 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 D0 03 25 23 E0 03 22 03 A9 30 46 FE F7 52 FF 08 B1 03 25 1B E0 69 46 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 214000
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 20 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 204800
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x32000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 A8 FE F7 DA FD 08 B1 03 25 14 E0 00 9B 01 9A 01 E0 52 1E 5B 1C 12 B1 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 4F F4 80 72 A1 F5 00 70 15 F0 3E FB 4F F4 80 72 AF F2 DC 01 04 48 15 F0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 218096
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 30 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 208896
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x33000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 37 FB 03 48 EC F7 B2 FB 04 B0 20 46 10 BD 00 00 64 34 07 08 20 7C 20 53 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 8E 10 44 1F FA 80 F8 20 68 00 23 04 AA 00 68 FF F7 A8 F9 81 46 20 68 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 222192
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 40 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 212992
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x34000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 23 03 AA 31 46 00 68 FF F7 A0 F9 40 EA 09 06 20 68 00 23 02 AA 39 46 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: D6 D1 00 95 20 68 03 22 43 46 59 46 00 68 FE F7 27 FA 00 28 CC D1 31 46 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 226288
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 50 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 217088
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x35000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 50 46 01 22 BD E8 F8 4F 00 F0 AA B8 38 B5 0C 46 15 46 00 F0 C7 F8 88 B1 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 06 2F 02 D9 13 20 BD E8 F8 8F 08 2E 02 D3 14 20 BD E8 F8 8F 7F 08 60 68 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 230384
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 60 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 221184
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x36000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 42 88 01 88 80 88 02 FB 05 11 08 44 81 B2 49 EA 88 00 4F F0 00 0A CD F8 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 30 46 00 F0 B9 F9 40 EA 05 04 30 46 00 F0 1C FB 04 43 30 46 FF F7 1C FE 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 234480
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 70 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 225280
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x37000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 40 EA 04 05 3D E0 01 21 30 46 01 F0 6F F9 40 EA 05 04 30 46 00 F0 C6 FB 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 42 6B A2 F1 64 00 B0 F5 E1 7F 05 D8 00 21 28 46 00 F0 94 F9 04 43 01 E0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 238576
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 80 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 229376
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x38000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 44 F0 80 04 70 69 90 F8 40 10 01 29 0C D1 C1 6B A1 F5 61 60 B0 F5 61 7F 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 86 B2 28 46 00 F0 3A F8 07 46 00 20 00 90 03 22 28 68 23 46 31 46 00 68 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 242672
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 90 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 233472
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x39000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FA F7 22 FA 38 43 F8 BD F8 B5 0D 46 C0 B2 00 F0 9D F8 04 46 64 B1 60 68 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 56 F8 24 00 02 90 00 28 26 D1 0C 20 02 A9 FA F7 DD FE 02 98 07 60 9E 20 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 246768
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 A0 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 237568
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3A000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF F7 5A FD 02 99 48 60 14 4F 38 B1 6C B1 3B 68 23 21 43 F2 60 02 12 A0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 6C 74 61 00 08 90 05 08 54 9A 05 08 01 00 00 01 73 62 6C 31 5F 63 6F 6E 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 250864
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 B0 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 241664
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3B000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 66 69 67 2E 63 00 00 00 36 00 00 01 00 00 50 86 88 9D 05 08 44 00 00 01 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 70 B5 05 46 00 24 00 2D 06 D9 4F F4 7A 70 E6 F7 19 FC 64 1C AC 42 F8 D3 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 254960
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 C0 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 245760
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3C000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 70 BD E6 F7 13 BC 10 B5 01 24 00 20 01 F0 96 FE 20 46 10 BD 0A 4B 18 6B 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 22 00 21 90 20 00 F0 55 FF 00 22 91 20 11 46 00 F0 50 FF 01 20 10 BD 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 259056
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 D0 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 249856
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3D000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 08 48 FF F7 07 FF 00 20 00 F0 D8 FA E8 E7 00 22 90 20 11 46 00 F0 42 FF 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 10 B5 04 46 7C B1 A2 69 00 21 A2 20 FF F7 52 FF 62 69 00 21 A3 20 FF F7 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 263152
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 E0 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 253952
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3E000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 4D FF 07 49 20 46 49 69 BD E8 10 40 08 47 BD E8 10 40 00 21 A8 20 40 F2 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FD FE 00 28 3D D1 B8 F1 01 0F 00 F0 7D 81 C7 48 00 78 01 28 00 F0 7C 81 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 267248
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 F0 03 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 258048
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x3F000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 F0 80 B9 C4 48 C5 4E 08 90 9B F8 49 01 F0 B1 D6 F8 60 31 D6 F8 64 01 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 54 9A 05 08 05 00 00 41 73 62 6C 31 5F 6D 63 2E 63 00 00 00 D9 9C 05 08 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 271344
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 262144
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x40000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 00 00 01 15 00 00 01 F8 B5 05 46 00 20 00 90 1E 4C DE F7 25 FD 40 68 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 40 0D 03 00 F0 B5 83 B0 04 46 26 68 01 21 20 46 02 F0 DA FC 00 28 1C D1 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 275440
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 10 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 266240
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x41000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 20 60 72 01 27 E7 65 20 46 02 F0 6B FD 05 46 20 7A 02 28 06 D0 06 28 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 0C 01 F1 0C 03 00 22 BC F1 00 0F 0D D9 14 27 0F 4D 04 68 07 EB 82 08 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 279536
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 20 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 270336
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x42000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 55 F8 24 40 54 F8 08 40 1C 60 1B 1D 52 1C 62 45 F3 D3 08 68 34 28 05 D0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 06 46 30 46 FF F7 8A F8 05 46 8D B1 05 F1 0C 04 C4 F8 94 50 60 7A 01 28 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 283632
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 30 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 274432
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x43000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D D0 02 28 0B D0 4F F0 00 08 C5 F8 B0 80 4F F0 01 09 28 79 30 B1 12 E0 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 89 68 C0 EB C0 00 03 96 C0 00 02 93 00 91 40 23 01 90 02 21 60 46 01 F0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 287728
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 40 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 278528
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x44000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 1F FA C0 B1 04 46 20 E0 4F F4 81 74 1D E0 4A 68 5A B1 89 68 40 01 03 96 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 04 90 CD F8 00 80 2A 46 78 6B 33 46 FF F7 93 F9 48 B1 44 B1 B8 68 02 9A 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 291824
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 50 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 282624
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x45000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 50 F8 0B 10 80 58 08 18 21 46 BE F7 67 FF 0A F1 01 0A 78 68 00 8F 50 45 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 1A 02 03 0E 2B 05 06 09 30 21 30 00 01 02 04 03 65 01 48 86 60 09 06 0D 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 295920
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 60 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 286720
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x46000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 30 31 30 00 00 22 01 B1 10 B9 01 20 70 47 52 1C 8A 42 02 D2 83 5C 00 2B 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 08 F0 0F 08 59 F8 28 80 4F EA F8 1B 8B EA B8 4B 8B EA D8 0E CD F8 44 E0 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 300016
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 70 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 290816
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x47000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0A F1 0E 08 08 F0 0F 08 59 F8 28 80 4F EA 78 4B 8B EA F8 4B 8B EA 98 28 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 25 60 00 20 70 BD 3E A0 E7 F7 34 FA 04 B1 25 60 00 20 70 BD 46 57 20 55 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 304112
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 80 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 294912
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x48000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 70 64 61 74 65 20 53 75 63 63 65 73 73 66 75 6C 2E 20 46 57 20 56 65 72 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 0A A8 BA F7 6F FF 0E 99 B9 42 01 D0 D1 F7 5A FB 10 B0 28 46 BD E8 F0 87 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 308208
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 90 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 299008
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x49000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 4C 9A 05 08 C0 F3 0F 11 A1 F5 00 42 C4 3A 05 D1 6F F3 13 10 40 F4 43 60 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 43 44 54 20 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 312304
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 A0 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 303104
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4A000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 76 65 72 73 69 6F 6E 3A 25 64 2C 50 6C 61 74 66 6F 72 6D 20 49 44 3A 25 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 02 00 00 00 96 02 00 80 00 00 00 00 02 00 00 00 A3 02 00 80 00 00 02 0B 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 316400
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 B0 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 307200
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4B000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 FF 00 FF 02 00 00 00 B2 02 00 80 25 01 00 00 02 00 00 00 C1 02 00 80 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 02 00 00 00 2D 04 00 80 00 00 00 01 02 00 00 00 37 04 00 80 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 320496
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 C0 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 311296
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4C000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 00 00 00 43 04 00 80 8E 00 00 00 14 00 00 00 53 04 00 80 6C 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 4C 04 00 00 0C 0F 00 00 4B 00 00 00 00 00 00 00 CC 01 00 00 E3 02 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 324592
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 D0 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 315392
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4D000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: A2 FE FF FF B0 04 00 00 E8 03 00 00 4C 04 00 00 01 00 00 00 15 13 10 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: E2 4D F3 FE 5F F0 BC C6 E8 ED 7D C2 31 CB 3E CF 86 D6 FF CB 83 86 B8 D5 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 328688
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 E0 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 319488
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4E000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 34 9B 79 D1 ED BD 3A DC 5A A0 FB D8 EE E0 0C 69 59 FD CD 6D 80 DB 8E 60 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 332784
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 F0 04 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 323584
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x4F000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF 38 05 08 36 00 00 00 FF 00 00 00 4B 39 05 08 36 00 00 00 FF 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 336880
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 05 00 A4 0B 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 327680
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x50000
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 2980
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0xBA4
+
+22:50:35: INFO: function: tx_data:203 Transmitting 2980 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 53 39 05 08 36 00 00 00 FF 00 00 00 5B 39 05 08 34 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 43 00 00 00 F8 FF FF FF 0C 00 00 00 0E 00 00 00 0F 00 00 00 2E 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 339860
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 0B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 330660
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x50BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 4C 99 07 08 7C C9 05 08 A4 DB 05 08 5F 14 05 08 74 C9 05 08 70 C9 05 08 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 343956
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 1B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 334756
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x51BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 9C 38 07 08 68 C9 05 08 60 C7 05 08 5E 14 05 08 6C C7 05 08 84 C7 05 08 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 00 00 00 01 00 00 00 5E 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 348052
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 2B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 338852
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x52BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 352148
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 3B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 342948
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x53BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF 00 00 00 01 04 69 26 FF 00 00 00 01 A5 D0 20 FF 00 00 00 01 EC 69 20 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 356244
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 4B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 347044
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x54BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF 00 00 00 01 A5 D0 20 FF 00 00 00 01 36 6B 20 FF 00 00 00 01 A5 D0 18 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 360340
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 5B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 351140
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x55BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 08 81 24 FF 00 00 00 01 04 82 24 FF 00 00 00 01 3F 83 24 FF 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 364436
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 6B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 355236
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x56BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 03 87 24 FF 00 00 00 01 04 88 24 FF 00 00 00 01 3F 89 24 FF 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 A5 D0 BF FF 00 00 00 00 0B DA BF FF 00 00 00 00 80 46 BF FF 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 368532
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 7B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 359332
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x57BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 01 58 08 FF 00 00 00 00 00 57 08 FF 00 00 00 00 02 50 01 FF 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 372628
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 8B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 363428
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x58BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF 00 00 00 00 04 5D 70 FF 00 00 00 00 14 64 70 FF 00 00 00 00 04 65 70 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 376724
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 9B 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 367524
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x59BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF 00 00 00 00 18 68 70 FF 00 00 00 00 04 69 70 FF 00 00 00 00 1C 6C 70 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 380820
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 AB 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 371620
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5ABA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 A5 D0 1B FF 00 00 00 01 00 72 1B FF 00 00 00 01 02 7E 1B FF 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 384916
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 BB 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 375716
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5BBA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 45 44 1A FF 00 00 00 01 A5 D0 1A FF 00 00 00 01 A0 51 1A FF 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 02 00 9B B1 FF 00 03 03 02 00 9C B1 FF 00 03 03 02 00 9D B1 FF 00 03 03 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 389012
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 CB 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 379812
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5CBA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 00 9E B1 FF 00 03 03 02 00 9F B1 FF 00 03 03 02 00 A0 B1 FF 00 03 03 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 40 30 40 92 40 48 72 00 00 52 15 00 FF FF FF FC 80 48 72 00 64 0A FF 83 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 393108
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 DB 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 383908
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5DBA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF FF FF FC FF FF FF FB F3 0A 73 40 01 30 01 91 01 48 73 00 A4 0B FF 83 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF 00 00 00 01 40 8C 24 FF 00 00 00 01 2B 8D 24 FF 00 00 00 01 43 8E 24 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 397204
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 EB 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 388004
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5EBA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF 00 00 00 01 00 8F 24 FF 00 00 00 01 01 90 24 FF 00 00 00 01 00 91 24 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF 00 03 03 02 00 52 B1 FF 00 03 03 02 00 53 B1 FF 00 03 03 02 00 54 B1 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 401300
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 FB 05 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 392100
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x5FBA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF 00 03 03 02 00 55 B1 FF 00 03 03 02 00 56 B1 FF 00 03 03 02 00 57 B1 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 405396
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 0B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 396196
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x60BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 01 1E 52 17 FF 00 00 00 01 A5 D0 17 FF 00 00 00 01 20 53 17 FF 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 409492
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 1B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 400292
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x61BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 01 30 7E 17 FF 00 00 00 01 A5 D0 1B FF 00 00 00 01 5F 4A 1B FF 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 02 04 44 B5 FF 00 00 00 02 04 44 B6 FF 00 00 00 02 04 44 B7 FF 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 413588
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 2B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 404388
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x62BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 02 01 DA 04 FF 00 00 00 02 80 46 37 FF 00 00 00 02 80 47 37 FF 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 417684
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 3B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 408484
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x63BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 421780
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 4B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 412580
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x64BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 40 00 00 00 01 00 00 00 44 00 00 00 00 77 00 00 48 00 00 00 11 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 425876
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 5B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 416676
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x65BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 4C 00 00 00 7E 08 02 00 50 00 00 00 7E 08 02 00 54 00 00 00 00 22 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 429972
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 6B 06 00 00 10 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 420772
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x66BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 4096
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x1000
+
+22:50:35: INFO: function: tx_data:203 Transmitting 4096 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 4F 00 51 00 53 00 55 00 56 00 60 00 61 00 62 00 70 00 71 00 72 00 73 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 434068
+
+22:50:35: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 03 00 00 00 14 00 00 00 
+
+22:50:35: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 3 and packet length 20 bytes
+
+22:50:35: INFO: function: sahara_rx_data:281 Command packet length 20
+
+22:50:35: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:35: INFO: function: rx_data:294 Received 12 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 A4 7B 06 00 80 09 00 00 
+
+22:50:35: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:35: EVENT: RECEIVED <-- SAHARA_READ_DATA
+
+22:50:35: INFO: function: start_image_transfer:1320 start_image_transfer: Offset 424868
+
+22:50:35: INFO: function: start_image_transfer:1321 start_image_transfer: Offset 0x67BA4
+
+22:50:35: INFO: function: start_image_transfer:1322 start_image_transfer: Length 2432
+
+22:50:35: INFO: function: start_image_transfer:1323 start_image_transfer: Length 0x980
+
+22:50:35: INFO: function: tx_data:203 Transmitting 2432 bytes
+
+22:50:35: INFO: function: print_buffer:367 First few bytes: 74 00 75 00 76 00 90 00 92 00 93 00 94 00 00 00 00 1B 00 00 05 00 08 00 
+
+22:50:35: INFO: function: print_buffer:374 Last few bytes: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+22:50:35: INFO: function: tx_data:235 Total bytes sent so far: 436500
+
+22:50:36: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:36: INFO: function: print_buffer:367 First few bytes: 04 00 00 00 10 00 00 00 
+
+22:50:36: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 4 and packet length 16 bytes
+
+22:50:36: INFO: function: sahara_rx_data:281 Command packet length 16
+
+22:50:36: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:36: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:36: INFO: function: print_buffer:367 First few bytes: 0D 00 00 00 00 00 00 00 
+
+22:50:36: INFO: function: sahara_start:474 STATE <-- SAHARA_WAIT_COMMAND
+
+
+22:50:36: EVENT: RECEIVED <-- SAHARA_END_IMAGE_TX
+
+22:50:36: INFO: function: is_ack_successful:1044 SAHARA_STATUS_SUCCESS
+
+22:50:36: EVENT: SENDING --> SAHARA_DONE
+
+22:50:36: INFO: function: tx_data:203 Transmitting 8 bytes
+
+22:50:36: INFO: function: print_buffer:367 First few bytes: 05 00 00 00 08 00 00 00 
+
+22:50:36: INFO: function: tx_data:235 Total bytes sent so far: 436508
+
+22:50:36: INFO: function: rx_data:294 Received 8 bytes
+
+22:50:36: INFO: function: print_buffer:367 First few bytes: 06 00 00 00 0C 00 00 00 
+
+22:50:36: INFO: function: sahara_rx_data:271 Read 8 bytes, Header indicates command 6 and packet length 12 bytes
+
+22:50:36: INFO: function: sahara_rx_data:281 Command packet length 12
+
+22:50:36: INFO: function: sahara_rx_data:282 SAHARA_RAW_BUFFER_SIZE length 1048576
+
+22:50:36: INFO: function: rx_data:294 Received 4 bytes
+
+22:50:36: INFO: function: print_buffer:367 First few bytes: 00 00 00 00 
+
+22:50:36: 436452 bytes transferred in 0.281000 seconds (1.4813MBps)
+
+
+
+22:50:36: File transferred successfully
+
+
+
+22:50:36: INFO: function: sahara_start:907 SAHARA_WAIT_DONE_RESP recieved with SAHARA_MODE_IMAGE_TX_PENDING=0x00000000
+
+
+22:50:36: EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+NOTE: Target requested image 13 which is DeviceProgrammer. Forcing QUIT. This is by design, ** All is well ** SUCCESS!!
+
+
+22:50:36: EVENT: 
+
+Successfully uploaded all images
+
+
+22:50:36: Sahara protocol completed
+
+22:50:36: INFO: function: port_disconnect:56 Disconnecting from com port

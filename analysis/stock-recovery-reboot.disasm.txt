@@ -1,0 +1,792 @@
+Input: recovery-stock-analysis\ramdisk\sbin\recovery
+SHA256: 39c91bd457cc9029b9529a0cdc9507d783d0a584df5e5d5c94056e7604307d29
+Addresses are ELF virtual addresses. String tracking is local and heuristic.
+
+
+FUNCTION 0x1e59c size=188 _ZL13intent_rebootiPPc
+  0001e59c: f30f1ef8  str      x19, [sp, #-0x20]!
+  0001e5a0: fd7b01a9  stp      x29, x30, [sp, #0x10]
+  0001e5a4: fd430091  add      x29, sp, #0x10
+  0001e5a8: f30301aa  mov      x19, x1
+  0001e5ac: 1f040071  cmp      w0, #1
+  0001e5b0: a1030054  b.ne     #0x1e624
+  0001e5b4: e0031faa  mov      x0, xzr
+  0001e5b8: 19020094  bl       #0x1ee1c  ; _ZL15finish_recoveryPKc
+  0001e5bc: 000900b0  adrp     x0, #0x13f000
+  0001e5c0: 00f42b91  add      x0, x0, #0xafd  ; 0x13fafd "rm -rf /data/media/0/.recovery_repair"
+  0001e5c4: 6ae20294  bl       #0xd6f6c  ; __system
+  0001e5c8: 000900b0  adrp     x0, #0x13f000
+  0001e5cc: 008c2c91  add      x0, x0, #0xb23  ; 0x13fb23 "rm -rf /external_sd/.recovery_repair"
+  0001e5d0: 67e20294  bl       #0xd6f6c  ; __system
+  0001e5d4: 730240f9  ldr      x19, [x19]
+  0001e5d8: 010900b0  adrp     x1, #0x13f000
+  0001e5dc: 21242791  add      x1, x1, #0x9c9  ; 0x13f9c9 "reboot"
+  0001e5e0: e00313aa  mov      x0, x19
+  0001e5e4: 0dd2ff97  bl       #0x12e18  ; strstr@plt
+  0001e5e8: c00000b5  cbnz     x0, #0x1e600
+  0001e5ec: 010900b0  adrp     x1, #0x13f000
+  0001e5f0: 21f03191  add      x1, x1, #0xc7c  ; 0x13fc7c "shutdown"
+  0001e5f4: e00313aa  mov      x0, x19
+  0001e5f8: 08d2ff97  bl       #0x12e18  ; strstr@plt
+  0001e5fc: a00000b4  cbz      x0, #0x1e610
+  0001e600: 000900b0  adrp     x0, #0x13f000
+  0001e604: 00202d91  add      x0, x0, #0xb48  ; 0x13fb48 "sys.powerctl"
+  0001e608: e10313aa  mov      x1, x19
+  0001e60c: 07d3ff97  bl       #0x13228  ; property_set@plt
+  0001e610: fd7b41a9  ldp      x29, x30, [sp, #0x10]
+  0001e614: e0031f2a  mov      w0, wzr
+  0001e618: e1031faa  mov      x1, xzr
+  0001e61c: f30742f8  ldr      x19, [sp], #0x20
+  0001e620: 98300014  b        #0x2a880  ; oppoIntent_result_set
+  0001e624: 000900b0  adrp     x0, #0x13f000
+  0001e628: 010900b0  adrp     x1, #0x13f000
+  0001e62c: 00442f91  add      x0, x0, #0xbd1  ; 0x13fbd1 "function %s(line %d) argc == 1\n"
+  0001e630: 21b83191  add      x1, x1, #0xc6e  ; 0x13fc6e "intent_reboot"
+  0001e634: 42818052  mov      w2, #0x40a
+  0001e638: c4d1ff97  bl       #0x12d48  ; printf@plt
+  0001e63c: a00b00b0  adrp     x0, #0x193000
+  0001e640: 08008012  mov      w8, #-1
+  0001e644: 00c441f9  ldr      x0, [x0, #0x388]
+  0001e648: 080000b9  str      w8, [x0]
+  0001e64c: fd7b41a9  ldp      x29, x30, [sp, #0x10]
+  0001e650: f30742f8  ldr      x19, [sp], #0x20
+  0001e654: c0035fd6  ret      
+
+FUNCTION 0x1ee1c size=1980 _ZL15finish_recoveryPKc
+  0001ee1c: fc5fbca9  stp      x28, x23, [sp, #-0x40]!
+  0001ee20: f65701a9  stp      x22, x21, [sp, #0x10]
+  0001ee24: f44f02a9  stp      x20, x19, [sp, #0x20]
+  0001ee28: fd7b03a9  stp      x29, x30, [sp, #0x30]
+  0001ee2c: fdc30091  add      x29, sp, #0x30
+  0001ee30: ff4328d1  sub      sp, sp, #0xa10
+  0001ee34: 49d03bd5  mrs      x9, tpidr_el0
+  0001ee38: f30300aa  mov      x19, x0
+  0001ee3c: 281540f9  ldr      x8, [x9, #0x28]
+  0001ee40: 00090090  adrp     x0, #0x13e000
+  0001ee44: 00cc1291  add      x0, x0, #0x4b3  ; 0x13e4b3 "/data"
+  0001ee48: a8831cf8  stur     x8, [x29, #-0x38]
+  0001ee4c: abebff97  bl       #0x19cf8  ; ensure_path_mounted
+  0001ee50: 000900b0  adrp     x0, #0x13f000
+  0001ee54: 00c03f91  add      x0, x0, #0xff0  ; 0x13fff0 "data/media/0"
+  0001ee58: e1031f2a  mov      w1, wzr
+  0001ee5c: cfcfff97  bl       #0x12d98  ; access@plt
+  0001ee60: c0040035  cbnz     w0, #0x1eef8
+  0001ee64: 000900b0  adrp     x0, #0x13f000
+  0001ee68: 00643f91  add      x0, x0, #0xfd9  ; 0x13ffd9 "/data/media/0/oppo_log"
+  0001ee6c: e1031f2a  mov      w1, wzr
+  0001ee70: cacfff97  bl       #0x12d98  ; access@plt
+  0001ee74: a0010034  cbz      w0, #0x1eea8
+  0001ee78: 140900b0  adrp     x20, #0x13f000
+  0001ee7c: 94663f91  add      x20, x20, #0xfd9  ; 0x13ffd9 "/data/media/0/oppo_log"
+  0001ee80: a13d8052  mov      w1, #0x1ed
+  0001ee84: e00314aa  mov      x0, x20
+  0001ee88: d4d0ff97  bl       #0x131d8  ; mkdir@plt
+  0001ee8c: e1230032  mov      w1, #0x1ff
+  0001ee90: e00314aa  mov      x0, x20
+  0001ee94: 6dd1ff97  bl       #0x13448  ; chmod@plt
+  0001ee98: e1270032  mov      w1, #0x3ff
+  0001ee9c: e2270032  mov      w2, #0x3ff
+  0001eea0: e00314aa  mov      x0, x20
+  0001eea4: 6dd1ff97  bl       #0x13458  ; chown@plt
+  0001eea8: 150900b0  adrp     x21, #0x13f000
+  0001eeac: 000900b0  adrp     x0, #0x13f000
+  0001eeb0: b5563e91  add      x21, x21, #0xf95  ; 0x13ff95 "/data/media/0/oppo_log/last_log"
+  0001eeb4: 00580291  add      x0, x0, #0x96  ; 0x13f096 "/tmp/recovery.log"
+  0001eeb8: e10315aa  mov      x1, x21
+  0001eebc: e2031f2a  mov      w2, wzr
+  0001eec0: c6010094  bl       #0x1f5d8  ; _ZL13copy_log_filePKcS0_i
+  0001eec4: 160900b0  adrp     x22, #0x13f000
+  0001eec8: 000900b0  adrp     x0, #0x13f000
+  0001eecc: d6d63e91  add      x22, x22, #0xfb5  ; 0x13ffb5 "/data/media/0/oppo_log/last_install"
+  0001eed0: 00503591  add      x0, x0, #0xd54  ; 0x13fd54 "/tmp/last_install"
+  0001eed4: e10316aa  mov      x1, x22
+  0001eed8: e2031f2a  mov      w2, wzr
+  0001eedc: bf010094  bl       #0x1f5d8  ; _ZL13copy_log_filePKcS0_i
+  0001eee0: e1230032  mov      w1, #0x1ff
+  0001eee4: e00315aa  mov      x0, x21
+  0001eee8: 58d1ff97  bl       #0x13448  ; chmod@plt
+  0001eeec: e1230032  mov      w1, #0x1ff
+  0001eef0: e00316aa  mov      x0, x22
+  0001eef4: 55d1ff97  bl       #0x13448  ; chmod@plt
+  0001eef8: c80b00f0  adrp     x8, #0x199000
+  0001eefc: 09616f39  ldrb     w9, [x8, #0xbd8]
+  0001ef00: 49120037  tbnz     w9, #0, #0x1f148
+  0001ef04: 160900d0  adrp     x22, #0x140000
+  0001ef08: d6aa0291  add      x22, x22, #0xaa  ; 0x1400aa "/cache/recovery/last_log"
+  0001ef0c: ea030032  mov      w10, #1
+  0001ef10: e00316aa  mov      x0, x22
+  0001ef14: 0a612f39  strb     w10, [x8, #0xbd8]
+  0001ef18: 78ebff97  bl       #0x19cf8  ; ensure_path_mounted
+  0001ef1c: 140900d0  adrp     x20, #0x140000
+  0001ef20: 94f20191  add      x20, x20, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001ef24: e00314aa  mov      x0, x20
+  0001ef28: 74ebff97  bl       #0x19cf8  ; ensure_path_mounted
+  0001ef2c: 150900d0  adrp     x21, #0x140000
+  0001ef30: b5020091  add      x21, x21, #0  ; 0x140000 "%s.%d"
+  0001ef34: e0232491  add      x0, sp, #0x908
+  0001ef38: e5031e32  mov      w5, #4
+  0001ef3c: e30315aa  mov      x3, x21
+  0001ef40: e40316aa  mov      x4, x22
+  0001ef44: 2f020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001ef48: b7008052  mov      w23, #5
+  0001ef4c: e0232091  add      x0, sp, #0x808
+  0001ef50: e30315aa  mov      x3, x21
+  0001ef54: e40316aa  mov      x4, x22
+  0001ef58: e503172a  mov      w5, w23
+  0001ef5c: 29020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001ef60: e0232491  add      x0, sp, #0x908
+  0001ef64: e1232091  add      x1, sp, #0x808
+  0001ef68: 40d1ff97  bl       #0x13468  ; rename@plt
+  0001ef6c: e0232491  add      x0, sp, #0x908
+  0001ef70: e5031e32  mov      w5, #4
+  0001ef74: e30315aa  mov      x3, x21
+  0001ef78: e40314aa  mov      x4, x20
+  0001ef7c: 21020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001ef80: e0232091  add      x0, sp, #0x808
+  0001ef84: e30315aa  mov      x3, x21
+  0001ef88: e40314aa  mov      x4, x20
+  0001ef8c: e503172a  mov      w5, w23
+  0001ef90: 1c020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001ef94: e0232491  add      x0, sp, #0x908
+  0001ef98: e1232091  add      x1, sp, #0x808
+  0001ef9c: 33d1ff97  bl       #0x13468  ; rename@plt
+  0001efa0: e0232491  add      x0, sp, #0x908
+  0001efa4: e5070032  mov      w5, #3
+  0001efa8: e30315aa  mov      x3, x21
+  0001efac: e40316aa  mov      x4, x22
+  0001efb0: 14020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001efb4: e0232091  add      x0, sp, #0x808
+  0001efb8: e5031e32  mov      w5, #4
+  0001efbc: e30315aa  mov      x3, x21
+  0001efc0: e40316aa  mov      x4, x22
+  0001efc4: 0f020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001efc8: e0232491  add      x0, sp, #0x908
+  0001efcc: e1232091  add      x1, sp, #0x808
+  0001efd0: 26d1ff97  bl       #0x13468  ; rename@plt
+  0001efd4: e0232491  add      x0, sp, #0x908
+  0001efd8: e5070032  mov      w5, #3
+  0001efdc: e30315aa  mov      x3, x21
+  0001efe0: e40314aa  mov      x4, x20
+  0001efe4: 07020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001efe8: e0232091  add      x0, sp, #0x808
+  0001efec: e5031e32  mov      w5, #4
+  0001eff0: e30315aa  mov      x3, x21
+  0001eff4: e40314aa  mov      x4, x20
+  0001eff8: 02020094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001effc: e0232491  add      x0, sp, #0x908
+  0001f000: e1232091  add      x1, sp, #0x808
+  0001f004: 19d1ff97  bl       #0x13468  ; rename@plt
+  0001f008: e0232491  add      x0, sp, #0x908
+  0001f00c: e5031f32  mov      w5, #2
+  0001f010: e30315aa  mov      x3, x21
+  0001f014: e40316aa  mov      x4, x22
+  0001f018: fa010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f01c: e0232091  add      x0, sp, #0x808
+  0001f020: e5070032  mov      w5, #3
+  0001f024: e30315aa  mov      x3, x21
+  0001f028: e40316aa  mov      x4, x22
+  0001f02c: f5010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f030: e0232491  add      x0, sp, #0x908
+  0001f034: e1232091  add      x1, sp, #0x808
+  0001f038: 0cd1ff97  bl       #0x13468  ; rename@plt
+  0001f03c: e0232491  add      x0, sp, #0x908
+  0001f040: e5031f32  mov      w5, #2
+  0001f044: e30315aa  mov      x3, x21
+  0001f048: e40314aa  mov      x4, x20
+  0001f04c: ed010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f050: e0232091  add      x0, sp, #0x808
+  0001f054: e5070032  mov      w5, #3
+  0001f058: e30315aa  mov      x3, x21
+  0001f05c: e40314aa  mov      x4, x20
+  0001f060: e8010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f064: e0232491  add      x0, sp, #0x908
+  0001f068: e1232091  add      x1, sp, #0x808
+  0001f06c: ffd0ff97  bl       #0x13468  ; rename@plt
+  0001f070: e0232491  add      x0, sp, #0x908
+  0001f074: e5030032  mov      w5, #1
+  0001f078: e30315aa  mov      x3, x21
+  0001f07c: e40316aa  mov      x4, x22
+  0001f080: e0010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f084: e0232091  add      x0, sp, #0x808
+  0001f088: e5031f32  mov      w5, #2
+  0001f08c: e30315aa  mov      x3, x21
+  0001f090: e40316aa  mov      x4, x22
+  0001f094: db010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f098: e0232491  add      x0, sp, #0x908
+  0001f09c: e1232091  add      x1, sp, #0x808
+  0001f0a0: f2d0ff97  bl       #0x13468  ; rename@plt
+  0001f0a4: e0232491  add      x0, sp, #0x908
+  0001f0a8: e5030032  mov      w5, #1
+  0001f0ac: e30315aa  mov      x3, x21
+  0001f0b0: e40314aa  mov      x4, x20
+  0001f0b4: d3010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f0b8: e0232091  add      x0, sp, #0x808
+  0001f0bc: e5031f32  mov      w5, #2
+  0001f0c0: e30315aa  mov      x3, x21
+  0001f0c4: e40314aa  mov      x4, x20
+  0001f0c8: ce010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f0cc: e0232491  add      x0, sp, #0x908
+  0001f0d0: e1232091  add      x1, sp, #0x808
+  0001f0d4: e5d0ff97  bl       #0x13468  ; rename@plt
+  0001f0d8: 17090090  adrp     x23, #0x13f000
+  0001f0dc: f7f63f91  add      x23, x23, #0xffd
+  0001f0e0: e0232491  add      x0, sp, #0x908
+  0001f0e4: e30317aa  mov      x3, x23
+  0001f0e8: e40316aa  mov      x4, x22
+  0001f0ec: e5031f2a  mov      w5, wzr
+  0001f0f0: c4010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f0f4: e0232091  add      x0, sp, #0x808
+  0001f0f8: e5030032  mov      w5, #1
+  0001f0fc: e30315aa  mov      x3, x21
+  0001f100: e40316aa  mov      x4, x22
+  0001f104: bf010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f108: e0232491  add      x0, sp, #0x908
+  0001f10c: e1232091  add      x1, sp, #0x808
+  0001f110: d6d0ff97  bl       #0x13468  ; rename@plt
+  0001f114: e0232491  add      x0, sp, #0x908
+  0001f118: e30317aa  mov      x3, x23
+  0001f11c: e40314aa  mov      x4, x20
+  0001f120: e5031f2a  mov      w5, wzr
+  0001f124: b7010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f128: e0232091  add      x0, sp, #0x808
+  0001f12c: e5030032  mov      w5, #1
+  0001f130: e30315aa  mov      x3, x21
+  0001f134: e40314aa  mov      x4, x20
+  0001f138: b2010094  bl       #0x1f800  ; _ZL8snprintfPcU17pass_object_size1mPKcz
+  0001f13c: e0232491  add      x0, sp, #0x908
+  0001f140: e1232091  add      x1, sp, #0x808
+  0001f144: c9d0ff97  bl       #0x13468  ; rename@plt
+  0001f148: 530800b4  cbz      x19, #0x1f250
+  0001f14c: 00090090  adrp     x0, #0x13f000
+  0001f150: 00742d91  add      x0, x0, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f154: e9eaff97  bl       #0x19cf8  ; ensure_path_mounted
+  0001f158: 40020034  cbz      w0, #0x1f1a0
+  0001f15c: aa0b0090  adrp     x10, #0x193000
+  0001f160: e10800f0  adrp     x1, #0x13e000
+  0001f164: 02090090  adrp     x2, #0x13f000
+  0001f168: 4aa941f9  ldr      x10, [x10, #0x350]
+  0001f16c: 21603491  add      x1, x1, #0xd18  ; 0x13ed18 "oppo/e: Can't mount %s\n"
+  0001f170: 42742d91  add      x2, x2, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f174: 400140f9  ldr      x0, [x10]
+  0001f178: 3ccfff97  bl       #0x12e68  ; fprintf@plt
+  0001f17c: ac0b0090  adrp     x12, #0x193000
+  0001f180: 01090090  adrp     x1, #0x13f000
+  0001f184: 02090090  adrp     x2, #0x13f000
+  0001f188: 8ca941f9  ldr      x12, [x12, #0x350]
+  0001f18c: 21281991  add      x1, x1, #0x64a  ; 0x13f64a "oppo/e: Can't open %s\n"
+  0001f190: 42742d91  add      x2, x2, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f194: 800140f9  ldr      x0, [x12]
+  0001f198: 34cfff97  bl       #0x12e68  ; fprintf@plt
+  0001f19c: 2d000014  b        #0x1f250
+  0001f1a0: e00800f0  adrp     x0, #0x13e000
+  0001f1a4: 00c03491  add      x0, x0, #0xd30
+  0001f1a8: e10e8052  mov      w1, #0x77
+  0001f1ac: e2070032  mov      w2, #3
+  0001f1b0: 4ed0ff97  bl       #0x132e8  ; __strchr_chk@plt
+  0001f1b4: 200100b4  cbz      x0, #0x1f1d8
+  0001f1b8: ab0b00d0  adrp     x11, #0x195000
+  0001f1bc: 00090090  adrp     x0, #0x13f000
+  0001f1c0: 00742d91  add      x0, x0, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f1c4: 64b145f9  ldr      x4, [x11, #0xb60]
+  0001f1c8: e1230032  mov      w1, #0x1ff
+  0001f1cc: e3030032  mov      w3, #1
+  0001f1d0: e2031faa  mov      x2, xzr
+  0001f1d4: 4f340294  bl       #0xac310  ; dirCreateHierarchy
+  0001f1d8: 00090090  adrp     x0, #0x13f000
+  0001f1dc: 01090090  adrp     x1, #0x13f000
+  0001f1e0: 00742d91  add      x0, x0, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f1e4: 21201991  add      x1, x1, #0x648
+  0001f1e8: bcceff97  bl       #0x12cd8  ; fopen@plt
+  0001f1ec: f60300aa  mov      x22, x0
+  0001f1f0: 76fcffb4  cbz      x22, #0x1f17c
+  0001f1f4: e00313aa  mov      x0, x19
+  0001f1f8: e10316aa  mov      x1, x22
+  0001f1fc: 3fd0ff97  bl       #0x132f8  ; fputs@plt
+  0001f200: e00316aa  mov      x0, x22
+  0001f204: 41d0ff97  bl       #0x13308  ; fflush@plt
+  0001f208: e00316aa  mov      x0, x22
+  0001f20c: 43d0ff97  bl       #0x13318  ; ferror@plt
+  0001f210: c0010034  cbz      w0, #0x1f248
+  0001f214: ad0b0090  adrp     x13, #0x193000
+  0001f218: ada941f9  ldr      x13, [x13, #0x350]
+  0001f21c: b30140f9  ldr      x19, [x13]
+  0001f220: 2acfff97  bl       #0x12ec8  ; __errno@plt
+  0001f224: 000040b9  ldr      w0, [x0]
+  0001f228: 2ccfff97  bl       #0x12ed8  ; strerror@plt
+  0001f22c: 01090090  adrp     x1, #0x13f000
+  0001f230: 02090090  adrp     x2, #0x13f000
+  0001f234: e30300aa  mov      x3, x0
+  0001f238: 21d02d91  add      x1, x1, #0xb74  ; 0x13fb74 "oppo/e: Error in %s\n(%s)\n"
+  0001f23c: 42742d91  add      x2, x2, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f240: e00313aa  mov      x0, x19
+  0001f244: 09cfff97  bl       #0x12e68  ; fprintf@plt
+  0001f248: e00316aa  mov      x0, x22
+  0001f24c: bbceff97  bl       #0x12d38  ; fclose@plt
+  0001f250: 40018052  mov      w0, #0xa
+  0001f254: e1031faa  mov      x1, xzr
+  0001f258: e2031f2a  mov      w2, wzr
+  0001f25c: 87d0ff97  bl       #0x13478  ; klogctl@plt
+  0001f260: f403002a  mov      w20, w0
+  0001f264: 9f020071  cmp      w20, #0
+  0001f268: 2d050054  b.le     #0x1f30c
+  0001f26c: 8f060011  add      w15, w20, #1
+  0001f270: e07d4093  sxtw     x0, w15
+  0001f274: 9dceff97  bl       #0x12ce8  ; malloc@plt
+  0001f278: f30300aa  mov      x19, x0
+  0001f27c: 130100b5  cbnz     x19, #0x1f29c
+  0001f280: b00b0090  adrp     x16, #0x193000
+  0001f284: 010900b0  adrp     x1, #0x140000
+  0001f288: 21a80091  add      x1, x1, #0x2a  ; 0x14002a "oppo/e: Can't alloc %d bytes for klog buffer\n"
+  0001f28c: 10aa41f9  ldr      x16, [x16, #0x350]
+  0001f290: e203142a  mov      w2, w20
+  0001f294: 000240f9  ldr      x0, [x16]
+  0001f298: f4ceff97  bl       #0x12e68  ; fprintf@plt
+  0001f29c: e0070032  mov      w0, #3
+  0001f2a0: e10313aa  mov      x1, x19
+  0001f2a4: e203142a  mov      w2, w20
+  0001f2a8: 74d0ff97  bl       #0x13478  ; klogctl@plt
+  0001f2ac: f403002a  mov      w20, w0
+  0001f2b0: 7404f837  tbnz     w20, #0x1f, #0x1f33c
+  0001f2b4: 000900b0  adrp     x0, #0x140000
+  0001f2b8: 00f00191  add      x0, x0, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f2bc: 8feaff97  bl       #0x19cf8  ; ensure_path_mounted
+  0001f2c0: e0050034  cbz      w0, #0x1f37c
+  0001f2c4: b20b0090  adrp     x18, #0x193000
+  0001f2c8: e10800f0  adrp     x1, #0x13e000
+  0001f2cc: 020900b0  adrp     x2, #0x140000
+  0001f2d0: 52aa41f9  ldr      x18, [x18, #0x350]
+  0001f2d4: 21603491  add      x1, x1, #0xd18  ; 0x13ed18 "oppo/e: Can't mount %s\n"
+  0001f2d8: 42f00191  add      x2, x2, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f2dc: 400240f9  ldr      x0, [x18]
+  0001f2e0: e2ceff97  bl       #0x12e68  ; fprintf@plt
+  0001f2e4: a10b0090  adrp     x1, #0x193000
+  0001f2e8: 020900b0  adrp     x2, #0x140000
+  0001f2ec: 42f00191  add      x2, x2, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f2f0: 21a841f9  ldr      x1, [x1, #0x350]
+  0001f2f4: 200040f9  ldr      x0, [x1]
+  0001f2f8: 01090090  adrp     x1, #0x13f000
+  0001f2fc: 21281991  add      x1, x1, #0x64a  ; 0x13f64a "oppo/e: Can't open %s\n"
+  0001f300: daceff97  bl       #0x12e68  ; fprintf@plt
+  0001f304: 730300b5  cbnz     x19, #0x1f370
+  0001f308: 58000014  b        #0x1f468
+  0001f30c: ae0b0090  adrp     x14, #0x193000
+  0001f310: cea941f9  ldr      x14, [x14, #0x350]
+  0001f314: d40140f9  ldr      x20, [x14]
+  0001f318: ecceff97  bl       #0x12ec8  ; __errno@plt
+  0001f31c: 000040b9  ldr      w0, [x0]
+  0001f320: eeceff97  bl       #0x12ed8  ; strerror@plt
+  0001f324: 010900b0  adrp     x1, #0x140000
+  0001f328: e20300aa  mov      x2, x0
+  0001f32c: 21180091  add      x1, x1, #6  ; 0x140006 "oppo/e: Error getting klog size:%s\n"
+  0001f330: e00314aa  mov      x0, x20
+  0001f334: cdceff97  bl       #0x12e68  ; fprintf@plt
+  0001f338: 4c000014  b        #0x1f468
+  0001f33c: b10b0090  adrp     x17, #0x193000
+  0001f340: 31aa41f9  ldr      x17, [x17, #0x350]
+  0001f344: 350240f9  ldr      x21, [x17]
+  0001f348: e0ceff97  bl       #0x12ec8  ; __errno@plt
+  0001f34c: 000040b9  ldr      w0, [x0]
+  0001f350: e2ceff97  bl       #0x12ed8  ; strerror@plt
+  0001f354: e40300aa  mov      x4, x0
+  0001f358: 010900b0  adrp     x1, #0x140000
+  0001f35c: 21600191  add      x1, x1, #0x58  ; 0x140058 "oppo/e: Error in reading klog (%s)\n"
+  0001f360: e00315aa  mov      x0, x21
+  0001f364: e20304aa  mov      x2, x4
+  0001f368: c0ceff97  bl       #0x12e68  ; fprintf@plt
+  0001f36c: f30700b4  cbz      x19, #0x1f468
+  0001f370: e00313aa  mov      x0, x19
+  0001f374: 55ceff97  bl       #0x12cc8  ; free@plt
+  0001f378: 3c000014  b        #0x1f468
+  0001f37c: e00800f0  adrp     x0, #0x13e000
+  0001f380: 00c03491  add      x0, x0, #0xd30
+  0001f384: e10e8052  mov      w1, #0x77
+  0001f388: e2070032  mov      w2, #3
+  0001f38c: d7cfff97  bl       #0x132e8  ; __strchr_chk@plt
+  0001f390: 200100b4  cbz      x0, #0x1f3b4
+  0001f394: a00b00d0  adrp     x0, #0x195000
+  0001f398: e1230032  mov      w1, #0x1ff
+  0001f39c: e3030032  mov      w3, #1
+  0001f3a0: 04b045f9  ldr      x4, [x0, #0xb60]
+  0001f3a4: 000900b0  adrp     x0, #0x140000
+  0001f3a8: 00f00191  add      x0, x0, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f3ac: e2031faa  mov      x2, xzr
+  0001f3b0: d8330294  bl       #0xac310  ; dirCreateHierarchy
+  0001f3b4: 000900b0  adrp     x0, #0x140000
+  0001f3b8: 01090090  adrp     x1, #0x13f000
+  0001f3bc: 00f00191  add      x0, x0, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f3c0: 21201991  add      x1, x1, #0x648
+  0001f3c4: 45ceff97  bl       #0x12cd8  ; fopen@plt
+  0001f3c8: f50300aa  mov      x21, x0
+  0001f3cc: d5f8ffb4  cbz      x21, #0x1f2e4
+  0001f3d0: e2030032  mov      w2, #1
+  0001f3d4: e00313aa  mov      x0, x19
+  0001f3d8: e30315aa  mov      x3, x21
+  0001f3dc: 817e4093  sxtw     x1, w20
+  0001f3e0: 9eceff97  bl       #0x12e58  ; fwrite@plt
+  0001f3e4: e00315aa  mov      x0, x21
+  0001f3e8: c8cfff97  bl       #0x13308  ; fflush@plt
+  0001f3ec: e00315aa  mov      x0, x21
+  0001f3f0: cacfff97  bl       #0x13318  ; ferror@plt
+  0001f3f4: e0010034  cbz      w0, #0x1f430
+  0001f3f8: a20b0090  adrp     x2, #0x193000
+  0001f3fc: 42a841f9  ldr      x2, [x2, #0x350]
+  0001f400: 560040f9  ldr      x22, [x2]
+  0001f404: b1ceff97  bl       #0x12ec8  ; __errno@plt
+  0001f408: 000040b9  ldr      w0, [x0]
+  0001f40c: b3ceff97  bl       #0x12ed8  ; strerror@plt
+  0001f410: e50300aa  mov      x5, x0
+  0001f414: 01090090  adrp     x1, #0x13f000
+  0001f418: 020900b0  adrp     x2, #0x140000
+  0001f41c: 21d02d91  add      x1, x1, #0xb74  ; 0x13fb74 "oppo/e: Error in %s\n(%s)\n"
+  0001f420: 42f00191  add      x2, x2, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f424: e00316aa  mov      x0, x22
+  0001f428: e30305aa  mov      x3, x5
+  0001f42c: 8fceff97  bl       #0x12e68  ; fprintf@plt
+  0001f430: e00315aa  mov      x0, x21
+  0001f434: 41ceff97  bl       #0x12d38  ; fclose@plt
+  0001f438: 730000b4  cbz      x19, #0x1f444
+  0001f43c: e00313aa  mov      x0, x19
+  0001f440: 22ceff97  bl       #0x12cc8  ; free@plt
+  0001f444: 170900b0  adrp     x23, #0x140000
+  0001f448: f7f20191  add      x23, x23, #0x7c  ; 0x14007c "/cache/recovery/last_kmsg"
+  0001f44c: 81348052  mov      w1, #0x1a4
+  0001f450: e00317aa  mov      x0, x23
+  0001f454: fdcfff97  bl       #0x13448  ; chmod@plt
+  0001f458: 017d8052  mov      w1, #0x3e8
+  0001f45c: e00317aa  mov      x0, x23
+  0001f460: e203012a  mov      w2, w1
+  0001f464: fdcfff97  bl       #0x13458  ; chown@plt
+  0001f468: 13090090  adrp     x19, #0x13f000
+  0001f46c: 140900b0  adrp     x20, #0x140000
+  0001f470: 735a0291  add      x19, x19, #0x96  ; 0x13f096 "/tmp/recovery.log"
+  0001f474: 945a0291  add      x20, x20, #0x96  ; 0x140096 "/cache/recovery/log"
+  0001f478: e2030032  mov      w2, #1
+  0001f47c: e00313aa  mov      x0, x19
+  0001f480: e10314aa  mov      x1, x20
+  0001f484: 55000094  bl       #0x1f5d8  ; _ZL13copy_log_filePKcS0_i
+  0001f488: 150900b0  adrp     x21, #0x140000
+  0001f48c: b5aa0291  add      x21, x21, #0xaa  ; 0x1400aa "/cache/recovery/last_log"
+  0001f490: e00313aa  mov      x0, x19
+  0001f494: e10315aa  mov      x1, x21
+  0001f498: e2031f2a  mov      w2, wzr
+  0001f49c: 4f000094  bl       #0x1f5d8  ; _ZL13copy_log_filePKcS0_i
+  0001f4a0: 160900b0  adrp     x22, #0x140000
+  0001f4a4: 00090090  adrp     x0, #0x13f000
+  0001f4a8: d60e0391  add      x22, x22, #0xc3  ; 0x1400c3 "/cache/recovery/last_install"
+  0001f4ac: 00503591  add      x0, x0, #0xd54  ; 0x13fd54 "/tmp/last_install"
+  0001f4b0: e10316aa  mov      x1, x22
+  0001f4b4: e2031f2a  mov      w2, wzr
+  0001f4b8: 48000094  bl       #0x1f5d8  ; _ZL13copy_log_filePKcS0_i
+  0001f4bc: e1071932  mov      w1, #0x180
+  0001f4c0: e00314aa  mov      x0, x20
+  0001f4c4: e1cfff97  bl       #0x13448  ; chmod@plt
+  0001f4c8: 017d8052  mov      w1, #0x3e8
+  0001f4cc: e00314aa  mov      x0, x20
+  0001f4d0: e203012a  mov      w2, w1
+  0001f4d4: e1cfff97  bl       #0x13458  ; chown@plt
+  0001f4d8: 97348052  mov      w23, #0x1a4
+  0001f4dc: e00315aa  mov      x0, x21
+  0001f4e0: e103172a  mov      w1, w23
+  0001f4e4: d9cfff97  bl       #0x13448  ; chmod@plt
+  0001f4e8: e00316aa  mov      x0, x22
+  0001f4ec: e103172a  mov      w1, w23
+  0001f4f0: d6cfff97  bl       #0x13448  ; chmod@plt
+  0001f4f4: 00090090  adrp     x0, #0x13f000
+  0001f4f8: 00742d91  add      x0, x0, #0xb5d  ; 0x13fb5d "/cache/recovery/intent"
+  0001f4fc: e1230032  mov      w1, #0x1ff
+  0001f500: d2cfff97  bl       #0x13448  ; chmod@plt
+  0001f504: e0230091  add      x0, sp, #8
+  0001f508: e2031532  mov      w2, #0x800
+  0001f50c: e1031f2a  mov      w1, wzr
+  0001f510: 02ceff97  bl       #0x12d18  ; memset@plt
+  0001f514: e0230091  add      x0, sp, #8
+  0001f518: ff8f04f9  str      xzr, [sp, #0x918]
+  0001f51c: e1232491  add      x1, sp, #0x908
+  0001f520: ff8b04f9  str      xzr, [sp, #0x910]
+  0001f524: ff8704f9  str      xzr, [sp, #0x908]
+  0001f528: f3232491  add      x19, sp, #0x908
+  0001f52c: b33b0494  bl       #0x12e3f8  ; _Z24write_bootloader_messageRK18bootloader_messagePNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+  0001f530: 80010037  tbnz     w0, #0, #0x1f560
+  0001f534: a30b0090  adrp     x3, #0x193000
+  0001f538: 640240b2  orr      x4, x19, #1
+  0001f53c: e10800f0  adrp     x1, #0x13e000
+  0001f540: 63a841f9  ldr      x3, [x3, #0x350]
+  0001f544: 21cc3491  add      x1, x1, #0xd33  ; 0x13ed33 "oppo/e: %s\n"
+  0001f548: e8236439  ldrb     w8, [sp, #0x908]
+  0001f54c: e98f44f9  ldr      x9, [sp, #0x918]
+  0001f550: 600040f9  ldr      x0, [x3]
+  0001f554: 1f010072  tst      w8, #1
+  0001f558: 8200899a  csel     x2, x4, x9, eq
+  0001f55c: 43ceff97  bl       #0x12e68  ; fprintf@plt
+  0001f560: eb236439  ldrb     w11, [sp, #0x908]
+  0001f564: 6b000036  tbz      w11, #0, #0x1f570
+  0001f568: e08f44f9  ldr      x0, [sp, #0x918]
+  0001f56c: 4fceff97  bl       #0x12ea8  ; _ZdlPv@plt
+  0001f570: a50b00d0  adrp     x5, #0x195000
+  0001f574: ac584bb9  ldr      w12, [x5, #0xb58]
+  0001f578: 6c010034  cbz      w12, #0x1f5a4
+  0001f57c: 00090090  adrp     x0, #0x13f000
+  0001f580: 00583b91  add      x0, x0, #0xed6  ; 0x13fed6 "/cache/recovery/command"
+  0001f584: dde9ff97  bl       #0x19cf8  ; ensure_path_mounted
+  0001f588: 80000035  cbnz     w0, #0x1f598
+  0001f58c: 00090090  adrp     x0, #0x13f000
+  0001f590: 00583b91  add      x0, x0, #0xed6  ; 0x13fed6 "/cache/recovery/command"
+  0001f594: adceff97  bl       #0x13048  ; unlink@plt
+  0001f598: e00800f0  adrp     x0, #0x13e000
+  0001f59c: 00801091  add      x0, x0, #0x420  ; 0x13e420 "/cache"
+  0001f5a0: 00ebff97  bl       #0x1a1a0  ; ensure_path_unmounted
+  0001f5a4: 75cfff97  bl       #0x13378  ; sync@plt
+  0001f5a8: 46d03bd5  mrs      x6, tpidr_el0
+  0001f5ac: ca1440f9  ldr      x10, [x6, #0x28]
+  0001f5b0: ab835cf8  ldur     x11, [x29, #-0x38]
+  0001f5b4: 5f010beb  cmp      x10, x11
+  0001f5b8: e1000054  b.ne     #0x1f5d4
+  0001f5bc: ff432891  add      sp, sp, #0xa10
+  0001f5c0: fd7b43a9  ldp      x29, x30, [sp, #0x30]
+  0001f5c4: f44f42a9  ldp      x20, x19, [sp, #0x20]
+  0001f5c8: f65741a9  ldp      x22, x21, [sp, #0x10]
+  0001f5cc: fc5fc4a8  ldp      x28, x23, [sp], #0x40
+  0001f5d0: c0035fd6  ret      
+  0001f5d4: e1cdff97  bl       #0x12d58  ; __stack_chk_fail@plt
+
+FUNCTION 0x1fc64 size=264 _ZL19root_detection_showP9_menuUnit
+  0001fc64: f44fbea9  stp      x20, x19, [sp, #-0x20]!
+  0001fc68: fd7b01a9  stp      x29, x30, [sp, #0x10]
+  0001fc6c: fd430091  add      x29, sp, #0x10
+  0001fc70: f30300aa  mov      x19, x0
+  0001fc74: 9ca00194  bl       #0x87ee4  ; alib_tick
+  0001fc78: f40300aa  mov      x20, x0
+  0001fc7c: 43ccff97  bl       #0x12d88  ; getpid@plt
+  0001fc80: e203002a  mov      w2, w0
+  0001fc84: 00090090  adrp     x0, #0x13f000
+  0001fc88: 030900b0  adrp     x3, #0x140000
+  0001fc8c: 040900b0  adrp     x4, #0x140000
+  0001fc90: 00cc1c91  add      x0, x0, #0x733  ; 0x13f733 "(%lu ticks)(pid:%d)[%s]%s:%d::"
+  0001fc94: 63880691  add      x3, x3, #0x1a2  ; 0x1401a2 "vendor/oppo_app/OppoRecovery/oppo/src/main/version_ui.cpp"
+  0001fc98: 840c1491  add      x4, x4, #0x503  ; 0x140503 "root_detection_show"
+  0001fc9c: 250a8052  mov      w5, #0x51
+  0001fca0: e10314aa  mov      x1, x20
+  0001fca4: 29ccff97  bl       #0x12d48  ; printf@plt
+  0001fca8: 800900f0  adrp     x0, #0x152000
+  0001fcac: 00401d91  add      x0, x0, #0x750  ; 0x152750 "start detect root status..."
+  0001fcb0: 1eccff97  bl       #0x12d28  ; puts@plt
+  0001fcb4: a90b0090  adrp     x9, #0x193000
+  0001fcb8: 000900b0  adrp     x0, #0x140000
+  0001fcbc: 005c1491  add      x0, x0, #0x517  ; 0x140517 "usb"
+  0001fcc0: 29d141f9  ldr      x9, [x9, #0x3a0]
+  0001fcc4: 280140b9  ldr      w8, [x9]
+  0001fcc8: 0a050051  sub      w10, w8, #1
+  0001fccc: 2a0100b9  str      w10, [x9]
+  0001fcd0: f6feff97  bl       #0x1f8a8  ; _Z15check_usb_statePc
+  0001fcd4: 1f040071  cmp      w0, #1
+  0001fcd8: c0000054  b.eq     #0x1fcf0
+  0001fcdc: 000900b0  adrp     x0, #0x140000
+  0001fce0: 006c1491  add      x0, x0, #0x51b  ; 0x14051b "pc_port"
+  0001fce4: f1feff97  bl       #0x1f8a8  ; _Z15check_usb_statePc
+  0001fce8: 1f040071  cmp      w0, #1
+  0001fcec: 41030054  b.ne     #0x1fd54
+  0001fcf0: c80b00d0  adrp     x8, #0x199000
+  0001fcf4: 09dd4bb9  ldr      w9, [x8, #0xbdc]
+  0001fcf8: 2b050011  add      w11, w9, #1
+  0001fcfc: 3f090071  cmp      w9, #2
+  0001fd00: 0bdd0bb9  str      w11, [x8, #0xbdc]
+  0001fd04: 4b020054  b.lt     #0x1fd4c
+  0001fd08: 010900b0  adrp     x1, #0x140000
+  0001fd0c: 1fdd0bb9  str      wzr, [x8, #0xbdc]
+  0001fd10: 020900b0  adrp     x2, #0x140000
+  0001fd14: 63020291  add      x3, x19, #0x80
+  0001fd18: 218c1491  add      x1, x1, #0x523  ; 0x140523 "<~power.reboot.downmode>"
+  0001fd1c: 42f01491  add      x2, x2, #0x53c  ; 0x14053c "<~power.reboot.downmode.information>"
+  0001fd20: e0070032  mov      w0, #3
+  0001fd24: 18cb0194  bl       #0x92984  ; oppo_confirm
+  0001fd28: 1f040071  cmp      w0, #1
+  0001fd2c: c1000054  b.ne     #0x1fd44
+  0001fd30: 020900b0  adrp     x2, #0x140000
+  0001fd34: 42841591  add      x2, x2, #0x561  ; 0x140561 "reboot,edl"
+  0001fd38: e0070032  mov      w0, #3
+  0001fd3c: e1030032  mov      w1, #1
+  0001fd40: 242a0094  bl       #0x2a5d0  ; oppoIntent_send
+  0001fd44: e0031932  mov      w0, #0x80
+  0001fd48: 06000014  b        #0x1fd60
+  0001fd4c: e0031f2a  mov      w0, wzr
+  0001fd50: 04000014  b        #0x1fd60
+  0001fd54: ca0b00d0  adrp     x10, #0x199000
+  0001fd58: e0031f2a  mov      w0, wzr
+  0001fd5c: 5fdd0bb9  str      wzr, [x10, #0xbdc]
+  0001fd60: fd7b41a9  ldp      x29, x30, [sp, #0x10]
+  0001fd64: f44fc2a8  ldp      x20, x19, [sp], #0x20
+  0001fd68: c0035fd6  ret      
+
+FUNCTION 0x2a5d0 size=688 oppoIntent_send
+  0002a5d0: ff4304d1  sub      sp, sp, #0x110
+  0002a5d4: fc6b00f9  str      x28, [sp, #0xd0]
+  0002a5d8: f6570ea9  stp      x22, x21, [sp, #0xe0]
+  0002a5dc: f44f0fa9  stp      x20, x19, [sp, #0xf0]
+  0002a5e0: fd7b10a9  stp      x29, x30, [sp, #0x100]
+  0002a5e4: fd030491  add      x29, sp, #0x100
+  0002a5e8: e61f03ad  stp      q6, q7, [sp, #0x60]
+  0002a5ec: f303012a  mov      w19, w1
+  0002a5f0: e41702ad  stp      q4, q5, [sp, #0x40]
+  0002a5f4: f50302aa  mov      x21, x2
+  0002a5f8: e20f01ad  stp      q2, q3, [sp, #0x20]
+  0002a5fc: 620b00f0  adrp     x2, #0x199000
+  0002a600: e00700ad  stp      q0, q1, [sp]
+  0002a604: e69f09a9  stp      x6, x7, [sp, #0x98]
+  0002a608: e49708a9  stp      x4, x5, [sp, #0x88]
+  0002a60c: e34300f9  str      x3, [sp, #0x80]
+  0002a610: 41d03bd5  mrs      x1, tpidr_el0
+  0002a614: 281440f9  ldr      x8, [x1, #0x28]
+  0002a618: a8831cf8  stur     x8, [x29, #-0x38]
+  0002a61c: 4cc88db9  ldrsw    x12, [x2, #0xdc8]
+  0002a620: 9f050071  cmp      w12, #1
+  0002a624: 8b010054  b.lt     #0x2a654
+  0002a628: 630b00f0  adrp     x3, #0x199000
+  0002a62c: f6031faa  mov      x22, xzr
+  0002a630: 6ddc46f9  ldr      x13, [x3, #0xdb8]
+  0002a634: a80140b9  ldr      w8, [x13]
+  0002a638: 1f01006b  cmp      w8, w0
+  0002a63c: e0000054  b.eq     #0x2a658
+  0002a640: d6060091  add      x22, x22, #1
+  0002a644: ad410091  add      x13, x13, #0x10
+  0002a648: df020ceb  cmp      x22, x12
+  0002a64c: 4bffff54  b.lt     #0x2a634
+  0002a650: 02000014  b        #0x2a658
+  0002a654: f6031f2a  mov      w22, wzr
+  0002a658: 607e7d93  sbfiz    x0, x19, #3, #0x20
+  0002a65c: a3a1ff97  bl       #0x12ce8  ; malloc@plt
+  0002a660: e8030091  mov      x8, sp
+  0002a664: eb030291  add      x11, sp, #0x80
+  0002a668: f40300aa  mov      x20, x0
+  0002a66c: e9631932  mov      w9, #-0x80
+  0002a670: ea048012  mov      w10, #-0x28
+  0002a674: 04010291  add      x4, x8, #0x80
+  0002a678: 950200f9  str      x21, [x20]
+  0002a67c: 65a10091  add      x5, x11, #0x28
+  0002a680: a6430091  add      x6, x29, #0x10
+  0002a684: aa273829  stp      w10, w9, [x29, #-0x40]
+  0002a688: 7f060071  cmp      w19, #1
+  0002a68c: a5133ba9  stp      x5, x4, [x29, #-0x50]
+  0002a690: a6831af8  stur     x6, [x29, #-0x58]
+  0002a694: 8d0c0054  b.le     #0x2a824
+  0002a698: 680e0011  add      w8, w19, #3
+  0002a69c: ac035cb8  ldur     w12, [x29, #-0x40]
+  0002a6a0: e003132a  mov      w0, w19
+  0002a6a4: 08050012  and      w8, w8, #3
+  0002a6a8: 070800d1  sub      x7, x0, #2
+  0002a6ac: ff0c00f1  cmp      x7, #3
+  0002a6b0: 82000054  b.hs     #0x2a6c0
+  0002a6b4: e9030032  mov      w9, #1
+  0002a6b8: e8080035  cbnz     w8, #0x2a7d4
+  0002a6bc: 5a000014  b        #0x2a824
+  0002a6c0: 090400d1  sub      x9, x0, #1
+  0002a6c4: 8a820091  add      x10, x20, #0x20
+  0002a6c8: 2b0108cb  sub      x11, x9, x8
+  0002a6cc: e9030032  mov      w9, #1
+  0002a6d0: 0d000014  b        #0x2a704
+  0002a6d4: ae035bf8  ldur     x14, [x29, #-0x50]
+  0002a6d8: cec12c8b  add      x14, x14, w12, sxtw
+  0002a6dc: 14000014  b        #0x2a72c
+  0002a6e0: af035bf8  ldur     x15, [x29, #-0x50]
+  0002a6e4: f0c12d8b  add      x16, x15, w13, sxtw
+  0002a6e8: 1d000014  b        #0x2a75c
+  0002a6ec: b0035bf8  ldur     x16, [x29, #-0x50]
+  0002a6f0: 11c22e8b  add      x17, x16, w14, sxtw
+  0002a6f4: 26000014  b        #0x2a78c
+  0002a6f8: a0035bf8  ldur     x0, [x29, #-0x50]
+  0002a6fc: 12c02f8b  add      x18, x0, w15, sxtw
+  0002a700: 2f000014  b        #0x2a7bc
+  0002a704: 6c00f837  tbnz     w12, #0x1f, #0x2a710
+  0002a708: ed030c2a  mov      w13, w12
+  0002a70c: 05000014  b        #0x2a720
+  0002a710: 8d210011  add      w13, w12, #8
+  0002a714: bf010071  cmp      w13, #0
+  0002a718: ad031cb8  stur     w13, [x29, #-0x40]
+  0002a71c: cdfdff54  b.le     #0x2a6d4
+  0002a720: ae835af8  ldur     x14, [x29, #-0x58]
+  0002a724: cc210091  add      x12, x14, #8
+  0002a728: ac831af8  stur     x12, [x29, #-0x58]
+  0002a72c: cc0140f9  ldr      x12, [x14]
+  0002a730: 4c811ef8  stur     x12, [x10, #-0x18]
+  0002a734: 6d00f837  tbnz     w13, #0x1f, #0x2a740
+  0002a738: ee030d2a  mov      w14, w13
+  0002a73c: 05000014  b        #0x2a750
+  0002a740: ae210011  add      w14, w13, #8
+  0002a744: df010071  cmp      w14, #0
+  0002a748: ae031cb8  stur     w14, [x29, #-0x40]
+  0002a74c: adfcff54  b.le     #0x2a6e0
+  0002a750: b0835af8  ldur     x16, [x29, #-0x58]
+  0002a754: 11220091  add      x17, x16, #8
+  0002a758: b1831af8  stur     x17, [x29, #-0x58]
+  0002a75c: 0f0240f9  ldr      x15, [x16]
+  0002a760: 4f011ff8  stur     x15, [x10, #-0x10]
+  0002a764: 6e00f837  tbnz     w14, #0x1f, #0x2a770
+  0002a768: ef030e2a  mov      w15, w14
+  0002a76c: 05000014  b        #0x2a780
+  0002a770: cf210011  add      w15, w14, #8
+  0002a774: ff010071  cmp      w15, #0
+  0002a778: af031cb8  stur     w15, [x29, #-0x40]
+  0002a77c: 8dfbff54  b.le     #0x2a6ec
+  0002a780: b1835af8  ldur     x17, [x29, #-0x58]
+  0002a784: 32220091  add      x18, x17, #8
+  0002a788: b2831af8  stur     x18, [x29, #-0x58]
+  0002a78c: 2e0240f9  ldr      x14, [x17]
+  0002a790: 4e811ff8  stur     x14, [x10, #-8]
+  0002a794: 6f00f837  tbnz     w15, #0x1f, #0x2a7a0
+  0002a798: ec030f2a  mov      w12, w15
+  0002a79c: 05000014  b        #0x2a7b0
+  0002a7a0: ec210011  add      w12, w15, #8
+  0002a7a4: 9f010071  cmp      w12, #0
+  0002a7a8: ac031cb8  stur     w12, [x29, #-0x40]
+  0002a7ac: 6dfaff54  b.le     #0x2a6f8
+  0002a7b0: b2835af8  ldur     x18, [x29, #-0x58]
+  0002a7b4: 41220091  add      x1, x18, #8
+  0002a7b8: a1831af8  stur     x1, [x29, #-0x58]
+  0002a7bc: 500240f9  ldr      x16, [x18]
+  0002a7c0: 6b1100d1  sub      x11, x11, #4
+  0002a7c4: 29110091  add      x9, x9, #4
+  0002a7c8: 500502f8  str      x16, [x10], #0x20
+  0002a7cc: cbf9ffb5  cbnz     x11, #0x2a704
+  0002a7d0: a8020034  cbz      w8, #0x2a824
+  0002a7d4: 8a0e098b  add      x10, x20, x9, lsl #3
+  0002a7d8: 04000014  b        #0x2a7e8
+  0002a7dc: ab035bf8  ldur     x11, [x29, #-0x50]
+  0002a7e0: 6fc12c8b  add      x15, x11, w12, sxtw
+  0002a7e4: 0b000014  b        #0x2a810
+  0002a7e8: 6c00f837  tbnz     w12, #0x1f, #0x2a7f4
+  0002a7ec: e9030c2a  mov      w9, w12
+  0002a7f0: 05000014  b        #0x2a804
+  0002a7f4: 89210011  add      w9, w12, #8
+  0002a7f8: 3f010071  cmp      w9, #0
+  0002a7fc: a9031cb8  stur     w9, [x29, #-0x40]
+  0002a800: edfeff54  b.le     #0x2a7dc
+  0002a804: af835af8  ldur     x15, [x29, #-0x58]
+  0002a808: ed210091  add      x13, x15, #8
+  0002a80c: ad831af8  stur     x13, [x29, #-0x58]
+  0002a810: eb0140f9  ldr      x11, [x15]
+  0002a814: 080500d1  sub      x8, x8, #1
+  0002a818: ec03092a  mov      w12, w9
+  0002a81c: 4b8500f8  str      x11, [x10], #8
+  0002a820: 48feffb5  cbnz     x8, #0x2a7e8
+  0002a824: 680b00f0  adrp     x8, #0x199000
+  0002a828: e003132a  mov      w0, w19
+  0002a82c: e10314aa  mov      x1, x20
+  0002a830: 0add46f9  ldr      x10, [x8, #0xdb8]
+  0002a834: 49d1368b  add      x9, x10, w22, sxtw #4
+  0002a838: 290540f9  ldr      x9, [x9, #8]
+  0002a83c: 20013fd6  blr      x9
+  0002a840: f30300aa  mov      x19, x0
+  0002a844: e00314aa  mov      x0, x20
+  0002a848: 20a1ff97  bl       #0x12cc8  ; free@plt
+  0002a84c: 54d03bd5  mrs      x20, tpidr_el0
+  0002a850: 8a1640f9  ldr      x10, [x20, #0x28]
+  0002a854: ad835cf8  ldur     x13, [x29, #-0x38]
+  0002a858: 5f010deb  cmp      x10, x13
+  0002a85c: 01010054  b.ne     #0x2a87c
+  0002a860: e00313aa  mov      x0, x19
+  0002a864: fc6b40f9  ldr      x28, [sp, #0xd0]
+  0002a868: fd7b50a9  ldp      x29, x30, [sp, #0x100]
+  0002a86c: f44f4fa9  ldp      x20, x19, [sp, #0xf0]
+  0002a870: f6574ea9  ldp      x22, x21, [sp, #0xe0]
+  0002a874: ff430491  add      sp, sp, #0x110
+  0002a878: c0035fd6  ret      
+  0002a87c: 37a1ff97  bl       #0x12d58  ; __stack_chk_fail@plt
